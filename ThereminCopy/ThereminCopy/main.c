@@ -25,24 +25,37 @@
 #include "song.h"
 
 #define BIT(x) (1<<x)
+int duration; // keeps track of the duration of the echo from the ultra sonic sensor in micro seconds
+int distance; // keeps track of the distance calculated using the duration of the echo in cm
 
-int duration;
-int distance;
-
+/************************************************************************/
+/*
+Sends a pulse of 1000 Microseconds to the trigger pin of the Ultra Sonic sensor
+and Sets the counter of timer 1 to 0
+                                                                     */
+/************************************************************************/
 void echo(void){
 		
-		//digitalWrite(trigPin, HIGH);
 		PORTE = 0b00000100;
 		
-		//delayMicroseconds(1000);
 		_delay_us(1000);
 		
-		//digitalWrite(trigPin, LOW);
 		PORTE = 0b00000000;
 		TCNT1 = 0;
 }
 
+/************************************************************************/
+/* 
+Interrupts when Port E4 is changes State
 
+This interrupt happens twice after the trigger pin is send a pulse.
+The first time E4 triggers a rising edge:
+	In this case timer 1 is started
+	
+The second time E4 triggers a falling edge:
+	In this case timer 1 is stopped and the value is read and translated to a distance the ultra sonic sensor has detected
+                                                                     */
+/************************************************************************/
 ISR(INT4_vect)
 {
 	if (PINE & 0b00010000)
@@ -54,35 +67,30 @@ ISR(INT4_vect)
 	{
 		TCCR1B = 0;
 		duration = TCNT1;
-		//todo get timer number
 		distance = (duration/2) / 29.1;
 		PORTB = duration/10;
 		if (distance >= 200 || distance <= 0){
-			//Serial.println("Out of range");
-			PORTA = 0b11111111;
+			PORTA = 0b11111111; //If the value returned from the ultrasonic reading is invalid or too big
 		}
 		else {
-			//Serial.print(distance);
-			//Serial.println(" cm");
-			PORTA = distance;
+			PORTA = distance; 
 		}
 	}
 }
 
 int main(void)
 {
-	int tune = 0;
-	int oct = 0;
-	int tonelen = 200;
-	int lastOct = 0;
-	DDRD = 0b00000100;
-	DDRA = 0b11111111;
-	DDRB = 0b11111111;
+	int tune = 0; 
+	int oct = 0; // octave
+	int tonelen = 200;// tone length
+	int lastOct = 0; // last Played octave
+	DDRD = 0b00000100; // set only D4 as write pin and the rest as read pin
+	DDRA = 0b11111111; // set port A as write only
+	DDRB = 0b11111111; // set port B as write only
 	DDRC = 0;
 	
-	
-	EICRB = 0b00000001;
-	EIMSK = 0b00010000;
+	EICRB = 0b00000001; // een verrandering in pin 4 genereert een interrupt request
+	EIMSK = 0b00010000; // the interrupt on pin 4 is enabled 
 	sei();
 	
 	DDRF = 0b00001000;			//set DDRD3 as output
