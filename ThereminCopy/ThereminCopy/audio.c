@@ -17,7 +17,7 @@ void playTune(long frequency, long milis)
 	{
 		if(TCNT3 >= delay)
 		{
-			PORTE ^= (0xFF);
+			PORTE ^= (0b00001000);
 			t += TCNT3;
 			TCNT3 = 0;
 		}
