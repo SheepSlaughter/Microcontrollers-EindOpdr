@@ -17,7 +17,7 @@ inline static void delay_us(int count) {
 void playTune(long frequency, long milis)
 {
 	long t = 0;
-	long delay = 8000000L / frequency / 2L;
+	//long delay = 8000000L / frequency / 2L;
 	long count = milis * 8000L;
 	while(t < count)
 	{
