@@ -7,6 +7,7 @@
 #ifndef H_AUDIO
 #define H_AUDIO
 
+inline static void delay_us(int count);
 void playTune(long frequency, long milis);
 void wait( int ms );
 

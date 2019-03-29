@@ -78,18 +78,19 @@ int main(void)
 	EIMSK = 0b00010000;
 	sei();
 	
-	DDRE = 0b00001000;			//set DDRD3 as output
+	DDRF = 0b00001000;			//set DDRD3 as output
 	TCCR3B |= 0b00000001;	//set up timer
 	while(1)
 	{
 		echo();
-		wait(100);
 		if(PORTA < 0b11111111){
 			tune = 1050 - (PORTA * 4);
 		}
-		if(tune > 100)
+		if(tune > 100 && PORTA < 60)
 		{
-			playTune(tune, 200);
+			playTune(tune, 100);
+		}else{
+			wait(100);
 		}
 		//marioTheme();
 	}

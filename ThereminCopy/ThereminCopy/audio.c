@@ -8,10 +8,9 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-inline static void delay_us(uint16_t count) {
+inline static void delay_us(int count) {
 	while(count--) {
 		_delay_us(1);
-		
 	}
 }
 
@@ -22,12 +21,10 @@ void playTune(long frequency, long milis)
 	long count = milis * 8000L;
 	while(t < count)
 	{
-		if(TCNT3 >= delay)
-		{
-			PORTE ^= (0b00001000);
-			t += TCNT3;
-			TCNT3 = 0;
-		}
+		delay_us(1000000/frequency/2);
+		PORTF ^= (0b00001000);
+		t += TCNT3;
+		TCNT3 = 0;
 	}
 }
 
