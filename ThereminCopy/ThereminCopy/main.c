@@ -26,14 +26,18 @@
 
 int duration;
 int distance;
+int frequency = 0;
 
+inline static void delay_us(int count) {
+	while(count--) {
+		_delay_us(1);
+	}
+}
 void echo(void){
 		
 		//digitalWrite(trigPin, HIGH);
 		PORTE = 0b00000100;
 		
-		//delayMicroseconds(1000);
-		_delay_us(1000);
 		
 		//digitalWrite(trigPin, LOW);
 		PORTE = 0b00000000;
@@ -69,7 +73,6 @@ ISR(INT4_vect)
 
 int main(void)
 {
-	int tune;
 	DDRD = 0b00000100;
 	DDRA = 0b11111111;
 	DDRB = 0b11111111;
@@ -80,18 +83,33 @@ int main(void)
 	
 	DDRF = 0b00001000;			//set DDRD3 as output
 	TCCR3B |= 0b00000001;	//set up timer
+	
+	long time = 0;
+	int echos = 0;
 	while(1)
 	{
-		echo();
-		if(PORTA < 0b11111111){
-			tune = 1050 - (PORTA * 4);
+		//echo();
+		
+		if(PORTA < 60){
+			frequency = 1050 - (PORTA * 4);
 		}
-		if(tune > 100 && PORTA < 60)
+		if(frequency > 100 && PORTA < 60)
 		{
-			playTune(tune, 100);
-		}else{
-			wait(100);
+			time += 1000000/frequency/2;
+			delay_us(1000000/frequency/2);
+			PORTF ^= (0b00001000);
+			//t += TCNT3;
+			TCNT3 = 0;
 		}
+		if(time >= 100000){
+			PORTE = 0b00000100;
+		}else if (time >= 101000){
+			PORTE = 0b00000000;
+			TCNT1 = 0;
+			time = 0;
+		}
+		
+		
 		//marioTheme();
 	}
 	

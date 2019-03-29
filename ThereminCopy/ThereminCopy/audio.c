@@ -17,7 +17,6 @@ inline static void delay_us(int count) {
 void playTune(long frequency, long milis)
 {
 	long t = 0;
-	long delay = 8000000L / frequency / 2L;
 	long count = milis * 8000L;
 	while(t < count)
 	{
@@ -29,7 +28,6 @@ void playTune(long frequency, long milis)
 }
 
 void wait( int ms )
-
 {
 	for (int i=0; i<ms; i++)
 	{
