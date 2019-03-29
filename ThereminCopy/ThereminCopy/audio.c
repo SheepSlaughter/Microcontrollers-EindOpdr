@@ -8,6 +8,13 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+inline static void delay_us(uint16_t count) {
+	while(count--) {
+		_delay_us(1);
+		
+	}
+}
+
 void playTune(long frequency, long milis)
 {
 	long t = 0;

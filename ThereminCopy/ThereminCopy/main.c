@@ -37,8 +37,7 @@ void echo(void){
 		
 		//digitalWrite(trigPin, LOW);
 		PORTE = 0b00000000;
-		
-		_delay_ms(500);
+		TCNT1 = 0;
 }
 
 
@@ -70,6 +69,7 @@ ISR(INT4_vect)
 
 int main(void)
 {
+	int tune;
 	DDRD = 0b00000100;
 	DDRA = 0b11111111;
 	DDRB = 0b11111111;
@@ -83,7 +83,14 @@ int main(void)
 	while(1)
 	{
 		echo();
-		wait(100);
+		if(PORTA < 0b11111111){
+			tune = 1050 - (PORTA * 4);
+		}
+		if(tune > 100)
+		{
+			playTune(tune, 200);
+		}
+		//marioTheme();
 	}
 	
 	return 0;	                  // Standard Return Code
