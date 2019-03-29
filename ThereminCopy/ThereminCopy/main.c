@@ -90,16 +90,17 @@ int main(void)
 	int oct = 0; // octave
 	int tonelen = 200;// tone length
 	int lastOct = 0; // last Played octave
-	DDRD = 0b00000100; // set only D4 as write pin and the rest as read pin
+	DDRD = 0b00000000; // set port D as read only
 	DDRA = 0b11111111; // set port A as write only
 	DDRB = 0b11111111; // set port B as write only
 	DDRC = 0;
 	
-	EICRB = 0b00000001; // een verrandering in pin 4 genereert een interrupt request
-	EIMSK = 0b00010000; // the interrupt on pin 4 is enabled 
+	EICRA = 0b00000001; // set interupt 1 to rising edge
+	EICRB = 0b00000001; // set interupt 4 to trigger on rising and falling edge
+	EIMSK = 0b00010001; // the interrupt 4 and 1 is enabled 
 	sei();
 	
-	DDRF = 0b00001000;			//set DDRD3 as output
+	DDRF = 0b00001000;		//set pin 4 from PORTF as output
 	TCCR3B |= 0b00000001;	//set up timer
 	while(1)
 	{
