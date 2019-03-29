@@ -3,682 +3,2628 @@ ThereminCopy.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000448  2**0
+  0 .data         00000000  00800100  00800100  0000111c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000003f4  00000000  00000000  00000054  2**1
+  1 .text         000010c8  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000448  2**0
+  2 .comment      00000030  00000000  00000000  0000111c  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000478  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000114c  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000030  00000000  00000000  000004b4  2**0
+  4 .debug_aranges 00000030  00000000  00000000  00001188  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000a64  00000000  00000000  000004e4  2**0
+  5 .debug_info   000036aa  00000000  00000000  000011b8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000864  00000000  00000000  00000f48  2**0
+  6 .debug_abbrev 00000877  00000000  00000000  00004862  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000003d8  00000000  00000000  000017ac  2**0
+  7 .debug_line   00000f27  00000000  00000000  000050d9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000044  00000000  00000000  00001b84  2**2
+  8 .debug_frame  00000078  00000000  00000000  00006000  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000483  00000000  00000000  00001bc8  2**0
+  9 .debug_str    00000442  00000000  00000000  00006078  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000209  00000000  00000000  0000204b  2**0
+ 10 .debug_loc    0000021d  00000000  00000000  000064ba  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000020  00000000  00000000  00002254  2**0
+ 11 .debug_ranges 00000020  00000000  00000000  000066d7  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
-   2:	00 00       	nop
-   4:	4b c0       	rjmp	.+150    	; 0x9c <__bad_interrupt>
-   6:	00 00       	nop
-   8:	49 c0       	rjmp	.+146    	; 0x9c <__bad_interrupt>
-   a:	00 00       	nop
-   c:	47 c0       	rjmp	.+142    	; 0x9c <__bad_interrupt>
-   e:	00 00       	nop
-  10:	45 c0       	rjmp	.+138    	; 0x9c <__bad_interrupt>
-  12:	00 00       	nop
-  14:	43 c0       	rjmp	.+134    	; 0x9c <__bad_interrupt>
-  16:	00 00       	nop
-  18:	41 c0       	rjmp	.+130    	; 0x9c <__bad_interrupt>
-  1a:	00 00       	nop
-  1c:	3f c0       	rjmp	.+126    	; 0x9c <__bad_interrupt>
-  1e:	00 00       	nop
-  20:	3d c0       	rjmp	.+122    	; 0x9c <__bad_interrupt>
-  22:	00 00       	nop
-  24:	3b c0       	rjmp	.+118    	; 0x9c <__bad_interrupt>
-  26:	00 00       	nop
-  28:	39 c0       	rjmp	.+114    	; 0x9c <__bad_interrupt>
-  2a:	00 00       	nop
-  2c:	37 c0       	rjmp	.+110    	; 0x9c <__bad_interrupt>
-  2e:	00 00       	nop
-  30:	35 c0       	rjmp	.+106    	; 0x9c <__bad_interrupt>
-  32:	00 00       	nop
-  34:	33 c0       	rjmp	.+102    	; 0x9c <__bad_interrupt>
-  36:	00 00       	nop
-  38:	31 c0       	rjmp	.+98     	; 0x9c <__bad_interrupt>
-  3a:	00 00       	nop
-  3c:	2f c0       	rjmp	.+94     	; 0x9c <__bad_interrupt>
-  3e:	00 00       	nop
-  40:	2d c0       	rjmp	.+90     	; 0x9c <__bad_interrupt>
-  42:	00 00       	nop
-  44:	2b c0       	rjmp	.+86     	; 0x9c <__bad_interrupt>
-  46:	00 00       	nop
-  48:	29 c0       	rjmp	.+82     	; 0x9c <__bad_interrupt>
-  4a:	00 00       	nop
-  4c:	27 c0       	rjmp	.+78     	; 0x9c <__bad_interrupt>
-  4e:	00 00       	nop
-  50:	25 c0       	rjmp	.+74     	; 0x9c <__bad_interrupt>
-  52:	00 00       	nop
-  54:	23 c0       	rjmp	.+70     	; 0x9c <__bad_interrupt>
-  56:	00 00       	nop
-  58:	21 c0       	rjmp	.+66     	; 0x9c <__bad_interrupt>
-  5a:	00 00       	nop
-  5c:	1f c0       	rjmp	.+62     	; 0x9c <__bad_interrupt>
-  5e:	00 00       	nop
-  60:	1d c0       	rjmp	.+58     	; 0x9c <__bad_interrupt>
-  62:	00 00       	nop
-  64:	1b c0       	rjmp	.+54     	; 0x9c <__bad_interrupt>
-  66:	00 00       	nop
-  68:	19 c0       	rjmp	.+50     	; 0x9c <__bad_interrupt>
-  6a:	00 00       	nop
-  6c:	17 c0       	rjmp	.+46     	; 0x9c <__bad_interrupt>
-  6e:	00 00       	nop
-  70:	15 c0       	rjmp	.+42     	; 0x9c <__bad_interrupt>
-  72:	00 00       	nop
-  74:	13 c0       	rjmp	.+38     	; 0x9c <__bad_interrupt>
-  76:	00 00       	nop
-  78:	11 c0       	rjmp	.+34     	; 0x9c <__bad_interrupt>
-  7a:	00 00       	nop
-  7c:	0f c0       	rjmp	.+30     	; 0x9c <__bad_interrupt>
-  7e:	00 00       	nop
-  80:	0d c0       	rjmp	.+26     	; 0x9c <__bad_interrupt>
-  82:	00 00       	nop
-  84:	0b c0       	rjmp	.+22     	; 0x9c <__bad_interrupt>
-  86:	00 00       	nop
-  88:	09 c0       	rjmp	.+18     	; 0x9c <__bad_interrupt>
+       0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+       2:	00 00       	nop
+       4:	4c c0       	rjmp	.+152    	; 0x9e <__bad_interrupt>
+       6:	00 00       	nop
+       8:	4a c0       	rjmp	.+148    	; 0x9e <__bad_interrupt>
+       a:	00 00       	nop
+       c:	48 c0       	rjmp	.+144    	; 0x9e <__bad_interrupt>
+       e:	00 00       	nop
+      10:	46 c0       	rjmp	.+140    	; 0x9e <__bad_interrupt>
+      12:	00 00       	nop
+      14:	44 c0       	rjmp	.+136    	; 0x9e <__bad_interrupt>
+      16:	00 00       	nop
+      18:	42 c0       	rjmp	.+132    	; 0x9e <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	40 c0       	rjmp	.+128    	; 0x9e <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	3e c0       	rjmp	.+124    	; 0x9e <__bad_interrupt>
+      22:	00 00       	nop
+      24:	3c c0       	rjmp	.+120    	; 0x9e <__bad_interrupt>
+      26:	00 00       	nop
+      28:	3a c0       	rjmp	.+116    	; 0x9e <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	38 c0       	rjmp	.+112    	; 0x9e <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	36 c0       	rjmp	.+108    	; 0x9e <__bad_interrupt>
+      32:	00 00       	nop
+      34:	34 c0       	rjmp	.+104    	; 0x9e <__bad_interrupt>
+      36:	00 00       	nop
+      38:	32 c0       	rjmp	.+100    	; 0x9e <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	30 c0       	rjmp	.+96     	; 0x9e <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	2e c0       	rjmp	.+92     	; 0x9e <__bad_interrupt>
+      42:	00 00       	nop
+      44:	2c c0       	rjmp	.+88     	; 0x9e <__bad_interrupt>
+      46:	00 00       	nop
+      48:	2a c0       	rjmp	.+84     	; 0x9e <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	28 c0       	rjmp	.+80     	; 0x9e <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	26 c0       	rjmp	.+76     	; 0x9e <__bad_interrupt>
+      52:	00 00       	nop
+      54:	24 c0       	rjmp	.+72     	; 0x9e <__bad_interrupt>
+      56:	00 00       	nop
+      58:	22 c0       	rjmp	.+68     	; 0x9e <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	20 c0       	rjmp	.+64     	; 0x9e <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	1e c0       	rjmp	.+60     	; 0x9e <__bad_interrupt>
+      62:	00 00       	nop
+      64:	1c c0       	rjmp	.+56     	; 0x9e <__bad_interrupt>
+      66:	00 00       	nop
+      68:	1a c0       	rjmp	.+52     	; 0x9e <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	18 c0       	rjmp	.+48     	; 0x9e <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	16 c0       	rjmp	.+44     	; 0x9e <__bad_interrupt>
+      72:	00 00       	nop
+      74:	14 c0       	rjmp	.+40     	; 0x9e <__bad_interrupt>
+      76:	00 00       	nop
+      78:	12 c0       	rjmp	.+36     	; 0x9e <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	10 c0       	rjmp	.+32     	; 0x9e <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	0e c0       	rjmp	.+28     	; 0x9e <__bad_interrupt>
+      82:	00 00       	nop
+      84:	0c c0       	rjmp	.+24     	; 0x9e <__bad_interrupt>
+      86:	00 00       	nop
+      88:	0a c0       	rjmp	.+20     	; 0x9e <__bad_interrupt>
 	...
 
 0000008c <__ctors_end>:
-  8c:	11 24       	eor	r1, r1
-  8e:	1f be       	out	0x3f, r1	; 63
-  90:	cf ef       	ldi	r28, 0xFF	; 255
-  92:	d0 e1       	ldi	r29, 0x10	; 16
-  94:	de bf       	out	0x3e, r29	; 62
-  96:	cd bf       	out	0x3d, r28	; 61
-  98:	5c d0       	rcall	.+184    	; 0x152 <main>
-  9a:	aa c1       	rjmp	.+852    	; 0x3f0 <_exit>
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+      98:	66 d0       	rcall	.+204    	; 0x166 <main>
+      9a:	0c 94 62 08 	jmp	0x10c4	; 0x10c4 <_exit>
 
-0000009c <__bad_interrupt>:
-  9c:	b1 cf       	rjmp	.-158    	; 0x0 <__vectors>
+0000009e <__bad_interrupt>:
+      9e:	b0 cf       	rjmp	.-160    	; 0x0 <__vectors>
 
-0000009e <echoTimer>:
-		_delay_ms(200);
+000000a0 <playTune>:
+#include <avr/interrupt.h>
+
+void wait( int ms );
+
+void playTune(long frequency, long milis)
+{
+      a0:	8f 92       	push	r8
+      a2:	9f 92       	push	r9
+      a4:	af 92       	push	r10
+      a6:	bf 92       	push	r11
+      a8:	cf 92       	push	r12
+      aa:	df 92       	push	r13
+      ac:	ef 92       	push	r14
+      ae:	ff 92       	push	r15
+      b0:	0f 93       	push	r16
+      b2:	1f 93       	push	r17
+      b4:	6b 01       	movw	r12, r22
+      b6:	7c 01       	movw	r14, r24
+      b8:	49 01       	movw	r8, r18
+      ba:	5a 01       	movw	r10, r20
+	long t = 0;
+	long delay = 8000000L / frequency / 2L;
+      bc:	60 e0       	ldi	r22, 0x00	; 0
+      be:	79 e0       	ldi	r23, 0x09	; 9
+      c0:	8d e3       	ldi	r24, 0x3D	; 61
+      c2:	90 e0       	ldi	r25, 0x00	; 0
+      c4:	a7 01       	movw	r20, r14
+      c6:	96 01       	movw	r18, r12
+      c8:	a6 d7       	rcall	.+3916   	; 0x1016 <__divmodsi4>
+      ca:	69 01       	movw	r12, r18
+      cc:	7a 01       	movw	r14, r20
+	long count = milis * 8000L;
+      ce:	a0 e4       	ldi	r26, 0x40	; 64
+      d0:	bf e1       	ldi	r27, 0x1F	; 31
+      d2:	a5 01       	movw	r20, r10
+      d4:	94 01       	movw	r18, r8
+      d6:	bb d7       	rcall	.+3958   	; 0x104e <__muluhisi3>
+      d8:	8b 01       	movw	r16, r22
+      da:	9c 01       	movw	r18, r24
+
+void wait( int ms );
+
+void playTune(long frequency, long milis)
+{
+	long t = 0;
+      dc:	40 e0       	ldi	r20, 0x00	; 0
+      de:	50 e0       	ldi	r21, 0x00	; 0
+      e0:	ba 01       	movw	r22, r20
+	long delay = 8000000L / frequency / 2L;
+	long count = milis * 8000L;
+	while(t < count)
+	{
+		if(TCNT3 >= delay)
+      e2:	e8 e8       	ldi	r30, 0x88	; 136
+      e4:	f0 e0       	ldi	r31, 0x00	; 0
+void playTune(long frequency, long milis)
+{
+	long t = 0;
+	long delay = 8000000L / frequency / 2L;
+	long count = milis * 8000L;
+	while(t < count)
+      e6:	14 c0       	rjmp	.+40     	; 0x110 <playTune+0x70>
+	{
+		if(TCNT3 >= delay)
+      e8:	80 81       	ld	r24, Z
+      ea:	91 81       	ldd	r25, Z+1	; 0x01
+      ec:	a0 e0       	ldi	r26, 0x00	; 0
+      ee:	b0 e0       	ldi	r27, 0x00	; 0
+      f0:	8c 15       	cp	r24, r12
+      f2:	9d 05       	cpc	r25, r13
+      f4:	ae 05       	cpc	r26, r14
+      f6:	bf 05       	cpc	r27, r15
+      f8:	bc f3       	brlt	.-18     	; 0xe8 <playTune+0x48>
+		{
+			PORTE ^= (0xFF);
+      fa:	83 b1       	in	r24, 0x03	; 3
+      fc:	80 95       	com	r24
+      fe:	83 b9       	out	0x03, r24	; 3
+			t += TCNT3;
+     100:	80 81       	ld	r24, Z
+     102:	91 81       	ldd	r25, Z+1	; 0x01
+     104:	48 0f       	add	r20, r24
+     106:	59 1f       	adc	r21, r25
+     108:	61 1d       	adc	r22, r1
+     10a:	71 1d       	adc	r23, r1
+			TCNT3 = 0;
+     10c:	11 82       	std	Z+1, r1	; 0x01
+     10e:	10 82       	st	Z, r1
+void playTune(long frequency, long milis)
+{
+	long t = 0;
+	long delay = 8000000L / frequency / 2L;
+	long count = milis * 8000L;
+	while(t < count)
+     110:	40 17       	cp	r20, r16
+     112:	51 07       	cpc	r21, r17
+     114:	62 07       	cpc	r22, r18
+     116:	73 07       	cpc	r23, r19
+     118:	54 f4       	brge	.+20     	; 0x12e <playTune+0x8e>
+	{
+		if(TCNT3 >= delay)
+     11a:	80 81       	ld	r24, Z
+     11c:	91 81       	ldd	r25, Z+1	; 0x01
+     11e:	a0 e0       	ldi	r26, 0x00	; 0
+     120:	b0 e0       	ldi	r27, 0x00	; 0
+     122:	8c 15       	cp	r24, r12
+     124:	9d 05       	cpc	r25, r13
+     126:	ae 05       	cpc	r26, r14
+     128:	bf 05       	cpc	r27, r15
+     12a:	3c f7       	brge	.-50     	; 0xfa <playTune+0x5a>
+     12c:	dd cf       	rjmp	.-70     	; 0xe8 <playTune+0x48>
+			PORTE ^= (0xFF);
+			t += TCNT3;
+			TCNT3 = 0;
+		}
+	}
+}
+     12e:	1f 91       	pop	r17
+     130:	0f 91       	pop	r16
+     132:	ff 90       	pop	r15
+     134:	ef 90       	pop	r14
+     136:	df 90       	pop	r13
+     138:	cf 90       	pop	r12
+     13a:	bf 90       	pop	r11
+     13c:	af 90       	pop	r10
+     13e:	9f 90       	pop	r9
+     140:	8f 90       	pop	r8
+     142:	08 95       	ret
+
+00000144 <wait>:
+}
+
+void wait( int ms )
+
+{
+	for (int i=0; i<ms; i++)
+     144:	18 16       	cp	r1, r24
+     146:	19 06       	cpc	r1, r25
+     148:	6c f4       	brge	.+26     	; 0x164 <wait+0x20>
+     14a:	20 e0       	ldi	r18, 0x00	; 0
+     14c:	30 e0       	ldi	r19, 0x00	; 0
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     14e:	ef ec       	ldi	r30, 0xCF	; 207
+     150:	f7 e0       	ldi	r31, 0x07	; 7
+     152:	31 97       	sbiw	r30, 0x01	; 1
+     154:	f1 f7       	brne	.-4      	; 0x152 <wait+0xe>
+     156:	00 c0       	rjmp	.+0      	; 0x158 <wait+0x14>
+     158:	00 00       	nop
+     15a:	2f 5f       	subi	r18, 0xFF	; 255
+     15c:	3f 4f       	sbci	r19, 0xFF	; 255
+     15e:	82 17       	cp	r24, r18
+     160:	93 07       	cpc	r25, r19
+     162:	a9 f7       	brne	.-22     	; 0x14e <wait+0xa>
+     164:	08 95       	ret
+
+00000166 <main>:
 	}
 }
 
-void echoTimer(void){
-	DDRD = 0b00000100;
-  9e:	84 e0       	ldi	r24, 0x04	; 4
-  a0:	81 bb       	out	0x11, r24	; 17
-	DDRA = 0b11111111;
-  a2:	8f ef       	ldi	r24, 0xFF	; 255
-  a4:	8a bb       	out	0x1a, r24	; 26
-	DDRB = 0b11111111;
-  a6:	87 bb       	out	0x17, r24	; 23
-	while (1)
+int main(void)
+{
+	DDRE = 0b00001000;			//set DDRD3 as output
+     166:	88 e0       	ldi	r24, 0x08	; 8
+     168:	82 b9       	out	0x02, r24	; 2
+	TCCR3B |= 0b00000001;	//set up timer
+     16a:	ea e8       	ldi	r30, 0x8A	; 138
+     16c:	f0 e0       	ldi	r31, 0x00	; 0
+     16e:	80 81       	ld	r24, Z
+     170:	81 60       	ori	r24, 0x01	; 1
+     172:	80 83       	st	Z, r24
+	while(1)
 	{
-		int duration, distance;
-		
-		//digitalWrite(trigPin, HIGH);
-		PORTD = 0b00000100;
-  a8:	68 94       	set
-  aa:	dd 24       	eor	r13, r13
-  ac:	d2 f8       	bld	r13, 2
-		}
-		TCCR1B = 0;
-		duration = TCNT1;
-		
-		distance = (duration/2) / 29.1;
-		PORTB = duration/10;
-  ae:	0a e0       	ldi	r16, 0x0A	; 10
-  b0:	10 e0       	ldi	r17, 0x00	; 0
-		if (distance >= 200 || distance <= 0){
-			//Serial.println("Out of range");
-			PORTA = 0b11111111;
-  b2:	cc 24       	eor	r12, r12
-  b4:	ca 94       	dec	r12
-	while (1)
-	{
-		int duration, distance;
-		
-		//digitalWrite(trigPin, HIGH);
-		PORTD = 0b00000100;
-  b6:	d2 ba       	out	0x12, r13	; 18
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
+		playTune(660 ,100);
+     174:	24 e6       	ldi	r18, 0x64	; 100
+     176:	30 e0       	ldi	r19, 0x00	; 0
+     178:	40 e0       	ldi	r20, 0x00	; 0
+     17a:	50 e0       	ldi	r21, 0x00	; 0
+     17c:	64 e9       	ldi	r22, 0x94	; 148
+     17e:	72 e0       	ldi	r23, 0x02	; 2
+     180:	80 e0       	ldi	r24, 0x00	; 0
+     182:	90 e0       	ldi	r25, 0x00	; 0
+     184:	8d df       	rcall	.-230    	; 0xa0 <playTune>
+		wait(150);
+     186:	86 e9       	ldi	r24, 0x96	; 150
+     188:	90 e0       	ldi	r25, 0x00	; 0
+     18a:	dc df       	rcall	.-72     	; 0x144 <wait>
+		playTune(660 ,100);
+     18c:	24 e6       	ldi	r18, 0x64	; 100
+     18e:	30 e0       	ldi	r19, 0x00	; 0
+     190:	40 e0       	ldi	r20, 0x00	; 0
+     192:	50 e0       	ldi	r21, 0x00	; 0
+     194:	64 e9       	ldi	r22, 0x94	; 148
+     196:	72 e0       	ldi	r23, 0x02	; 2
+     198:	80 e0       	ldi	r24, 0x00	; 0
+     19a:	90 e0       	ldi	r25, 0x00	; 0
+     19c:	81 df       	rcall	.-254    	; 0xa0 <playTune>
+		wait(300);
+     19e:	8c e2       	ldi	r24, 0x2C	; 44
+     1a0:	91 e0       	ldi	r25, 0x01	; 1
+     1a2:	d0 df       	rcall	.-96     	; 0x144 <wait>
+     1a4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(660 ,100);
+     1a6:	30 e0       	ldi	r19, 0x00	; 0
+     1a8:	40 e0       	ldi	r20, 0x00	; 0
+     1aa:	50 e0       	ldi	r21, 0x00	; 0
+     1ac:	64 e9       	ldi	r22, 0x94	; 148
+     1ae:	72 e0       	ldi	r23, 0x02	; 2
+     1b0:	80 e0       	ldi	r24, 0x00	; 0
+     1b2:	90 e0       	ldi	r25, 0x00	; 0
+     1b4:	75 df       	rcall	.-278    	; 0xa0 <playTune>
+		wait(300);
+     1b6:	8c e2       	ldi	r24, 0x2C	; 44
+     1b8:	91 e0       	ldi	r25, 0x01	; 1
+     1ba:	c4 df       	rcall	.-120    	; 0x144 <wait>
+     1bc:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(510 ,100);
+     1be:	30 e0       	ldi	r19, 0x00	; 0
+     1c0:	40 e0       	ldi	r20, 0x00	; 0
+     1c2:	50 e0       	ldi	r21, 0x00	; 0
+     1c4:	6e ef       	ldi	r22, 0xFE	; 254
+     1c6:	71 e0       	ldi	r23, 0x01	; 1
+     1c8:	80 e0       	ldi	r24, 0x00	; 0
+     1ca:	90 e0       	ldi	r25, 0x00	; 0
+     1cc:	69 df       	rcall	.-302    	; 0xa0 <playTune>
+		wait(100);
+     1ce:	84 e6       	ldi	r24, 0x64	; 100
+     1d0:	90 e0       	ldi	r25, 0x00	; 0
+     1d2:	b8 df       	rcall	.-144    	; 0x144 <wait>
+     1d4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(660 ,100);
+     1d6:	30 e0       	ldi	r19, 0x00	; 0
+     1d8:	40 e0       	ldi	r20, 0x00	; 0
+     1da:	50 e0       	ldi	r21, 0x00	; 0
+     1dc:	64 e9       	ldi	r22, 0x94	; 148
+     1de:	72 e0       	ldi	r23, 0x02	; 2
+     1e0:	80 e0       	ldi	r24, 0x00	; 0
+     1e2:	90 e0       	ldi	r25, 0x00	; 0
+     1e4:	5d df       	rcall	.-326    	; 0xa0 <playTune>
+		wait(300);
+     1e6:	8c e2       	ldi	r24, 0x2C	; 44
+     1e8:	91 e0       	ldi	r25, 0x01	; 1
+     1ea:	ac df       	rcall	.-168    	; 0x144 <wait>
+		playTune(770 ,100);
+     1ec:	24 e6       	ldi	r18, 0x64	; 100
+     1ee:	30 e0       	ldi	r19, 0x00	; 0
+     1f0:	40 e0       	ldi	r20, 0x00	; 0
+     1f2:	50 e0       	ldi	r21, 0x00	; 0
+     1f4:	62 e0       	ldi	r22, 0x02	; 2
+     1f6:	73 e0       	ldi	r23, 0x03	; 3
+     1f8:	80 e0       	ldi	r24, 0x00	; 0
+     1fa:	90 e0       	ldi	r25, 0x00	; 0
+     1fc:	51 df       	rcall	.-350    	; 0xa0 <playTune>
+		wait(550);
+     1fe:	86 e2       	ldi	r24, 0x26	; 38
+     200:	92 e0       	ldi	r25, 0x02	; 2
+     202:	a0 df       	rcall	.-192    	; 0x144 <wait>
+		playTune(380 ,100);
+     204:	24 e6       	ldi	r18, 0x64	; 100
+     206:	30 e0       	ldi	r19, 0x00	; 0
+     208:	40 e0       	ldi	r20, 0x00	; 0
+     20a:	50 e0       	ldi	r21, 0x00	; 0
+     20c:	6c e7       	ldi	r22, 0x7C	; 124
+     20e:	71 e0       	ldi	r23, 0x01	; 1
+     210:	80 e0       	ldi	r24, 0x00	; 0
+     212:	90 e0       	ldi	r25, 0x00	; 0
+     214:	45 df       	rcall	.-374    	; 0xa0 <playTune>
+		wait(575);
+     216:	8f e3       	ldi	r24, 0x3F	; 63
+     218:	92 e0       	ldi	r25, 0x02	; 2
+     21a:	94 df       	rcall	.-216    	; 0x144 <wait>
 
-	__builtin_avr_delay_cycles(__ticks_dc);
-  b8:	8f ec       	ldi	r24, 0xCF	; 207
-  ba:	97 e0       	ldi	r25, 0x07	; 7
-  bc:	01 97       	sbiw	r24, 0x01	; 1
-  be:	f1 f7       	brne	.-4      	; 0xbc <echoTimer+0x1e>
-  c0:	00 c0       	rjmp	.+0      	; 0xc2 <echoTimer+0x24>
-  c2:	00 00       	nop
-		
-		//delayMicroseconds(1000);
-		_delay_us(1000);
-		
-		//digitalWrite(trigPin, LOW);
-		PORTD = 0b00000000;
-  c4:	12 ba       	out	0x12, r1	; 18
-		//duration = pulseIn(echoPin, HIGH);
-		
-		
-		duration = 0;
-		int temp;
-		temp = PIND & 0b00000001;
-  c6:	80 b3       	in	r24, 0x10	; 16
-		
-	
-		
-		while(!temp){
-  c8:	98 2f       	mov	r25, r24
-  ca:	91 70       	andi	r25, 0x01	; 1
-  cc:	c9 2f       	mov	r28, r25
-  ce:	20 e0       	ldi	r18, 0x00	; 0
-  d0:	d2 2f       	mov	r29, r18
-  d2:	80 fd       	sbrc	r24, 0
-  d4:	08 c0       	rjmp	.+16     	; 0xe6 <echoTimer+0x48>
-			temp = PIND & 0b00000001;
-  d6:	80 b3       	in	r24, 0x10	; 16
-		int temp;
-		temp = PIND & 0b00000001;
-		
-	
-		
-		while(!temp){
-  d8:	98 2f       	mov	r25, r24
-  da:	91 70       	andi	r25, 0x01	; 1
-  dc:	c9 2f       	mov	r28, r25
-  de:	20 e0       	ldi	r18, 0x00	; 0
-  e0:	d2 2f       	mov	r29, r18
-  e2:	80 ff       	sbrs	r24, 0
-  e4:	f8 cf       	rjmp	.-16     	; 0xd6 <echoTimer+0x38>
-			temp = PIND & 0b00000001;
-		}
-		
-		TCNT1 = 0;
-  e6:	1d bc       	out	0x2d, r1	; 45
-  e8:	1c bc       	out	0x2c, r1	; 44
-		TCCR1B |= 0b10;
-  ea:	8e b5       	in	r24, 0x2e	; 46
-  ec:	82 60       	ori	r24, 0x02	; 2
-  ee:	8e bd       	out	0x2e, r24	; 46
-		while(temp && duration < 10000){
-  f0:	cd 2b       	or	r28, r29
-  f2:	11 f0       	breq	.+4      	; 0xf8 <echoTimer+0x5a>
-  f4:	80 99       	sbic	0x10, 0	; 16
-  f6:	fe cf       	rjmp	.-4      	; 0xf4 <echoTimer+0x56>
-			temp = PIND & 0b00000001;
-			//_delay_us(1);
-			//duration++;
-		}
-		TCCR1B = 0;
-  f8:	1e bc       	out	0x2e, r1	; 46
-		duration = TCNT1;
-  fa:	ec b4       	in	r14, 0x2c	; 44
-  fc:	fd b4       	in	r15, 0x2d	; 45
-		
-		distance = (duration/2) / 29.1;
-  fe:	b7 01       	movw	r22, r14
- 100:	ff 20       	and	r15, r15
- 102:	14 f4       	brge	.+4      	; 0x108 <echoTimer+0x6a>
- 104:	6f 5f       	subi	r22, 0xFF	; 255
- 106:	7f 4f       	sbci	r23, 0xFF	; 255
- 108:	75 95       	asr	r23
- 10a:	67 95       	ror	r22
- 10c:	07 2e       	mov	r0, r23
- 10e:	00 0c       	add	r0, r0
- 110:	88 0b       	sbc	r24, r24
- 112:	99 0b       	sbc	r25, r25
- 114:	ba d0       	rcall	.+372    	; 0x28a <__floatsisf>
- 116:	2d ec       	ldi	r18, 0xCD	; 205
- 118:	3c ec       	ldi	r19, 0xCC	; 204
- 11a:	48 ee       	ldi	r20, 0xE8	; 232
- 11c:	51 e4       	ldi	r21, 0x41	; 65
- 11e:	1a d0       	rcall	.+52     	; 0x154 <__divsf3>
- 120:	81 d0       	rcall	.+258    	; 0x224 <__fixsfsi>
- 122:	4b 01       	movw	r8, r22
- 124:	5c 01       	movw	r10, r24
-		PORTB = duration/10;
- 126:	c7 01       	movw	r24, r14
- 128:	b8 01       	movw	r22, r16
- 12a:	3b d1       	rcall	.+630    	; 0x3a2 <__divmodhi4>
- 12c:	68 bb       	out	0x18, r22	; 24
- 12e:	c4 01       	movw	r24, r8
-		if (distance >= 200 || distance <= 0){
- 130:	01 97       	sbiw	r24, 0x01	; 1
- 132:	87 3c       	cpi	r24, 0xC7	; 199
- 134:	91 05       	cpc	r25, r1
- 136:	10 f0       	brcs	.+4      	; 0x13c <echoTimer+0x9e>
- 138:	cb ba       	out	0x1b, r12	; 27
-			//Serial.println("Out of range");
-			PORTA = 0b11111111;
- 13a:	01 c0       	rjmp	.+2      	; 0x13e <echoTimer+0xa0>
- 13c:	8b ba       	out	0x1b, r8	; 27
-		}
-		else {
-			//Serial.print(distance);
-			//Serial.println(" cm");
-			PORTA = distance;
- 13e:	8f ef       	ldi	r24, 0xFF	; 255
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
+		playTune(510 ,100);
+     21c:	24 e6       	ldi	r18, 0x64	; 100
+     21e:	30 e0       	ldi	r19, 0x00	; 0
+     220:	40 e0       	ldi	r20, 0x00	; 0
+     222:	50 e0       	ldi	r21, 0x00	; 0
+     224:	6e ef       	ldi	r22, 0xFE	; 254
+     226:	71 e0       	ldi	r23, 0x01	; 1
+     228:	80 e0       	ldi	r24, 0x00	; 0
+     22a:	90 e0       	ldi	r25, 0x00	; 0
+     22c:	39 df       	rcall	.-398    	; 0xa0 <playTune>
+		wait(450);
+     22e:	82 ec       	ldi	r24, 0xC2	; 194
+     230:	91 e0       	ldi	r25, 0x01	; 1
+     232:	88 df       	rcall	.-240    	; 0x144 <wait>
+     234:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(380 ,100);
+     236:	30 e0       	ldi	r19, 0x00	; 0
+     238:	40 e0       	ldi	r20, 0x00	; 0
+     23a:	50 e0       	ldi	r21, 0x00	; 0
+     23c:	6c e7       	ldi	r22, 0x7C	; 124
+     23e:	71 e0       	ldi	r23, 0x01	; 1
+     240:	80 e0       	ldi	r24, 0x00	; 0
+     242:	90 e0       	ldi	r25, 0x00	; 0
+     244:	2d df       	rcall	.-422    	; 0xa0 <playTune>
+		wait(400);
+     246:	80 e9       	ldi	r24, 0x90	; 144
+     248:	91 e0       	ldi	r25, 0x01	; 1
+     24a:	7c df       	rcall	.-264    	; 0x144 <wait>
+     24c:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(320 ,100);
+     24e:	30 e0       	ldi	r19, 0x00	; 0
+     250:	40 e0       	ldi	r20, 0x00	; 0
+     252:	50 e0       	ldi	r21, 0x00	; 0
+     254:	60 e4       	ldi	r22, 0x40	; 64
+     256:	71 e0       	ldi	r23, 0x01	; 1
+     258:	80 e0       	ldi	r24, 0x00	; 0
+     25a:	90 e0       	ldi	r25, 0x00	; 0
+     25c:	21 df       	rcall	.-446    	; 0xa0 <playTune>
+		wait(500);
+     25e:	84 ef       	ldi	r24, 0xF4	; 244
+     260:	91 e0       	ldi	r25, 0x01	; 1
+     262:	70 df       	rcall	.-288    	; 0x144 <wait>
+     264:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(440 ,100);
+     266:	30 e0       	ldi	r19, 0x00	; 0
+     268:	40 e0       	ldi	r20, 0x00	; 0
+     26a:	50 e0       	ldi	r21, 0x00	; 0
+     26c:	68 eb       	ldi	r22, 0xB8	; 184
+     26e:	71 e0       	ldi	r23, 0x01	; 1
+     270:	80 e0       	ldi	r24, 0x00	; 0
+     272:	90 e0       	ldi	r25, 0x00	; 0
+     274:	15 df       	rcall	.-470    	; 0xa0 <playTune>
+		wait(300);
+     276:	8c e2       	ldi	r24, 0x2C	; 44
+     278:	91 e0       	ldi	r25, 0x01	; 1
+     27a:	64 df       	rcall	.-312    	; 0x144 <wait>
+		playTune(480 ,80);
+     27c:	20 e5       	ldi	r18, 0x50	; 80
+     27e:	30 e0       	ldi	r19, 0x00	; 0
+     280:	40 e0       	ldi	r20, 0x00	; 0
+     282:	50 e0       	ldi	r21, 0x00	; 0
+     284:	60 ee       	ldi	r22, 0xE0	; 224
+     286:	71 e0       	ldi	r23, 0x01	; 1
+     288:	80 e0       	ldi	r24, 0x00	; 0
+     28a:	90 e0       	ldi	r25, 0x00	; 0
+     28c:	09 df       	rcall	.-494    	; 0xa0 <playTune>
+		wait(330);
+     28e:	8a e4       	ldi	r24, 0x4A	; 74
+     290:	91 e0       	ldi	r25, 0x01	; 1
+     292:	58 df       	rcall	.-336    	; 0x144 <wait>
+		playTune(450 ,100);
+     294:	24 e6       	ldi	r18, 0x64	; 100
+     296:	30 e0       	ldi	r19, 0x00	; 0
+     298:	40 e0       	ldi	r20, 0x00	; 0
+     29a:	50 e0       	ldi	r21, 0x00	; 0
+     29c:	62 ec       	ldi	r22, 0xC2	; 194
+     29e:	71 e0       	ldi	r23, 0x01	; 1
+     2a0:	80 e0       	ldi	r24, 0x00	; 0
+     2a2:	90 e0       	ldi	r25, 0x00	; 0
+     2a4:	fd de       	rcall	.-518    	; 0xa0 <playTune>
+		wait(150);
+     2a6:	86 e9       	ldi	r24, 0x96	; 150
+     2a8:	90 e0       	ldi	r25, 0x00	; 0
+     2aa:	4c df       	rcall	.-360    	; 0x144 <wait>
+		playTune(430 ,100);
+     2ac:	24 e6       	ldi	r18, 0x64	; 100
+     2ae:	30 e0       	ldi	r19, 0x00	; 0
+     2b0:	40 e0       	ldi	r20, 0x00	; 0
+     2b2:	50 e0       	ldi	r21, 0x00	; 0
+     2b4:	6e ea       	ldi	r22, 0xAE	; 174
+     2b6:	71 e0       	ldi	r23, 0x01	; 1
+     2b8:	80 e0       	ldi	r24, 0x00	; 0
+     2ba:	90 e0       	ldi	r25, 0x00	; 0
+     2bc:	f1 de       	rcall	.-542    	; 0xa0 <playTune>
+		wait(300);
+     2be:	8c e2       	ldi	r24, 0x2C	; 44
+     2c0:	91 e0       	ldi	r25, 0x01	; 1
+     2c2:	40 df       	rcall	.-384    	; 0x144 <wait>
+     2c4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(380 ,100);
+     2c6:	30 e0       	ldi	r19, 0x00	; 0
+     2c8:	40 e0       	ldi	r20, 0x00	; 0
+     2ca:	50 e0       	ldi	r21, 0x00	; 0
+     2cc:	6c e7       	ldi	r22, 0x7C	; 124
+     2ce:	71 e0       	ldi	r23, 0x01	; 1
+     2d0:	80 e0       	ldi	r24, 0x00	; 0
+     2d2:	90 e0       	ldi	r25, 0x00	; 0
+     2d4:	e5 de       	rcall	.-566    	; 0xa0 <playTune>
+		wait(200);
+     2d6:	88 ec       	ldi	r24, 0xC8	; 200
+     2d8:	90 e0       	ldi	r25, 0x00	; 0
+     2da:	34 df       	rcall	.-408    	; 0x144 <wait>
+     2dc:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(660 ,80);
+     2de:	30 e0       	ldi	r19, 0x00	; 0
+     2e0:	40 e0       	ldi	r20, 0x00	; 0
+     2e2:	50 e0       	ldi	r21, 0x00	; 0
+     2e4:	64 e9       	ldi	r22, 0x94	; 148
+     2e6:	72 e0       	ldi	r23, 0x02	; 2
+     2e8:	80 e0       	ldi	r24, 0x00	; 0
+     2ea:	90 e0       	ldi	r25, 0x00	; 0
+     2ec:	d9 de       	rcall	.-590    	; 0xa0 <playTune>
+		wait(200);
+     2ee:	88 ec       	ldi	r24, 0xC8	; 200
+     2f0:	90 e0       	ldi	r25, 0x00	; 0
+     2f2:	28 df       	rcall	.-432    	; 0x144 <wait>
+     2f4:	22 e3       	ldi	r18, 0x32	; 50
+		playTune(760 ,50);
+     2f6:	30 e0       	ldi	r19, 0x00	; 0
+     2f8:	40 e0       	ldi	r20, 0x00	; 0
+     2fa:	50 e0       	ldi	r21, 0x00	; 0
+     2fc:	68 ef       	ldi	r22, 0xF8	; 248
+     2fe:	72 e0       	ldi	r23, 0x02	; 2
+     300:	80 e0       	ldi	r24, 0x00	; 0
+     302:	90 e0       	ldi	r25, 0x00	; 0
+     304:	cd de       	rcall	.-614    	; 0xa0 <playTune>
+		wait(150);
+     306:	86 e9       	ldi	r24, 0x96	; 150
+     308:	90 e0       	ldi	r25, 0x00	; 0
+     30a:	1c df       	rcall	.-456    	; 0x144 <wait>
+		playTune(860 ,100);
+     30c:	24 e6       	ldi	r18, 0x64	; 100
+     30e:	30 e0       	ldi	r19, 0x00	; 0
+     310:	40 e0       	ldi	r20, 0x00	; 0
+     312:	50 e0       	ldi	r21, 0x00	; 0
+     314:	6c e5       	ldi	r22, 0x5C	; 92
+     316:	73 e0       	ldi	r23, 0x03	; 3
+     318:	80 e0       	ldi	r24, 0x00	; 0
+     31a:	90 e0       	ldi	r25, 0x00	; 0
+     31c:	c1 de       	rcall	.-638    	; 0xa0 <playTune>
+		wait(300);
+     31e:	8c e2       	ldi	r24, 0x2C	; 44
+     320:	91 e0       	ldi	r25, 0x01	; 1
+     322:	10 df       	rcall	.-480    	; 0x144 <wait>
+		playTune(700 ,80);
+     324:	20 e5       	ldi	r18, 0x50	; 80
+     326:	30 e0       	ldi	r19, 0x00	; 0
+     328:	40 e0       	ldi	r20, 0x00	; 0
+     32a:	50 e0       	ldi	r21, 0x00	; 0
+     32c:	6c eb       	ldi	r22, 0xBC	; 188
+     32e:	72 e0       	ldi	r23, 0x02	; 2
+     330:	80 e0       	ldi	r24, 0x00	; 0
+     332:	90 e0       	ldi	r25, 0x00	; 0
+     334:	b5 de       	rcall	.-662    	; 0xa0 <playTune>
+		wait(150);
+     336:	86 e9       	ldi	r24, 0x96	; 150
+     338:	90 e0       	ldi	r25, 0x00	; 0
+     33a:	04 df       	rcall	.-504    	; 0x144 <wait>
+		playTune(760 ,50);
+     33c:	22 e3       	ldi	r18, 0x32	; 50
+     33e:	30 e0       	ldi	r19, 0x00	; 0
+     340:	40 e0       	ldi	r20, 0x00	; 0
+     342:	50 e0       	ldi	r21, 0x00	; 0
+     344:	68 ef       	ldi	r22, 0xF8	; 248
+     346:	72 e0       	ldi	r23, 0x02	; 2
+     348:	80 e0       	ldi	r24, 0x00	; 0
+     34a:	90 e0       	ldi	r25, 0x00	; 0
+     34c:	a9 de       	rcall	.-686    	; 0xa0 <playTune>
+		wait(350);
+     34e:	8e e5       	ldi	r24, 0x5E	; 94
+     350:	91 e0       	ldi	r25, 0x01	; 1
+     352:	f8 de       	rcall	.-528    	; 0x144 <wait>
+     354:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(660 ,80);
+     356:	30 e0       	ldi	r19, 0x00	; 0
+     358:	40 e0       	ldi	r20, 0x00	; 0
+     35a:	50 e0       	ldi	r21, 0x00	; 0
+     35c:	64 e9       	ldi	r22, 0x94	; 148
+     35e:	72 e0       	ldi	r23, 0x02	; 2
+     360:	80 e0       	ldi	r24, 0x00	; 0
+     362:	90 e0       	ldi	r25, 0x00	; 0
+     364:	9d de       	rcall	.-710    	; 0xa0 <playTune>
+		wait(300);
+     366:	8c e2       	ldi	r24, 0x2C	; 44
+     368:	91 e0       	ldi	r25, 0x01	; 1
+     36a:	ec de       	rcall	.-552    	; 0x144 <wait>
+     36c:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(520 ,80);
+     36e:	30 e0       	ldi	r19, 0x00	; 0
+     370:	40 e0       	ldi	r20, 0x00	; 0
+     372:	50 e0       	ldi	r21, 0x00	; 0
+     374:	68 e0       	ldi	r22, 0x08	; 8
+     376:	72 e0       	ldi	r23, 0x02	; 2
+     378:	80 e0       	ldi	r24, 0x00	; 0
+     37a:	90 e0       	ldi	r25, 0x00	; 0
+     37c:	91 de       	rcall	.-734    	; 0xa0 <playTune>
+		wait(150);
+     37e:	86 e9       	ldi	r24, 0x96	; 150
+     380:	90 e0       	ldi	r25, 0x00	; 0
+     382:	e0 de       	rcall	.-576    	; 0x144 <wait>
+     384:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(580 ,80);
+     386:	30 e0       	ldi	r19, 0x00	; 0
+     388:	40 e0       	ldi	r20, 0x00	; 0
+     38a:	50 e0       	ldi	r21, 0x00	; 0
+     38c:	64 e4       	ldi	r22, 0x44	; 68
+     38e:	72 e0       	ldi	r23, 0x02	; 2
+     390:	80 e0       	ldi	r24, 0x00	; 0
+     392:	90 e0       	ldi	r25, 0x00	; 0
+     394:	85 de       	rcall	.-758    	; 0xa0 <playTune>
+		wait(150);
+     396:	86 e9       	ldi	r24, 0x96	; 150
+     398:	90 e0       	ldi	r25, 0x00	; 0
+     39a:	d4 de       	rcall	.-600    	; 0x144 <wait>
+		playTune(480 ,80);
+     39c:	20 e5       	ldi	r18, 0x50	; 80
+     39e:	30 e0       	ldi	r19, 0x00	; 0
+     3a0:	40 e0       	ldi	r20, 0x00	; 0
+     3a2:	50 e0       	ldi	r21, 0x00	; 0
+     3a4:	60 ee       	ldi	r22, 0xE0	; 224
+     3a6:	71 e0       	ldi	r23, 0x01	; 1
+     3a8:	80 e0       	ldi	r24, 0x00	; 0
+     3aa:	90 e0       	ldi	r25, 0x00	; 0
+     3ac:	79 de       	rcall	.-782    	; 0xa0 <playTune>
+		wait(500);
+     3ae:	84 ef       	ldi	r24, 0xF4	; 244
+     3b0:	91 e0       	ldi	r25, 0x01	; 1
+     3b2:	c8 de       	rcall	.-624    	; 0x144 <wait>
 
-	__builtin_avr_delay_cycles(__ticks_dc);
- 140:	91 ee       	ldi	r25, 0xE1	; 225
- 142:	24 e0       	ldi	r18, 0x04	; 4
- 144:	81 50       	subi	r24, 0x01	; 1
- 146:	90 40       	sbci	r25, 0x00	; 0
- 148:	20 40       	sbci	r18, 0x00	; 0
- 14a:	e1 f7       	brne	.-8      	; 0x144 <echoTimer+0xa6>
- 14c:	00 c0       	rjmp	.+0      	; 0x14e <echoTimer+0xb0>
- 14e:	00 00       	nop
- 150:	b2 cf       	rjmp	.-156    	; 0xb6 <echoTimer+0x18>
+		playTune(510 ,100);
+     3b4:	24 e6       	ldi	r18, 0x64	; 100
+     3b6:	30 e0       	ldi	r19, 0x00	; 0
+     3b8:	40 e0       	ldi	r20, 0x00	; 0
+     3ba:	50 e0       	ldi	r21, 0x00	; 0
+     3bc:	6e ef       	ldi	r22, 0xFE	; 254
+     3be:	71 e0       	ldi	r23, 0x01	; 1
+     3c0:	80 e0       	ldi	r24, 0x00	; 0
+     3c2:	90 e0       	ldi	r25, 0x00	; 0
+     3c4:	6d de       	rcall	.-806    	; 0xa0 <playTune>
+		wait(450);
+     3c6:	82 ec       	ldi	r24, 0xC2	; 194
+     3c8:	91 e0       	ldi	r25, 0x01	; 1
+     3ca:	bc de       	rcall	.-648    	; 0x144 <wait>
+		playTune(380 ,100);
+     3cc:	24 e6       	ldi	r18, 0x64	; 100
+     3ce:	30 e0       	ldi	r19, 0x00	; 0
+     3d0:	40 e0       	ldi	r20, 0x00	; 0
+     3d2:	50 e0       	ldi	r21, 0x00	; 0
+     3d4:	6c e7       	ldi	r22, 0x7C	; 124
+     3d6:	71 e0       	ldi	r23, 0x01	; 1
+     3d8:	80 e0       	ldi	r24, 0x00	; 0
+     3da:	90 e0       	ldi	r25, 0x00	; 0
+     3dc:	61 de       	rcall	.-830    	; 0xa0 <playTune>
+		wait(400);
+     3de:	80 e9       	ldi	r24, 0x90	; 144
+     3e0:	91 e0       	ldi	r25, 0x01	; 1
+     3e2:	b0 de       	rcall	.-672    	; 0x144 <wait>
+     3e4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(320 ,100);
+     3e6:	30 e0       	ldi	r19, 0x00	; 0
+     3e8:	40 e0       	ldi	r20, 0x00	; 0
+     3ea:	50 e0       	ldi	r21, 0x00	; 0
+     3ec:	60 e4       	ldi	r22, 0x40	; 64
+     3ee:	71 e0       	ldi	r23, 0x01	; 1
+     3f0:	80 e0       	ldi	r24, 0x00	; 0
+     3f2:	90 e0       	ldi	r25, 0x00	; 0
+     3f4:	55 de       	rcall	.-854    	; 0xa0 <playTune>
+		wait(500);
+     3f6:	84 ef       	ldi	r24, 0xF4	; 244
+     3f8:	91 e0       	ldi	r25, 0x01	; 1
+     3fa:	a4 de       	rcall	.-696    	; 0x144 <wait>
+     3fc:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(440 ,100);
+     3fe:	30 e0       	ldi	r19, 0x00	; 0
+     400:	40 e0       	ldi	r20, 0x00	; 0
+     402:	50 e0       	ldi	r21, 0x00	; 0
+     404:	68 eb       	ldi	r22, 0xB8	; 184
+     406:	71 e0       	ldi	r23, 0x01	; 1
+     408:	80 e0       	ldi	r24, 0x00	; 0
+     40a:	90 e0       	ldi	r25, 0x00	; 0
+     40c:	49 de       	rcall	.-878    	; 0xa0 <playTune>
+		wait(300);
+     40e:	8c e2       	ldi	r24, 0x2C	; 44
+     410:	91 e0       	ldi	r25, 0x01	; 1
+     412:	98 de       	rcall	.-720    	; 0x144 <wait>
+     414:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(480 ,80);
+     416:	30 e0       	ldi	r19, 0x00	; 0
+     418:	40 e0       	ldi	r20, 0x00	; 0
+     41a:	50 e0       	ldi	r21, 0x00	; 0
+     41c:	60 ee       	ldi	r22, 0xE0	; 224
+     41e:	71 e0       	ldi	r23, 0x01	; 1
+     420:	80 e0       	ldi	r24, 0x00	; 0
+     422:	90 e0       	ldi	r25, 0x00	; 0
+     424:	3d de       	rcall	.-902    	; 0xa0 <playTune>
+		wait(330);
+     426:	8a e4       	ldi	r24, 0x4A	; 74
+     428:	91 e0       	ldi	r25, 0x01	; 1
+     42a:	8c de       	rcall	.-744    	; 0x144 <wait>
+		playTune(450 ,100);
+     42c:	24 e6       	ldi	r18, 0x64	; 100
+     42e:	30 e0       	ldi	r19, 0x00	; 0
+     430:	40 e0       	ldi	r20, 0x00	; 0
+     432:	50 e0       	ldi	r21, 0x00	; 0
+     434:	62 ec       	ldi	r22, 0xC2	; 194
+     436:	71 e0       	ldi	r23, 0x01	; 1
+     438:	80 e0       	ldi	r24, 0x00	; 0
+     43a:	90 e0       	ldi	r25, 0x00	; 0
+     43c:	31 de       	rcall	.-926    	; 0xa0 <playTune>
+		wait(150);
+     43e:	86 e9       	ldi	r24, 0x96	; 150
+     440:	90 e0       	ldi	r25, 0x00	; 0
+     442:	80 de       	rcall	.-768    	; 0x144 <wait>
+		playTune(430 ,100);
+     444:	24 e6       	ldi	r18, 0x64	; 100
+     446:	30 e0       	ldi	r19, 0x00	; 0
+     448:	40 e0       	ldi	r20, 0x00	; 0
+     44a:	50 e0       	ldi	r21, 0x00	; 0
+     44c:	6e ea       	ldi	r22, 0xAE	; 174
+     44e:	71 e0       	ldi	r23, 0x01	; 1
+     450:	80 e0       	ldi	r24, 0x00	; 0
+     452:	90 e0       	ldi	r25, 0x00	; 0
+     454:	25 de       	rcall	.-950    	; 0xa0 <playTune>
+		wait(300);
+     456:	8c e2       	ldi	r24, 0x2C	; 44
+     458:	91 e0       	ldi	r25, 0x01	; 1
+     45a:	74 de       	rcall	.-792    	; 0x144 <wait>
+		playTune(380 ,100);
+     45c:	24 e6       	ldi	r18, 0x64	; 100
+     45e:	30 e0       	ldi	r19, 0x00	; 0
+     460:	40 e0       	ldi	r20, 0x00	; 0
+     462:	50 e0       	ldi	r21, 0x00	; 0
+     464:	6c e7       	ldi	r22, 0x7C	; 124
+     466:	71 e0       	ldi	r23, 0x01	; 1
+     468:	80 e0       	ldi	r24, 0x00	; 0
+     46a:	90 e0       	ldi	r25, 0x00	; 0
+     46c:	19 de       	rcall	.-974    	; 0xa0 <playTune>
+		wait(200);
+     46e:	88 ec       	ldi	r24, 0xC8	; 200
+     470:	90 e0       	ldi	r25, 0x00	; 0
+     472:	68 de       	rcall	.-816    	; 0x144 <wait>
+     474:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(660 ,80);
+     476:	30 e0       	ldi	r19, 0x00	; 0
+     478:	40 e0       	ldi	r20, 0x00	; 0
+     47a:	50 e0       	ldi	r21, 0x00	; 0
+     47c:	64 e9       	ldi	r22, 0x94	; 148
+     47e:	72 e0       	ldi	r23, 0x02	; 2
+     480:	80 e0       	ldi	r24, 0x00	; 0
+     482:	90 e0       	ldi	r25, 0x00	; 0
+     484:	0d de       	rcall	.-998    	; 0xa0 <playTune>
+		wait(200);
+     486:	88 ec       	ldi	r24, 0xC8	; 200
+     488:	90 e0       	ldi	r25, 0x00	; 0
+     48a:	5c de       	rcall	.-840    	; 0x144 <wait>
+     48c:	22 e3       	ldi	r18, 0x32	; 50
+		playTune(760 ,50);
+     48e:	30 e0       	ldi	r19, 0x00	; 0
+     490:	40 e0       	ldi	r20, 0x00	; 0
+     492:	50 e0       	ldi	r21, 0x00	; 0
+     494:	68 ef       	ldi	r22, 0xF8	; 248
+     496:	72 e0       	ldi	r23, 0x02	; 2
+     498:	80 e0       	ldi	r24, 0x00	; 0
+     49a:	90 e0       	ldi	r25, 0x00	; 0
+     49c:	01 de       	rcall	.-1022   	; 0xa0 <playTune>
+		wait(150);
+     49e:	86 e9       	ldi	r24, 0x96	; 150
+     4a0:	90 e0       	ldi	r25, 0x00	; 0
+     4a2:	50 de       	rcall	.-864    	; 0x144 <wait>
+     4a4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(860 ,100);
+     4a6:	30 e0       	ldi	r19, 0x00	; 0
+     4a8:	40 e0       	ldi	r20, 0x00	; 0
+     4aa:	50 e0       	ldi	r21, 0x00	; 0
+     4ac:	6c e5       	ldi	r22, 0x5C	; 92
+     4ae:	73 e0       	ldi	r23, 0x03	; 3
+     4b0:	80 e0       	ldi	r24, 0x00	; 0
+     4b2:	90 e0       	ldi	r25, 0x00	; 0
+     4b4:	f5 dd       	rcall	.-1046   	; 0xa0 <playTune>
+		wait(300);
+     4b6:	8c e2       	ldi	r24, 0x2C	; 44
+     4b8:	91 e0       	ldi	r25, 0x01	; 1
+     4ba:	44 de       	rcall	.-888    	; 0x144 <wait>
+		playTune(700 ,80);
+     4bc:	20 e5       	ldi	r18, 0x50	; 80
+     4be:	30 e0       	ldi	r19, 0x00	; 0
+     4c0:	40 e0       	ldi	r20, 0x00	; 0
+     4c2:	50 e0       	ldi	r21, 0x00	; 0
+     4c4:	6c eb       	ldi	r22, 0xBC	; 188
+     4c6:	72 e0       	ldi	r23, 0x02	; 2
+     4c8:	80 e0       	ldi	r24, 0x00	; 0
+     4ca:	90 e0       	ldi	r25, 0x00	; 0
+     4cc:	e9 dd       	rcall	.-1070   	; 0xa0 <playTune>
+		wait(150);
+     4ce:	86 e9       	ldi	r24, 0x96	; 150
+     4d0:	90 e0       	ldi	r25, 0x00	; 0
+     4d2:	38 de       	rcall	.-912    	; 0x144 <wait>
+		playTune(760 ,50);
+     4d4:	22 e3       	ldi	r18, 0x32	; 50
+     4d6:	30 e0       	ldi	r19, 0x00	; 0
+     4d8:	40 e0       	ldi	r20, 0x00	; 0
+     4da:	50 e0       	ldi	r21, 0x00	; 0
+     4dc:	68 ef       	ldi	r22, 0xF8	; 248
+     4de:	72 e0       	ldi	r23, 0x02	; 2
+     4e0:	80 e0       	ldi	r24, 0x00	; 0
+     4e2:	90 e0       	ldi	r25, 0x00	; 0
+     4e4:	dd dd       	rcall	.-1094   	; 0xa0 <playTune>
+		wait(350);
+     4e6:	8e e5       	ldi	r24, 0x5E	; 94
+     4e8:	91 e0       	ldi	r25, 0x01	; 1
+     4ea:	2c de       	rcall	.-936    	; 0x144 <wait>
+		playTune(660 ,80);
+     4ec:	20 e5       	ldi	r18, 0x50	; 80
+     4ee:	30 e0       	ldi	r19, 0x00	; 0
+     4f0:	40 e0       	ldi	r20, 0x00	; 0
+     4f2:	50 e0       	ldi	r21, 0x00	; 0
+     4f4:	64 e9       	ldi	r22, 0x94	; 148
+     4f6:	72 e0       	ldi	r23, 0x02	; 2
+     4f8:	80 e0       	ldi	r24, 0x00	; 0
+     4fa:	90 e0       	ldi	r25, 0x00	; 0
+     4fc:	d1 dd       	rcall	.-1118   	; 0xa0 <playTune>
+		wait(300);
+     4fe:	8c e2       	ldi	r24, 0x2C	; 44
+     500:	91 e0       	ldi	r25, 0x01	; 1
+     502:	20 de       	rcall	.-960    	; 0x144 <wait>
+     504:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(520 ,80);
+     506:	30 e0       	ldi	r19, 0x00	; 0
+     508:	40 e0       	ldi	r20, 0x00	; 0
+     50a:	50 e0       	ldi	r21, 0x00	; 0
+     50c:	68 e0       	ldi	r22, 0x08	; 8
+     50e:	72 e0       	ldi	r23, 0x02	; 2
+     510:	80 e0       	ldi	r24, 0x00	; 0
+     512:	90 e0       	ldi	r25, 0x00	; 0
+     514:	c5 dd       	rcall	.-1142   	; 0xa0 <playTune>
+		wait(150);
+     516:	86 e9       	ldi	r24, 0x96	; 150
+     518:	90 e0       	ldi	r25, 0x00	; 0
+     51a:	14 de       	rcall	.-984    	; 0x144 <wait>
+     51c:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(580 ,80);
+     51e:	30 e0       	ldi	r19, 0x00	; 0
+     520:	40 e0       	ldi	r20, 0x00	; 0
+     522:	50 e0       	ldi	r21, 0x00	; 0
+     524:	64 e4       	ldi	r22, 0x44	; 68
+     526:	72 e0       	ldi	r23, 0x02	; 2
+     528:	80 e0       	ldi	r24, 0x00	; 0
+     52a:	90 e0       	ldi	r25, 0x00	; 0
+     52c:	b9 dd       	rcall	.-1166   	; 0xa0 <playTune>
+		wait(150);
+     52e:	86 e9       	ldi	r24, 0x96	; 150
+     530:	90 e0       	ldi	r25, 0x00	; 0
+     532:	08 de       	rcall	.-1008   	; 0x144 <wait>
+     534:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(480 ,80);
+     536:	30 e0       	ldi	r19, 0x00	; 0
+     538:	40 e0       	ldi	r20, 0x00	; 0
+     53a:	50 e0       	ldi	r21, 0x00	; 0
+     53c:	60 ee       	ldi	r22, 0xE0	; 224
+     53e:	71 e0       	ldi	r23, 0x01	; 1
+     540:	80 e0       	ldi	r24, 0x00	; 0
+     542:	90 e0       	ldi	r25, 0x00	; 0
+     544:	ad dd       	rcall	.-1190   	; 0xa0 <playTune>
+		wait(500);
+     546:	84 ef       	ldi	r24, 0xF4	; 244
+     548:	91 e0       	ldi	r25, 0x01	; 1
+     54a:	fc dd       	rcall	.-1032   	; 0x144 <wait>
 
-00000152 <main>:
- 152:	a5 df       	rcall	.-182    	; 0x9e <echoTimer>
+		playTune(500 ,100);
+     54c:	24 e6       	ldi	r18, 0x64	; 100
+     54e:	30 e0       	ldi	r19, 0x00	; 0
+     550:	40 e0       	ldi	r20, 0x00	; 0
+     552:	50 e0       	ldi	r21, 0x00	; 0
+     554:	64 ef       	ldi	r22, 0xF4	; 244
+     556:	71 e0       	ldi	r23, 0x01	; 1
+     558:	80 e0       	ldi	r24, 0x00	; 0
+     55a:	90 e0       	ldi	r25, 0x00	; 0
+     55c:	a1 dd       	rcall	.-1214   	; 0xa0 <playTune>
+		wait(300);
+     55e:	8c e2       	ldi	r24, 0x2C	; 44
+     560:	91 e0       	ldi	r25, 0x01	; 1
+     562:	f0 dd       	rcall	.-1056   	; 0x144 <wait>
 
-00000154 <__divsf3>:
- 154:	0c d0       	rcall	.+24     	; 0x16e <__divsf3x>
- 156:	eb c0       	rjmp	.+470    	; 0x32e <__fp_round>
- 158:	e3 d0       	rcall	.+454    	; 0x320 <__fp_pscB>
- 15a:	40 f0       	brcs	.+16     	; 0x16c <__divsf3+0x18>
- 15c:	da d0       	rcall	.+436    	; 0x312 <__fp_pscA>
- 15e:	30 f0       	brcs	.+12     	; 0x16c <__divsf3+0x18>
- 160:	21 f4       	brne	.+8      	; 0x16a <__divsf3+0x16>
- 162:	5f 3f       	cpi	r21, 0xFF	; 255
- 164:	19 f0       	breq	.+6      	; 0x16c <__divsf3+0x18>
- 166:	cc c0       	rjmp	.+408    	; 0x300 <__fp_inf>
- 168:	51 11       	cpse	r21, r1
- 16a:	15 c1       	rjmp	.+554    	; 0x396 <__fp_szero>
- 16c:	cf c0       	rjmp	.+414    	; 0x30c <__fp_nan>
+		playTune(760 ,100);
+     564:	24 e6       	ldi	r18, 0x64	; 100
+     566:	30 e0       	ldi	r19, 0x00	; 0
+     568:	40 e0       	ldi	r20, 0x00	; 0
+     56a:	50 e0       	ldi	r21, 0x00	; 0
+     56c:	68 ef       	ldi	r22, 0xF8	; 248
+     56e:	72 e0       	ldi	r23, 0x02	; 2
+     570:	80 e0       	ldi	r24, 0x00	; 0
+     572:	90 e0       	ldi	r25, 0x00	; 0
+     574:	95 dd       	rcall	.-1238   	; 0xa0 <playTune>
+		wait(100);
+     576:	84 e6       	ldi	r24, 0x64	; 100
+     578:	90 e0       	ldi	r25, 0x00	; 0
+     57a:	e4 dd       	rcall	.-1080   	; 0x144 <wait>
+		playTune(720 ,100);
+     57c:	24 e6       	ldi	r18, 0x64	; 100
+     57e:	30 e0       	ldi	r19, 0x00	; 0
+     580:	40 e0       	ldi	r20, 0x00	; 0
+     582:	50 e0       	ldi	r21, 0x00	; 0
+     584:	60 ed       	ldi	r22, 0xD0	; 208
+     586:	72 e0       	ldi	r23, 0x02	; 2
+     588:	80 e0       	ldi	r24, 0x00	; 0
+     58a:	90 e0       	ldi	r25, 0x00	; 0
+     58c:	89 dd       	rcall	.-1262   	; 0xa0 <playTune>
+		wait(150);
+     58e:	86 e9       	ldi	r24, 0x96	; 150
+     590:	90 e0       	ldi	r25, 0x00	; 0
+     592:	d8 dd       	rcall	.-1104   	; 0x144 <wait>
+     594:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(680 ,100);
+     596:	30 e0       	ldi	r19, 0x00	; 0
+     598:	40 e0       	ldi	r20, 0x00	; 0
+     59a:	50 e0       	ldi	r21, 0x00	; 0
+     59c:	68 ea       	ldi	r22, 0xA8	; 168
+     59e:	72 e0       	ldi	r23, 0x02	; 2
+     5a0:	80 e0       	ldi	r24, 0x00	; 0
+     5a2:	90 e0       	ldi	r25, 0x00	; 0
+     5a4:	7d dd       	rcall	.-1286   	; 0xa0 <playTune>
+		wait(150);
+     5a6:	86 e9       	ldi	r24, 0x96	; 150
+     5a8:	90 e0       	ldi	r25, 0x00	; 0
+     5aa:	cc dd       	rcall	.-1128   	; 0x144 <wait>
+     5ac:	26 e9       	ldi	r18, 0x96	; 150
+		playTune(620 ,150);
+     5ae:	30 e0       	ldi	r19, 0x00	; 0
+     5b0:	40 e0       	ldi	r20, 0x00	; 0
+     5b2:	50 e0       	ldi	r21, 0x00	; 0
+     5b4:	6c e6       	ldi	r22, 0x6C	; 108
+     5b6:	72 e0       	ldi	r23, 0x02	; 2
+     5b8:	80 e0       	ldi	r24, 0x00	; 0
+     5ba:	90 e0       	ldi	r25, 0x00	; 0
+     5bc:	71 dd       	rcall	.-1310   	; 0xa0 <playTune>
+		wait(300);
+     5be:	8c e2       	ldi	r24, 0x2C	; 44
+     5c0:	91 e0       	ldi	r25, 0x01	; 1
+     5c2:	c0 dd       	rcall	.-1152   	; 0x144 <wait>
+     5c4:	26 e9       	ldi	r18, 0x96	; 150
 
-0000016e <__divsf3x>:
- 16e:	f0 d0       	rcall	.+480    	; 0x350 <__fp_split3>
- 170:	98 f3       	brcs	.-26     	; 0x158 <__divsf3+0x4>
+		playTune(650 ,150);
+     5c6:	30 e0       	ldi	r19, 0x00	; 0
+     5c8:	40 e0       	ldi	r20, 0x00	; 0
+     5ca:	50 e0       	ldi	r21, 0x00	; 0
+     5cc:	6a e8       	ldi	r22, 0x8A	; 138
+     5ce:	72 e0       	ldi	r23, 0x02	; 2
+     5d0:	80 e0       	ldi	r24, 0x00	; 0
+     5d2:	90 e0       	ldi	r25, 0x00	; 0
+     5d4:	65 dd       	rcall	.-1334   	; 0xa0 <playTune>
+		wait(300);
+     5d6:	8c e2       	ldi	r24, 0x2C	; 44
+     5d8:	91 e0       	ldi	r25, 0x01	; 1
+     5da:	b4 dd       	rcall	.-1176   	; 0x144 <wait>
+		playTune(380 ,100);
+     5dc:	24 e6       	ldi	r18, 0x64	; 100
+     5de:	30 e0       	ldi	r19, 0x00	; 0
+     5e0:	40 e0       	ldi	r20, 0x00	; 0
+     5e2:	50 e0       	ldi	r21, 0x00	; 0
+     5e4:	6c e7       	ldi	r22, 0x7C	; 124
+     5e6:	71 e0       	ldi	r23, 0x01	; 1
+     5e8:	80 e0       	ldi	r24, 0x00	; 0
+     5ea:	90 e0       	ldi	r25, 0x00	; 0
+     5ec:	59 dd       	rcall	.-1358   	; 0xa0 <playTune>
+		wait(150);
+     5ee:	86 e9       	ldi	r24, 0x96	; 150
+     5f0:	90 e0       	ldi	r25, 0x00	; 0
+     5f2:	a8 dd       	rcall	.-1200   	; 0x144 <wait>
+		playTune(430 ,100);
+     5f4:	24 e6       	ldi	r18, 0x64	; 100
+     5f6:	30 e0       	ldi	r19, 0x00	; 0
+     5f8:	40 e0       	ldi	r20, 0x00	; 0
+     5fa:	50 e0       	ldi	r21, 0x00	; 0
+     5fc:	6e ea       	ldi	r22, 0xAE	; 174
+     5fe:	71 e0       	ldi	r23, 0x01	; 1
+     600:	80 e0       	ldi	r24, 0x00	; 0
+     602:	90 e0       	ldi	r25, 0x00	; 0
+     604:	4d dd       	rcall	.-1382   	; 0xa0 <playTune>
+		wait(150);
+     606:	86 e9       	ldi	r24, 0x96	; 150
+     608:	90 e0       	ldi	r25, 0x00	; 0
+     60a:	9c dd       	rcall	.-1224   	; 0x144 <wait>
 
-00000172 <__divsf3_pse>:
- 172:	99 23       	and	r25, r25
- 174:	c9 f3       	breq	.-14     	; 0x168 <__divsf3+0x14>
- 176:	55 23       	and	r21, r21
- 178:	b1 f3       	breq	.-20     	; 0x166 <__divsf3+0x12>
- 17a:	95 1b       	sub	r25, r21
- 17c:	55 0b       	sbc	r21, r21
- 17e:	bb 27       	eor	r27, r27
- 180:	aa 27       	eor	r26, r26
- 182:	62 17       	cp	r22, r18
- 184:	73 07       	cpc	r23, r19
- 186:	84 07       	cpc	r24, r20
- 188:	38 f0       	brcs	.+14     	; 0x198 <__divsf3_pse+0x26>
- 18a:	9f 5f       	subi	r25, 0xFF	; 255
- 18c:	5f 4f       	sbci	r21, 0xFF	; 255
- 18e:	22 0f       	add	r18, r18
- 190:	33 1f       	adc	r19, r19
- 192:	44 1f       	adc	r20, r20
- 194:	aa 1f       	adc	r26, r26
- 196:	a9 f3       	breq	.-22     	; 0x182 <__divsf3_pse+0x10>
- 198:	33 d0       	rcall	.+102    	; 0x200 <__divsf3_pse+0x8e>
- 19a:	0e 2e       	mov	r0, r30
- 19c:	3a f0       	brmi	.+14     	; 0x1ac <__divsf3_pse+0x3a>
- 19e:	e0 e8       	ldi	r30, 0x80	; 128
- 1a0:	30 d0       	rcall	.+96     	; 0x202 <__divsf3_pse+0x90>
- 1a2:	91 50       	subi	r25, 0x01	; 1
- 1a4:	50 40       	sbci	r21, 0x00	; 0
- 1a6:	e6 95       	lsr	r30
- 1a8:	00 1c       	adc	r0, r0
- 1aa:	ca f7       	brpl	.-14     	; 0x19e <__divsf3_pse+0x2c>
- 1ac:	29 d0       	rcall	.+82     	; 0x200 <__divsf3_pse+0x8e>
- 1ae:	fe 2f       	mov	r31, r30
- 1b0:	27 d0       	rcall	.+78     	; 0x200 <__divsf3_pse+0x8e>
- 1b2:	66 0f       	add	r22, r22
- 1b4:	77 1f       	adc	r23, r23
- 1b6:	88 1f       	adc	r24, r24
- 1b8:	bb 1f       	adc	r27, r27
- 1ba:	26 17       	cp	r18, r22
- 1bc:	37 07       	cpc	r19, r23
- 1be:	48 07       	cpc	r20, r24
- 1c0:	ab 07       	cpc	r26, r27
- 1c2:	b0 e8       	ldi	r27, 0x80	; 128
- 1c4:	09 f0       	breq	.+2      	; 0x1c8 <__divsf3_pse+0x56>
- 1c6:	bb 0b       	sbc	r27, r27
- 1c8:	80 2d       	mov	r24, r0
- 1ca:	bf 01       	movw	r22, r30
- 1cc:	ff 27       	eor	r31, r31
- 1ce:	93 58       	subi	r25, 0x83	; 131
- 1d0:	5f 4f       	sbci	r21, 0xFF	; 255
- 1d2:	2a f0       	brmi	.+10     	; 0x1de <__divsf3_pse+0x6c>
- 1d4:	9e 3f       	cpi	r25, 0xFE	; 254
- 1d6:	51 05       	cpc	r21, r1
- 1d8:	68 f0       	brcs	.+26     	; 0x1f4 <__divsf3_pse+0x82>
- 1da:	92 c0       	rjmp	.+292    	; 0x300 <__fp_inf>
- 1dc:	dc c0       	rjmp	.+440    	; 0x396 <__fp_szero>
- 1de:	5f 3f       	cpi	r21, 0xFF	; 255
- 1e0:	ec f3       	brlt	.-6      	; 0x1dc <__divsf3_pse+0x6a>
- 1e2:	98 3e       	cpi	r25, 0xE8	; 232
- 1e4:	dc f3       	brlt	.-10     	; 0x1dc <__divsf3_pse+0x6a>
- 1e6:	86 95       	lsr	r24
- 1e8:	77 95       	ror	r23
- 1ea:	67 95       	ror	r22
- 1ec:	b7 95       	ror	r27
- 1ee:	f7 95       	ror	r31
- 1f0:	9f 5f       	subi	r25, 0xFF	; 255
- 1f2:	c9 f7       	brne	.-14     	; 0x1e6 <__divsf3_pse+0x74>
- 1f4:	88 0f       	add	r24, r24
- 1f6:	91 1d       	adc	r25, r1
- 1f8:	96 95       	lsr	r25
- 1fa:	87 95       	ror	r24
- 1fc:	97 f9       	bld	r25, 7
- 1fe:	08 95       	ret
- 200:	e1 e0       	ldi	r30, 0x01	; 1
- 202:	66 0f       	add	r22, r22
- 204:	77 1f       	adc	r23, r23
- 206:	88 1f       	adc	r24, r24
- 208:	bb 1f       	adc	r27, r27
- 20a:	62 17       	cp	r22, r18
- 20c:	73 07       	cpc	r23, r19
- 20e:	84 07       	cpc	r24, r20
- 210:	ba 07       	cpc	r27, r26
- 212:	20 f0       	brcs	.+8      	; 0x21c <__divsf3_pse+0xaa>
- 214:	62 1b       	sub	r22, r18
- 216:	73 0b       	sbc	r23, r19
- 218:	84 0b       	sbc	r24, r20
- 21a:	ba 0b       	sbc	r27, r26
- 21c:	ee 1f       	adc	r30, r30
- 21e:	88 f7       	brcc	.-30     	; 0x202 <__divsf3_pse+0x90>
- 220:	e0 95       	com	r30
- 222:	08 95       	ret
+		playTune(500 ,100);
+     60c:	24 e6       	ldi	r18, 0x64	; 100
+     60e:	30 e0       	ldi	r19, 0x00	; 0
+     610:	40 e0       	ldi	r20, 0x00	; 0
+     612:	50 e0       	ldi	r21, 0x00	; 0
+     614:	64 ef       	ldi	r22, 0xF4	; 244
+     616:	71 e0       	ldi	r23, 0x01	; 1
+     618:	80 e0       	ldi	r24, 0x00	; 0
+     61a:	90 e0       	ldi	r25, 0x00	; 0
+     61c:	41 dd       	rcall	.-1406   	; 0xa0 <playTune>
+		wait(300);
+     61e:	8c e2       	ldi	r24, 0x2C	; 44
+     620:	91 e0       	ldi	r25, 0x01	; 1
+     622:	90 dd       	rcall	.-1248   	; 0x144 <wait>
+     624:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(430 ,100);
+     626:	30 e0       	ldi	r19, 0x00	; 0
+     628:	40 e0       	ldi	r20, 0x00	; 0
+     62a:	50 e0       	ldi	r21, 0x00	; 0
+     62c:	6e ea       	ldi	r22, 0xAE	; 174
+     62e:	71 e0       	ldi	r23, 0x01	; 1
+     630:	80 e0       	ldi	r24, 0x00	; 0
+     632:	90 e0       	ldi	r25, 0x00	; 0
+     634:	35 dd       	rcall	.-1430   	; 0xa0 <playTune>
+		wait(150);
+     636:	86 e9       	ldi	r24, 0x96	; 150
+     638:	90 e0       	ldi	r25, 0x00	; 0
+     63a:	84 dd       	rcall	.-1272   	; 0x144 <wait>
+     63c:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(500 ,100);
+     63e:	30 e0       	ldi	r19, 0x00	; 0
+     640:	40 e0       	ldi	r20, 0x00	; 0
+     642:	50 e0       	ldi	r21, 0x00	; 0
+     644:	64 ef       	ldi	r22, 0xF4	; 244
+     646:	71 e0       	ldi	r23, 0x01	; 1
+     648:	80 e0       	ldi	r24, 0x00	; 0
+     64a:	90 e0       	ldi	r25, 0x00	; 0
+     64c:	29 dd       	rcall	.-1454   	; 0xa0 <playTune>
+		wait(100);
+     64e:	84 e6       	ldi	r24, 0x64	; 100
+     650:	90 e0       	ldi	r25, 0x00	; 0
+     652:	78 dd       	rcall	.-1296   	; 0x144 <wait>
+     654:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(570 ,100);
+     656:	30 e0       	ldi	r19, 0x00	; 0
+     658:	40 e0       	ldi	r20, 0x00	; 0
+     65a:	50 e0       	ldi	r21, 0x00	; 0
+     65c:	6a e3       	ldi	r22, 0x3A	; 58
+     65e:	72 e0       	ldi	r23, 0x02	; 2
+     660:	80 e0       	ldi	r24, 0x00	; 0
+     662:	90 e0       	ldi	r25, 0x00	; 0
+     664:	1d dd       	rcall	.-1478   	; 0xa0 <playTune>
+		wait(220);
+     666:	8c ed       	ldi	r24, 0xDC	; 220
+     668:	90 e0       	ldi	r25, 0x00	; 0
+     66a:	6c dd       	rcall	.-1320   	; 0x144 <wait>
 
-00000224 <__fixsfsi>:
- 224:	04 d0       	rcall	.+8      	; 0x22e <__fixunssfsi>
- 226:	68 94       	set
- 228:	b1 11       	cpse	r27, r1
- 22a:	b5 c0       	rjmp	.+362    	; 0x396 <__fp_szero>
- 22c:	08 95       	ret
+		playTune(500 ,100);
+     66c:	24 e6       	ldi	r18, 0x64	; 100
+     66e:	30 e0       	ldi	r19, 0x00	; 0
+     670:	40 e0       	ldi	r20, 0x00	; 0
+     672:	50 e0       	ldi	r21, 0x00	; 0
+     674:	64 ef       	ldi	r22, 0xF4	; 244
+     676:	71 e0       	ldi	r23, 0x01	; 1
+     678:	80 e0       	ldi	r24, 0x00	; 0
+     67a:	90 e0       	ldi	r25, 0x00	; 0
+     67c:	11 dd       	rcall	.-1502   	; 0xa0 <playTune>
+		wait(300);
+     67e:	8c e2       	ldi	r24, 0x2C	; 44
+     680:	91 e0       	ldi	r25, 0x01	; 1
+     682:	60 dd       	rcall	.-1344   	; 0x144 <wait>
 
-0000022e <__fixunssfsi>:
- 22e:	98 d0       	rcall	.+304    	; 0x360 <__fp_splitA>
- 230:	88 f0       	brcs	.+34     	; 0x254 <__fixunssfsi+0x26>
- 232:	9f 57       	subi	r25, 0x7F	; 127
- 234:	90 f0       	brcs	.+36     	; 0x25a <__fixunssfsi+0x2c>
- 236:	b9 2f       	mov	r27, r25
- 238:	99 27       	eor	r25, r25
- 23a:	b7 51       	subi	r27, 0x17	; 23
- 23c:	a0 f0       	brcs	.+40     	; 0x266 <__fixunssfsi+0x38>
- 23e:	d1 f0       	breq	.+52     	; 0x274 <__fixunssfsi+0x46>
- 240:	66 0f       	add	r22, r22
- 242:	77 1f       	adc	r23, r23
- 244:	88 1f       	adc	r24, r24
- 246:	99 1f       	adc	r25, r25
- 248:	1a f0       	brmi	.+6      	; 0x250 <__fixunssfsi+0x22>
- 24a:	ba 95       	dec	r27
- 24c:	c9 f7       	brne	.-14     	; 0x240 <__fixunssfsi+0x12>
- 24e:	12 c0       	rjmp	.+36     	; 0x274 <__fixunssfsi+0x46>
- 250:	b1 30       	cpi	r27, 0x01	; 1
- 252:	81 f0       	breq	.+32     	; 0x274 <__fixunssfsi+0x46>
- 254:	9f d0       	rcall	.+318    	; 0x394 <__fp_zero>
- 256:	b1 e0       	ldi	r27, 0x01	; 1
- 258:	08 95       	ret
- 25a:	9c c0       	rjmp	.+312    	; 0x394 <__fp_zero>
- 25c:	67 2f       	mov	r22, r23
- 25e:	78 2f       	mov	r23, r24
- 260:	88 27       	eor	r24, r24
- 262:	b8 5f       	subi	r27, 0xF8	; 248
- 264:	39 f0       	breq	.+14     	; 0x274 <__fixunssfsi+0x46>
- 266:	b9 3f       	cpi	r27, 0xF9	; 249
- 268:	cc f3       	brlt	.-14     	; 0x25c <__fixunssfsi+0x2e>
- 26a:	86 95       	lsr	r24
- 26c:	77 95       	ror	r23
- 26e:	67 95       	ror	r22
- 270:	b3 95       	inc	r27
- 272:	d9 f7       	brne	.-10     	; 0x26a <__fixunssfsi+0x3c>
- 274:	3e f4       	brtc	.+14     	; 0x284 <__fixunssfsi+0x56>
- 276:	90 95       	com	r25
- 278:	80 95       	com	r24
- 27a:	70 95       	com	r23
- 27c:	61 95       	neg	r22
- 27e:	7f 4f       	sbci	r23, 0xFF	; 255
- 280:	8f 4f       	sbci	r24, 0xFF	; 255
- 282:	9f 4f       	sbci	r25, 0xFF	; 255
- 284:	08 95       	ret
+		playTune(760 ,100);
+     684:	24 e6       	ldi	r18, 0x64	; 100
+     686:	30 e0       	ldi	r19, 0x00	; 0
+     688:	40 e0       	ldi	r20, 0x00	; 0
+     68a:	50 e0       	ldi	r21, 0x00	; 0
+     68c:	68 ef       	ldi	r22, 0xF8	; 248
+     68e:	72 e0       	ldi	r23, 0x02	; 2
+     690:	80 e0       	ldi	r24, 0x00	; 0
+     692:	90 e0       	ldi	r25, 0x00	; 0
+     694:	05 dd       	rcall	.-1526   	; 0xa0 <playTune>
+		wait(100);
+     696:	84 e6       	ldi	r24, 0x64	; 100
+     698:	90 e0       	ldi	r25, 0x00	; 0
+     69a:	54 dd       	rcall	.-1368   	; 0x144 <wait>
+		playTune(720 ,100);
+     69c:	24 e6       	ldi	r18, 0x64	; 100
+     69e:	30 e0       	ldi	r19, 0x00	; 0
+     6a0:	40 e0       	ldi	r20, 0x00	; 0
+     6a2:	50 e0       	ldi	r21, 0x00	; 0
+     6a4:	60 ed       	ldi	r22, 0xD0	; 208
+     6a6:	72 e0       	ldi	r23, 0x02	; 2
+     6a8:	80 e0       	ldi	r24, 0x00	; 0
+     6aa:	90 e0       	ldi	r25, 0x00	; 0
+     6ac:	f9 dc       	rcall	.-1550   	; 0xa0 <playTune>
+		wait(150);
+     6ae:	86 e9       	ldi	r24, 0x96	; 150
+     6b0:	90 e0       	ldi	r25, 0x00	; 0
+     6b2:	48 dd       	rcall	.-1392   	; 0x144 <wait>
+     6b4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(680 ,100);
+     6b6:	30 e0       	ldi	r19, 0x00	; 0
+     6b8:	40 e0       	ldi	r20, 0x00	; 0
+     6ba:	50 e0       	ldi	r21, 0x00	; 0
+     6bc:	68 ea       	ldi	r22, 0xA8	; 168
+     6be:	72 e0       	ldi	r23, 0x02	; 2
+     6c0:	80 e0       	ldi	r24, 0x00	; 0
+     6c2:	90 e0       	ldi	r25, 0x00	; 0
+     6c4:	ed dc       	rcall	.-1574   	; 0xa0 <playTune>
+		wait(150);
+     6c6:	86 e9       	ldi	r24, 0x96	; 150
+     6c8:	90 e0       	ldi	r25, 0x00	; 0
+     6ca:	3c dd       	rcall	.-1416   	; 0x144 <wait>
+     6cc:	26 e9       	ldi	r18, 0x96	; 150
+		playTune(620 ,150);
+     6ce:	30 e0       	ldi	r19, 0x00	; 0
+     6d0:	40 e0       	ldi	r20, 0x00	; 0
+     6d2:	50 e0       	ldi	r21, 0x00	; 0
+     6d4:	6c e6       	ldi	r22, 0x6C	; 108
+     6d6:	72 e0       	ldi	r23, 0x02	; 2
+     6d8:	80 e0       	ldi	r24, 0x00	; 0
+     6da:	90 e0       	ldi	r25, 0x00	; 0
+     6dc:	e1 dc       	rcall	.-1598   	; 0xa0 <playTune>
+		wait(300);
+     6de:	8c e2       	ldi	r24, 0x2C	; 44
+     6e0:	91 e0       	ldi	r25, 0x01	; 1
+     6e2:	30 dd       	rcall	.-1440   	; 0x144 <wait>
+     6e4:	28 ec       	ldi	r18, 0xC8	; 200
 
-00000286 <__floatunsisf>:
- 286:	e8 94       	clt
- 288:	09 c0       	rjmp	.+18     	; 0x29c <__floatsisf+0x12>
+		playTune(650 ,200);
+     6e6:	30 e0       	ldi	r19, 0x00	; 0
+     6e8:	40 e0       	ldi	r20, 0x00	; 0
+     6ea:	50 e0       	ldi	r21, 0x00	; 0
+     6ec:	6a e8       	ldi	r22, 0x8A	; 138
+     6ee:	72 e0       	ldi	r23, 0x02	; 2
+     6f0:	80 e0       	ldi	r24, 0x00	; 0
+     6f2:	90 e0       	ldi	r25, 0x00	; 0
+     6f4:	d5 dc       	rcall	.-1622   	; 0xa0 <playTune>
+		wait(300);
+     6f6:	8c e2       	ldi	r24, 0x2C	; 44
+     6f8:	91 e0       	ldi	r25, 0x01	; 1
+     6fa:	24 dd       	rcall	.-1464   	; 0x144 <wait>
 
-0000028a <__floatsisf>:
- 28a:	97 fb       	bst	r25, 7
- 28c:	3e f4       	brtc	.+14     	; 0x29c <__floatsisf+0x12>
- 28e:	90 95       	com	r25
- 290:	80 95       	com	r24
- 292:	70 95       	com	r23
- 294:	61 95       	neg	r22
- 296:	7f 4f       	sbci	r23, 0xFF	; 255
- 298:	8f 4f       	sbci	r24, 0xFF	; 255
- 29a:	9f 4f       	sbci	r25, 0xFF	; 255
- 29c:	99 23       	and	r25, r25
- 29e:	a9 f0       	breq	.+42     	; 0x2ca <__floatsisf+0x40>
- 2a0:	f9 2f       	mov	r31, r25
- 2a2:	96 e9       	ldi	r25, 0x96	; 150
- 2a4:	bb 27       	eor	r27, r27
- 2a6:	93 95       	inc	r25
- 2a8:	f6 95       	lsr	r31
- 2aa:	87 95       	ror	r24
- 2ac:	77 95       	ror	r23
- 2ae:	67 95       	ror	r22
- 2b0:	b7 95       	ror	r27
- 2b2:	f1 11       	cpse	r31, r1
- 2b4:	f8 cf       	rjmp	.-16     	; 0x2a6 <__floatsisf+0x1c>
- 2b6:	fa f4       	brpl	.+62     	; 0x2f6 <__floatsisf+0x6c>
- 2b8:	bb 0f       	add	r27, r27
- 2ba:	11 f4       	brne	.+4      	; 0x2c0 <__floatsisf+0x36>
- 2bc:	60 ff       	sbrs	r22, 0
- 2be:	1b c0       	rjmp	.+54     	; 0x2f6 <__floatsisf+0x6c>
- 2c0:	6f 5f       	subi	r22, 0xFF	; 255
- 2c2:	7f 4f       	sbci	r23, 0xFF	; 255
- 2c4:	8f 4f       	sbci	r24, 0xFF	; 255
- 2c6:	9f 4f       	sbci	r25, 0xFF	; 255
- 2c8:	16 c0       	rjmp	.+44     	; 0x2f6 <__floatsisf+0x6c>
- 2ca:	88 23       	and	r24, r24
- 2cc:	11 f0       	breq	.+4      	; 0x2d2 <__floatsisf+0x48>
- 2ce:	96 e9       	ldi	r25, 0x96	; 150
- 2d0:	11 c0       	rjmp	.+34     	; 0x2f4 <__floatsisf+0x6a>
- 2d2:	77 23       	and	r23, r23
- 2d4:	21 f0       	breq	.+8      	; 0x2de <__floatsisf+0x54>
- 2d6:	9e e8       	ldi	r25, 0x8E	; 142
- 2d8:	87 2f       	mov	r24, r23
- 2da:	76 2f       	mov	r23, r22
- 2dc:	05 c0       	rjmp	.+10     	; 0x2e8 <__floatsisf+0x5e>
- 2de:	66 23       	and	r22, r22
- 2e0:	71 f0       	breq	.+28     	; 0x2fe <__floatsisf+0x74>
- 2e2:	96 e8       	ldi	r25, 0x86	; 134
- 2e4:	86 2f       	mov	r24, r22
- 2e6:	70 e0       	ldi	r23, 0x00	; 0
- 2e8:	60 e0       	ldi	r22, 0x00	; 0
- 2ea:	2a f0       	brmi	.+10     	; 0x2f6 <__floatsisf+0x6c>
- 2ec:	9a 95       	dec	r25
- 2ee:	66 0f       	add	r22, r22
- 2f0:	77 1f       	adc	r23, r23
- 2f2:	88 1f       	adc	r24, r24
- 2f4:	da f7       	brpl	.-10     	; 0x2ec <__floatsisf+0x62>
- 2f6:	88 0f       	add	r24, r24
- 2f8:	96 95       	lsr	r25
- 2fa:	87 95       	ror	r24
- 2fc:	97 f9       	bld	r25, 7
- 2fe:	08 95       	ret
+		playTune(1020,80);
+     6fc:	20 e5       	ldi	r18, 0x50	; 80
+     6fe:	30 e0       	ldi	r19, 0x00	; 0
+     700:	40 e0       	ldi	r20, 0x00	; 0
+     702:	50 e0       	ldi	r21, 0x00	; 0
+     704:	6c ef       	ldi	r22, 0xFC	; 252
+     706:	73 e0       	ldi	r23, 0x03	; 3
+     708:	80 e0       	ldi	r24, 0x00	; 0
+     70a:	90 e0       	ldi	r25, 0x00	; 0
+     70c:	c9 dc       	rcall	.-1646   	; 0xa0 <playTune>
+		wait(300);
+     70e:	8c e2       	ldi	r24, 0x2C	; 44
+     710:	91 e0       	ldi	r25, 0x01	; 1
+     712:	18 dd       	rcall	.-1488   	; 0x144 <wait>
+		playTune(1020,80);
+     714:	20 e5       	ldi	r18, 0x50	; 80
+     716:	30 e0       	ldi	r19, 0x00	; 0
+     718:	40 e0       	ldi	r20, 0x00	; 0
+     71a:	50 e0       	ldi	r21, 0x00	; 0
+     71c:	6c ef       	ldi	r22, 0xFC	; 252
+     71e:	73 e0       	ldi	r23, 0x03	; 3
+     720:	80 e0       	ldi	r24, 0x00	; 0
+     722:	90 e0       	ldi	r25, 0x00	; 0
+     724:	bd dc       	rcall	.-1670   	; 0xa0 <playTune>
+		wait(150);
+     726:	86 e9       	ldi	r24, 0x96	; 150
+     728:	90 e0       	ldi	r25, 0x00	; 0
+     72a:	0c dd       	rcall	.-1512   	; 0x144 <wait>
+		playTune(1020,80);
+     72c:	20 e5       	ldi	r18, 0x50	; 80
+     72e:	30 e0       	ldi	r19, 0x00	; 0
+     730:	40 e0       	ldi	r20, 0x00	; 0
+     732:	50 e0       	ldi	r21, 0x00	; 0
+     734:	6c ef       	ldi	r22, 0xFC	; 252
+     736:	73 e0       	ldi	r23, 0x03	; 3
+     738:	80 e0       	ldi	r24, 0x00	; 0
+     73a:	90 e0       	ldi	r25, 0x00	; 0
+     73c:	b1 dc       	rcall	.-1694   	; 0xa0 <playTune>
+		wait(300);
+     73e:	8c e2       	ldi	r24, 0x2C	; 44
+     740:	91 e0       	ldi	r25, 0x01	; 1
+     742:	00 dd       	rcall	.-1536   	; 0x144 <wait>
+     744:	24 e6       	ldi	r18, 0x64	; 100
 
-00000300 <__fp_inf>:
- 300:	97 f9       	bld	r25, 7
- 302:	9f 67       	ori	r25, 0x7F	; 127
- 304:	80 e8       	ldi	r24, 0x80	; 128
- 306:	70 e0       	ldi	r23, 0x00	; 0
- 308:	60 e0       	ldi	r22, 0x00	; 0
- 30a:	08 95       	ret
+		playTune(380 ,100);
+     746:	30 e0       	ldi	r19, 0x00	; 0
+     748:	40 e0       	ldi	r20, 0x00	; 0
+     74a:	50 e0       	ldi	r21, 0x00	; 0
+     74c:	6c e7       	ldi	r22, 0x7C	; 124
+     74e:	71 e0       	ldi	r23, 0x01	; 1
+     750:	80 e0       	ldi	r24, 0x00	; 0
+     752:	90 e0       	ldi	r25, 0x00	; 0
+     754:	a5 dc       	rcall	.-1718   	; 0xa0 <playTune>
+		wait(300);
+     756:	8c e2       	ldi	r24, 0x2C	; 44
+     758:	91 e0       	ldi	r25, 0x01	; 1
+     75a:	f4 dc       	rcall	.-1560   	; 0x144 <wait>
+     75c:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(500 ,100);
+     75e:	30 e0       	ldi	r19, 0x00	; 0
+     760:	40 e0       	ldi	r20, 0x00	; 0
+     762:	50 e0       	ldi	r21, 0x00	; 0
+     764:	64 ef       	ldi	r22, 0xF4	; 244
+     766:	71 e0       	ldi	r23, 0x01	; 1
+     768:	80 e0       	ldi	r24, 0x00	; 0
+     76a:	90 e0       	ldi	r25, 0x00	; 0
+     76c:	99 dc       	rcall	.-1742   	; 0xa0 <playTune>
+		wait(300);
+     76e:	8c e2       	ldi	r24, 0x2C	; 44
+     770:	91 e0       	ldi	r25, 0x01	; 1
+     772:	e8 dc       	rcall	.-1584   	; 0x144 <wait>
+     774:	24 e6       	ldi	r18, 0x64	; 100
 
-0000030c <__fp_nan>:
- 30c:	9f ef       	ldi	r25, 0xFF	; 255
- 30e:	80 ec       	ldi	r24, 0xC0	; 192
- 310:	08 95       	ret
+		playTune(760 ,100);
+     776:	30 e0       	ldi	r19, 0x00	; 0
+     778:	40 e0       	ldi	r20, 0x00	; 0
+     77a:	50 e0       	ldi	r21, 0x00	; 0
+     77c:	68 ef       	ldi	r22, 0xF8	; 248
+     77e:	72 e0       	ldi	r23, 0x02	; 2
+     780:	80 e0       	ldi	r24, 0x00	; 0
+     782:	90 e0       	ldi	r25, 0x00	; 0
+     784:	8d dc       	rcall	.-1766   	; 0xa0 <playTune>
+		wait(100);
+     786:	84 e6       	ldi	r24, 0x64	; 100
+     788:	90 e0       	ldi	r25, 0x00	; 0
+     78a:	dc dc       	rcall	.-1608   	; 0x144 <wait>
+		playTune(720 ,100);
+     78c:	24 e6       	ldi	r18, 0x64	; 100
+     78e:	30 e0       	ldi	r19, 0x00	; 0
+     790:	40 e0       	ldi	r20, 0x00	; 0
+     792:	50 e0       	ldi	r21, 0x00	; 0
+     794:	60 ed       	ldi	r22, 0xD0	; 208
+     796:	72 e0       	ldi	r23, 0x02	; 2
+     798:	80 e0       	ldi	r24, 0x00	; 0
+     79a:	90 e0       	ldi	r25, 0x00	; 0
+     79c:	81 dc       	rcall	.-1790   	; 0xa0 <playTune>
+		wait(150);
+     79e:	86 e9       	ldi	r24, 0x96	; 150
+     7a0:	90 e0       	ldi	r25, 0x00	; 0
+     7a2:	d0 dc       	rcall	.-1632   	; 0x144 <wait>
+		playTune(680 ,100);
+     7a4:	24 e6       	ldi	r18, 0x64	; 100
+     7a6:	30 e0       	ldi	r19, 0x00	; 0
+     7a8:	40 e0       	ldi	r20, 0x00	; 0
+     7aa:	50 e0       	ldi	r21, 0x00	; 0
+     7ac:	68 ea       	ldi	r22, 0xA8	; 168
+     7ae:	72 e0       	ldi	r23, 0x02	; 2
+     7b0:	80 e0       	ldi	r24, 0x00	; 0
+     7b2:	90 e0       	ldi	r25, 0x00	; 0
+     7b4:	75 dc       	rcall	.-1814   	; 0xa0 <playTune>
+		wait(150);
+     7b6:	86 e9       	ldi	r24, 0x96	; 150
+     7b8:	90 e0       	ldi	r25, 0x00	; 0
+     7ba:	c4 dc       	rcall	.-1656   	; 0x144 <wait>
+		playTune(620 ,150);
+     7bc:	26 e9       	ldi	r18, 0x96	; 150
+     7be:	30 e0       	ldi	r19, 0x00	; 0
+     7c0:	40 e0       	ldi	r20, 0x00	; 0
+     7c2:	50 e0       	ldi	r21, 0x00	; 0
+     7c4:	6c e6       	ldi	r22, 0x6C	; 108
+     7c6:	72 e0       	ldi	r23, 0x02	; 2
+     7c8:	80 e0       	ldi	r24, 0x00	; 0
+     7ca:	90 e0       	ldi	r25, 0x00	; 0
+     7cc:	69 dc       	rcall	.-1838   	; 0xa0 <playTune>
+		wait(300);
+     7ce:	8c e2       	ldi	r24, 0x2C	; 44
+     7d0:	91 e0       	ldi	r25, 0x01	; 1
+     7d2:	b8 dc       	rcall	.-1680   	; 0x144 <wait>
+     7d4:	26 e9       	ldi	r18, 0x96	; 150
 
-00000312 <__fp_pscA>:
- 312:	00 24       	eor	r0, r0
- 314:	0a 94       	dec	r0
- 316:	16 16       	cp	r1, r22
- 318:	17 06       	cpc	r1, r23
- 31a:	18 06       	cpc	r1, r24
- 31c:	09 06       	cpc	r0, r25
- 31e:	08 95       	ret
+		playTune(650 ,150);
+     7d6:	30 e0       	ldi	r19, 0x00	; 0
+     7d8:	40 e0       	ldi	r20, 0x00	; 0
+     7da:	50 e0       	ldi	r21, 0x00	; 0
+     7dc:	6a e8       	ldi	r22, 0x8A	; 138
+     7de:	72 e0       	ldi	r23, 0x02	; 2
+     7e0:	80 e0       	ldi	r24, 0x00	; 0
+     7e2:	90 e0       	ldi	r25, 0x00	; 0
+     7e4:	5d dc       	rcall	.-1862   	; 0xa0 <playTune>
+		wait(300);
+     7e6:	8c e2       	ldi	r24, 0x2C	; 44
+     7e8:	91 e0       	ldi	r25, 0x01	; 1
+     7ea:	ac dc       	rcall	.-1704   	; 0x144 <wait>
+     7ec:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(380 ,100);
+     7ee:	30 e0       	ldi	r19, 0x00	; 0
+     7f0:	40 e0       	ldi	r20, 0x00	; 0
+     7f2:	50 e0       	ldi	r21, 0x00	; 0
+     7f4:	6c e7       	ldi	r22, 0x7C	; 124
+     7f6:	71 e0       	ldi	r23, 0x01	; 1
+     7f8:	80 e0       	ldi	r24, 0x00	; 0
+     7fa:	90 e0       	ldi	r25, 0x00	; 0
+     7fc:	51 dc       	rcall	.-1886   	; 0xa0 <playTune>
+		wait(150);
+     7fe:	86 e9       	ldi	r24, 0x96	; 150
+     800:	90 e0       	ldi	r25, 0x00	; 0
+     802:	a0 dc       	rcall	.-1728   	; 0x144 <wait>
+     804:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(430 ,100);
+     806:	30 e0       	ldi	r19, 0x00	; 0
+     808:	40 e0       	ldi	r20, 0x00	; 0
+     80a:	50 e0       	ldi	r21, 0x00	; 0
+     80c:	6e ea       	ldi	r22, 0xAE	; 174
+     80e:	71 e0       	ldi	r23, 0x01	; 1
+     810:	80 e0       	ldi	r24, 0x00	; 0
+     812:	90 e0       	ldi	r25, 0x00	; 0
+     814:	45 dc       	rcall	.-1910   	; 0xa0 <playTune>
+		wait(150);
+     816:	86 e9       	ldi	r24, 0x96	; 150
+     818:	90 e0       	ldi	r25, 0x00	; 0
+     81a:	94 dc       	rcall	.-1752   	; 0x144 <wait>
 
-00000320 <__fp_pscB>:
- 320:	00 24       	eor	r0, r0
- 322:	0a 94       	dec	r0
- 324:	12 16       	cp	r1, r18
- 326:	13 06       	cpc	r1, r19
- 328:	14 06       	cpc	r1, r20
- 32a:	05 06       	cpc	r0, r21
- 32c:	08 95       	ret
+		playTune(500 ,100);
+     81c:	24 e6       	ldi	r18, 0x64	; 100
+     81e:	30 e0       	ldi	r19, 0x00	; 0
+     820:	40 e0       	ldi	r20, 0x00	; 0
+     822:	50 e0       	ldi	r21, 0x00	; 0
+     824:	64 ef       	ldi	r22, 0xF4	; 244
+     826:	71 e0       	ldi	r23, 0x01	; 1
+     828:	80 e0       	ldi	r24, 0x00	; 0
+     82a:	90 e0       	ldi	r25, 0x00	; 0
+     82c:	39 dc       	rcall	.-1934   	; 0xa0 <playTune>
+		wait(300);
+     82e:	8c e2       	ldi	r24, 0x2C	; 44
+     830:	91 e0       	ldi	r25, 0x01	; 1
+     832:	88 dc       	rcall	.-1776   	; 0x144 <wait>
+		playTune(430 ,100);
+     834:	24 e6       	ldi	r18, 0x64	; 100
+     836:	30 e0       	ldi	r19, 0x00	; 0
+     838:	40 e0       	ldi	r20, 0x00	; 0
+     83a:	50 e0       	ldi	r21, 0x00	; 0
+     83c:	6e ea       	ldi	r22, 0xAE	; 174
+     83e:	71 e0       	ldi	r23, 0x01	; 1
+     840:	80 e0       	ldi	r24, 0x00	; 0
+     842:	90 e0       	ldi	r25, 0x00	; 0
+     844:	2d dc       	rcall	.-1958   	; 0xa0 <playTune>
+		wait(150);
+     846:	86 e9       	ldi	r24, 0x96	; 150
+     848:	90 e0       	ldi	r25, 0x00	; 0
+     84a:	7c dc       	rcall	.-1800   	; 0x144 <wait>
+		playTune(500 ,100);
+     84c:	24 e6       	ldi	r18, 0x64	; 100
+     84e:	30 e0       	ldi	r19, 0x00	; 0
+     850:	40 e0       	ldi	r20, 0x00	; 0
+     852:	50 e0       	ldi	r21, 0x00	; 0
+     854:	64 ef       	ldi	r22, 0xF4	; 244
+     856:	71 e0       	ldi	r23, 0x01	; 1
+     858:	80 e0       	ldi	r24, 0x00	; 0
+     85a:	90 e0       	ldi	r25, 0x00	; 0
+     85c:	21 dc       	rcall	.-1982   	; 0xa0 <playTune>
+		wait(100);
+     85e:	84 e6       	ldi	r24, 0x64	; 100
+     860:	90 e0       	ldi	r25, 0x00	; 0
+     862:	70 dc       	rcall	.-1824   	; 0x144 <wait>
+     864:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(570 ,100);
+     866:	30 e0       	ldi	r19, 0x00	; 0
+     868:	40 e0       	ldi	r20, 0x00	; 0
+     86a:	50 e0       	ldi	r21, 0x00	; 0
+     86c:	6a e3       	ldi	r22, 0x3A	; 58
+     86e:	72 e0       	ldi	r23, 0x02	; 2
+     870:	80 e0       	ldi	r24, 0x00	; 0
+     872:	90 e0       	ldi	r25, 0x00	; 0
+     874:	15 dc       	rcall	.-2006   	; 0xa0 <playTune>
+		wait(420);
+     876:	84 ea       	ldi	r24, 0xA4	; 164
+     878:	91 e0       	ldi	r25, 0x01	; 1
+     87a:	64 dc       	rcall	.-1848   	; 0x144 <wait>
+     87c:	24 e6       	ldi	r18, 0x64	; 100
 
-0000032e <__fp_round>:
- 32e:	09 2e       	mov	r0, r25
- 330:	03 94       	inc	r0
- 332:	00 0c       	add	r0, r0
- 334:	11 f4       	brne	.+4      	; 0x33a <__fp_round+0xc>
- 336:	88 23       	and	r24, r24
- 338:	52 f0       	brmi	.+20     	; 0x34e <__fp_round+0x20>
- 33a:	bb 0f       	add	r27, r27
- 33c:	40 f4       	brcc	.+16     	; 0x34e <__fp_round+0x20>
- 33e:	bf 2b       	or	r27, r31
- 340:	11 f4       	brne	.+4      	; 0x346 <__fp_round+0x18>
- 342:	60 ff       	sbrs	r22, 0
- 344:	04 c0       	rjmp	.+8      	; 0x34e <__fp_round+0x20>
- 346:	6f 5f       	subi	r22, 0xFF	; 255
- 348:	7f 4f       	sbci	r23, 0xFF	; 255
- 34a:	8f 4f       	sbci	r24, 0xFF	; 255
- 34c:	9f 4f       	sbci	r25, 0xFF	; 255
- 34e:	08 95       	ret
+		playTune(585 ,100);
+     87e:	30 e0       	ldi	r19, 0x00	; 0
+     880:	40 e0       	ldi	r20, 0x00	; 0
+     882:	50 e0       	ldi	r21, 0x00	; 0
+     884:	69 e4       	ldi	r22, 0x49	; 73
+     886:	72 e0       	ldi	r23, 0x02	; 2
+     888:	80 e0       	ldi	r24, 0x00	; 0
+     88a:	90 e0       	ldi	r25, 0x00	; 0
+     88c:	09 dc       	rcall	.-2030   	; 0xa0 <playTune>
+		wait(450);
+     88e:	82 ec       	ldi	r24, 0xC2	; 194
+     890:	91 e0       	ldi	r25, 0x01	; 1
+     892:	58 dc       	rcall	.-1872   	; 0x144 <wait>
+     894:	24 e6       	ldi	r18, 0x64	; 100
 
-00000350 <__fp_split3>:
- 350:	57 fd       	sbrc	r21, 7
- 352:	90 58       	subi	r25, 0x80	; 128
- 354:	44 0f       	add	r20, r20
- 356:	55 1f       	adc	r21, r21
- 358:	59 f0       	breq	.+22     	; 0x370 <__fp_splitA+0x10>
- 35a:	5f 3f       	cpi	r21, 0xFF	; 255
- 35c:	71 f0       	breq	.+28     	; 0x37a <__fp_splitA+0x1a>
- 35e:	47 95       	ror	r20
+		playTune(550 ,100);
+     896:	30 e0       	ldi	r19, 0x00	; 0
+     898:	40 e0       	ldi	r20, 0x00	; 0
+     89a:	50 e0       	ldi	r21, 0x00	; 0
+     89c:	66 e2       	ldi	r22, 0x26	; 38
+     89e:	72 e0       	ldi	r23, 0x02	; 2
+     8a0:	80 e0       	ldi	r24, 0x00	; 0
+     8a2:	90 e0       	ldi	r25, 0x00	; 0
+     8a4:	fd db       	rcall	.-2054   	; 0xa0 <playTune>
+		wait(420);
+     8a6:	84 ea       	ldi	r24, 0xA4	; 164
+     8a8:	91 e0       	ldi	r25, 0x01	; 1
+     8aa:	4c dc       	rcall	.-1896   	; 0x144 <wait>
 
-00000360 <__fp_splitA>:
- 360:	88 0f       	add	r24, r24
- 362:	97 fb       	bst	r25, 7
- 364:	99 1f       	adc	r25, r25
- 366:	61 f0       	breq	.+24     	; 0x380 <__fp_splitA+0x20>
- 368:	9f 3f       	cpi	r25, 0xFF	; 255
- 36a:	79 f0       	breq	.+30     	; 0x38a <__fp_splitA+0x2a>
- 36c:	87 95       	ror	r24
- 36e:	08 95       	ret
- 370:	12 16       	cp	r1, r18
- 372:	13 06       	cpc	r1, r19
- 374:	14 06       	cpc	r1, r20
- 376:	55 1f       	adc	r21, r21
- 378:	f2 cf       	rjmp	.-28     	; 0x35e <__fp_split3+0xe>
- 37a:	46 95       	lsr	r20
- 37c:	f1 df       	rcall	.-30     	; 0x360 <__fp_splitA>
- 37e:	08 c0       	rjmp	.+16     	; 0x390 <__fp_splitA+0x30>
- 380:	16 16       	cp	r1, r22
- 382:	17 06       	cpc	r1, r23
- 384:	18 06       	cpc	r1, r24
- 386:	99 1f       	adc	r25, r25
- 388:	f1 cf       	rjmp	.-30     	; 0x36c <__fp_splitA+0xc>
- 38a:	86 95       	lsr	r24
- 38c:	71 05       	cpc	r23, r1
- 38e:	61 05       	cpc	r22, r1
- 390:	08 94       	sec
- 392:	08 95       	ret
+		playTune(500 ,100);
+     8ac:	24 e6       	ldi	r18, 0x64	; 100
+     8ae:	30 e0       	ldi	r19, 0x00	; 0
+     8b0:	40 e0       	ldi	r20, 0x00	; 0
+     8b2:	50 e0       	ldi	r21, 0x00	; 0
+     8b4:	64 ef       	ldi	r22, 0xF4	; 244
+     8b6:	71 e0       	ldi	r23, 0x01	; 1
+     8b8:	80 e0       	ldi	r24, 0x00	; 0
+     8ba:	90 e0       	ldi	r25, 0x00	; 0
+     8bc:	f1 db       	rcall	.-2078   	; 0xa0 <playTune>
+		wait(360);
+     8be:	88 e6       	ldi	r24, 0x68	; 104
+     8c0:	91 e0       	ldi	r25, 0x01	; 1
+     8c2:	40 dc       	rcall	.-1920   	; 0x144 <wait>
 
-00000394 <__fp_zero>:
- 394:	e8 94       	clt
+		playTune(380 ,100);
+     8c4:	24 e6       	ldi	r18, 0x64	; 100
+     8c6:	30 e0       	ldi	r19, 0x00	; 0
+     8c8:	40 e0       	ldi	r20, 0x00	; 0
+     8ca:	50 e0       	ldi	r21, 0x00	; 0
+     8cc:	6c e7       	ldi	r22, 0x7C	; 124
+     8ce:	71 e0       	ldi	r23, 0x01	; 1
+     8d0:	80 e0       	ldi	r24, 0x00	; 0
+     8d2:	90 e0       	ldi	r25, 0x00	; 0
+     8d4:	e5 db       	rcall	.-2102   	; 0xa0 <playTune>
+		wait(300);
+     8d6:	8c e2       	ldi	r24, 0x2C	; 44
+     8d8:	91 e0       	ldi	r25, 0x01	; 1
+     8da:	34 dc       	rcall	.-1944   	; 0x144 <wait>
+		playTune(500 ,100);
+     8dc:	24 e6       	ldi	r18, 0x64	; 100
+     8de:	30 e0       	ldi	r19, 0x00	; 0
+     8e0:	40 e0       	ldi	r20, 0x00	; 0
+     8e2:	50 e0       	ldi	r21, 0x00	; 0
+     8e4:	64 ef       	ldi	r22, 0xF4	; 244
+     8e6:	71 e0       	ldi	r23, 0x01	; 1
+     8e8:	80 e0       	ldi	r24, 0x00	; 0
+     8ea:	90 e0       	ldi	r25, 0x00	; 0
+     8ec:	d9 db       	rcall	.-2126   	; 0xa0 <playTune>
+		wait(300);
+     8ee:	8c e2       	ldi	r24, 0x2C	; 44
+     8f0:	91 e0       	ldi	r25, 0x01	; 1
+     8f2:	28 dc       	rcall	.-1968   	; 0x144 <wait>
+     8f4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(500 ,100);
+     8f6:	30 e0       	ldi	r19, 0x00	; 0
+     8f8:	40 e0       	ldi	r20, 0x00	; 0
+     8fa:	50 e0       	ldi	r21, 0x00	; 0
+     8fc:	64 ef       	ldi	r22, 0xF4	; 244
+     8fe:	71 e0       	ldi	r23, 0x01	; 1
+     900:	80 e0       	ldi	r24, 0x00	; 0
+     902:	90 e0       	ldi	r25, 0x00	; 0
+     904:	cd db       	rcall	.-2150   	; 0xa0 <playTune>
+		wait(150);
+     906:	86 e9       	ldi	r24, 0x96	; 150
+     908:	90 e0       	ldi	r25, 0x00	; 0
+     90a:	1c dc       	rcall	.-1992   	; 0x144 <wait>
+     90c:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(500 ,100);
+     90e:	30 e0       	ldi	r19, 0x00	; 0
+     910:	40 e0       	ldi	r20, 0x00	; 0
+     912:	50 e0       	ldi	r21, 0x00	; 0
+     914:	64 ef       	ldi	r22, 0xF4	; 244
+     916:	71 e0       	ldi	r23, 0x01	; 1
+     918:	80 e0       	ldi	r24, 0x00	; 0
+     91a:	90 e0       	ldi	r25, 0x00	; 0
+     91c:	c1 db       	rcall	.-2174   	; 0xa0 <playTune>
+		wait(300);
+     91e:	8c e2       	ldi	r24, 0x2C	; 44
+     920:	91 e0       	ldi	r25, 0x01	; 1
+     922:	10 dc       	rcall	.-2016   	; 0x144 <wait>
+     924:	24 e6       	ldi	r18, 0x64	; 100
 
-00000396 <__fp_szero>:
- 396:	bb 27       	eor	r27, r27
- 398:	66 27       	eor	r22, r22
- 39a:	77 27       	eor	r23, r23
- 39c:	cb 01       	movw	r24, r22
- 39e:	97 f9       	bld	r25, 7
- 3a0:	08 95       	ret
+		playTune(500 ,100);
+     926:	30 e0       	ldi	r19, 0x00	; 0
+     928:	40 e0       	ldi	r20, 0x00	; 0
+     92a:	50 e0       	ldi	r21, 0x00	; 0
+     92c:	64 ef       	ldi	r22, 0xF4	; 244
+     92e:	71 e0       	ldi	r23, 0x01	; 1
+     930:	80 e0       	ldi	r24, 0x00	; 0
+     932:	90 e0       	ldi	r25, 0x00	; 0
+     934:	b5 db       	rcall	.-2198   	; 0xa0 <playTune>
+		wait(300);
+     936:	8c e2       	ldi	r24, 0x2C	; 44
+     938:	91 e0       	ldi	r25, 0x01	; 1
+     93a:	04 dc       	rcall	.-2040   	; 0x144 <wait>
 
-000003a2 <__divmodhi4>:
- 3a2:	97 fb       	bst	r25, 7
- 3a4:	07 2e       	mov	r0, r23
- 3a6:	16 f4       	brtc	.+4      	; 0x3ac <__divmodhi4+0xa>
- 3a8:	00 94       	com	r0
- 3aa:	06 d0       	rcall	.+12     	; 0x3b8 <__divmodhi4_neg1>
- 3ac:	77 fd       	sbrc	r23, 7
- 3ae:	08 d0       	rcall	.+16     	; 0x3c0 <__divmodhi4_neg2>
- 3b0:	0b d0       	rcall	.+22     	; 0x3c8 <__udivmodhi4>
- 3b2:	07 fc       	sbrc	r0, 7
- 3b4:	05 d0       	rcall	.+10     	; 0x3c0 <__divmodhi4_neg2>
- 3b6:	3e f4       	brtc	.+14     	; 0x3c6 <__divmodhi4_exit>
+		playTune(760 ,100);
+     93c:	24 e6       	ldi	r18, 0x64	; 100
+     93e:	30 e0       	ldi	r19, 0x00	; 0
+     940:	40 e0       	ldi	r20, 0x00	; 0
+     942:	50 e0       	ldi	r21, 0x00	; 0
+     944:	68 ef       	ldi	r22, 0xF8	; 248
+     946:	72 e0       	ldi	r23, 0x02	; 2
+     948:	80 e0       	ldi	r24, 0x00	; 0
+     94a:	90 e0       	ldi	r25, 0x00	; 0
+     94c:	a9 db       	rcall	.-2222   	; 0xa0 <playTune>
+		wait(100);
+     94e:	84 e6       	ldi	r24, 0x64	; 100
+     950:	90 e0       	ldi	r25, 0x00	; 0
+     952:	f8 db       	rcall	.-2064   	; 0x144 <wait>
+		playTune(720 ,100);
+     954:	24 e6       	ldi	r18, 0x64	; 100
+     956:	30 e0       	ldi	r19, 0x00	; 0
+     958:	40 e0       	ldi	r20, 0x00	; 0
+     95a:	50 e0       	ldi	r21, 0x00	; 0
+     95c:	60 ed       	ldi	r22, 0xD0	; 208
+     95e:	72 e0       	ldi	r23, 0x02	; 2
+     960:	80 e0       	ldi	r24, 0x00	; 0
+     962:	90 e0       	ldi	r25, 0x00	; 0
+     964:	9d db       	rcall	.-2246   	; 0xa0 <playTune>
+		wait(150);
+     966:	86 e9       	ldi	r24, 0x96	; 150
+     968:	90 e0       	ldi	r25, 0x00	; 0
+     96a:	ec db       	rcall	.-2088   	; 0x144 <wait>
+		playTune(680 ,100);
+     96c:	24 e6       	ldi	r18, 0x64	; 100
+     96e:	30 e0       	ldi	r19, 0x00	; 0
+     970:	40 e0       	ldi	r20, 0x00	; 0
+     972:	50 e0       	ldi	r21, 0x00	; 0
+     974:	68 ea       	ldi	r22, 0xA8	; 168
+     976:	72 e0       	ldi	r23, 0x02	; 2
+     978:	80 e0       	ldi	r24, 0x00	; 0
+     97a:	90 e0       	ldi	r25, 0x00	; 0
+     97c:	91 db       	rcall	.-2270   	; 0xa0 <playTune>
+		wait(150);
+     97e:	86 e9       	ldi	r24, 0x96	; 150
+     980:	90 e0       	ldi	r25, 0x00	; 0
+     982:	e0 db       	rcall	.-2112   	; 0x144 <wait>
+     984:	26 e9       	ldi	r18, 0x96	; 150
+		playTune(620 ,150);
+     986:	30 e0       	ldi	r19, 0x00	; 0
+     988:	40 e0       	ldi	r20, 0x00	; 0
+     98a:	50 e0       	ldi	r21, 0x00	; 0
+     98c:	6c e6       	ldi	r22, 0x6C	; 108
+     98e:	72 e0       	ldi	r23, 0x02	; 2
+     990:	80 e0       	ldi	r24, 0x00	; 0
+     992:	90 e0       	ldi	r25, 0x00	; 0
+     994:	85 db       	rcall	.-2294   	; 0xa0 <playTune>
+		wait(300);
+     996:	8c e2       	ldi	r24, 0x2C	; 44
+     998:	91 e0       	ldi	r25, 0x01	; 1
+     99a:	d4 db       	rcall	.-2136   	; 0x144 <wait>
+     99c:	26 e9       	ldi	r18, 0x96	; 150
 
-000003b8 <__divmodhi4_neg1>:
- 3b8:	90 95       	com	r25
- 3ba:	81 95       	neg	r24
- 3bc:	9f 4f       	sbci	r25, 0xFF	; 255
- 3be:	08 95       	ret
+		playTune(650 ,150);
+     99e:	30 e0       	ldi	r19, 0x00	; 0
+     9a0:	40 e0       	ldi	r20, 0x00	; 0
+     9a2:	50 e0       	ldi	r21, 0x00	; 0
+     9a4:	6a e8       	ldi	r22, 0x8A	; 138
+     9a6:	72 e0       	ldi	r23, 0x02	; 2
+     9a8:	80 e0       	ldi	r24, 0x00	; 0
+     9aa:	90 e0       	ldi	r25, 0x00	; 0
+     9ac:	79 db       	rcall	.-2318   	; 0xa0 <playTune>
+		wait(300);
+     9ae:	8c e2       	ldi	r24, 0x2C	; 44
+     9b0:	91 e0       	ldi	r25, 0x01	; 1
+     9b2:	c8 db       	rcall	.-2160   	; 0x144 <wait>
+     9b4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(380 ,100);
+     9b6:	30 e0       	ldi	r19, 0x00	; 0
+     9b8:	40 e0       	ldi	r20, 0x00	; 0
+     9ba:	50 e0       	ldi	r21, 0x00	; 0
+     9bc:	6c e7       	ldi	r22, 0x7C	; 124
+     9be:	71 e0       	ldi	r23, 0x01	; 1
+     9c0:	80 e0       	ldi	r24, 0x00	; 0
+     9c2:	90 e0       	ldi	r25, 0x00	; 0
+     9c4:	6d db       	rcall	.-2342   	; 0xa0 <playTune>
+		wait(150);
+     9c6:	86 e9       	ldi	r24, 0x96	; 150
+     9c8:	90 e0       	ldi	r25, 0x00	; 0
+     9ca:	bc db       	rcall	.-2184   	; 0x144 <wait>
+		playTune(430 ,100);
+     9cc:	24 e6       	ldi	r18, 0x64	; 100
+     9ce:	30 e0       	ldi	r19, 0x00	; 0
+     9d0:	40 e0       	ldi	r20, 0x00	; 0
+     9d2:	50 e0       	ldi	r21, 0x00	; 0
+     9d4:	6e ea       	ldi	r22, 0xAE	; 174
+     9d6:	71 e0       	ldi	r23, 0x01	; 1
+     9d8:	80 e0       	ldi	r24, 0x00	; 0
+     9da:	90 e0       	ldi	r25, 0x00	; 0
+     9dc:	61 db       	rcall	.-2366   	; 0xa0 <playTune>
+		wait(150);
+     9de:	86 e9       	ldi	r24, 0x96	; 150
+     9e0:	90 e0       	ldi	r25, 0x00	; 0
+     9e2:	b0 db       	rcall	.-2208   	; 0x144 <wait>
 
-000003c0 <__divmodhi4_neg2>:
- 3c0:	70 95       	com	r23
- 3c2:	61 95       	neg	r22
- 3c4:	7f 4f       	sbci	r23, 0xFF	; 255
+		playTune(500 ,100);
+     9e4:	24 e6       	ldi	r18, 0x64	; 100
+     9e6:	30 e0       	ldi	r19, 0x00	; 0
+     9e8:	40 e0       	ldi	r20, 0x00	; 0
+     9ea:	50 e0       	ldi	r21, 0x00	; 0
+     9ec:	64 ef       	ldi	r22, 0xF4	; 244
+     9ee:	71 e0       	ldi	r23, 0x01	; 1
+     9f0:	80 e0       	ldi	r24, 0x00	; 0
+     9f2:	90 e0       	ldi	r25, 0x00	; 0
+     9f4:	55 db       	rcall	.-2390   	; 0xa0 <playTune>
+		wait(300);
+     9f6:	8c e2       	ldi	r24, 0x2C	; 44
+     9f8:	91 e0       	ldi	r25, 0x01	; 1
+     9fa:	a4 db       	rcall	.-2232   	; 0x144 <wait>
+		playTune(430 ,100);
+     9fc:	24 e6       	ldi	r18, 0x64	; 100
+     9fe:	30 e0       	ldi	r19, 0x00	; 0
+     a00:	40 e0       	ldi	r20, 0x00	; 0
+     a02:	50 e0       	ldi	r21, 0x00	; 0
+     a04:	6e ea       	ldi	r22, 0xAE	; 174
+     a06:	71 e0       	ldi	r23, 0x01	; 1
+     a08:	80 e0       	ldi	r24, 0x00	; 0
+     a0a:	90 e0       	ldi	r25, 0x00	; 0
+     a0c:	49 db       	rcall	.-2414   	; 0xa0 <playTune>
+		wait(150);
+     a0e:	86 e9       	ldi	r24, 0x96	; 150
+     a10:	90 e0       	ldi	r25, 0x00	; 0
+     a12:	98 db       	rcall	.-2256   	; 0x144 <wait>
+     a14:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(500 ,100);
+     a16:	30 e0       	ldi	r19, 0x00	; 0
+     a18:	40 e0       	ldi	r20, 0x00	; 0
+     a1a:	50 e0       	ldi	r21, 0x00	; 0
+     a1c:	64 ef       	ldi	r22, 0xF4	; 244
+     a1e:	71 e0       	ldi	r23, 0x01	; 1
+     a20:	80 e0       	ldi	r24, 0x00	; 0
+     a22:	90 e0       	ldi	r25, 0x00	; 0
+     a24:	3d db       	rcall	.-2438   	; 0xa0 <playTune>
+		wait(100);
+     a26:	84 e6       	ldi	r24, 0x64	; 100
+     a28:	90 e0       	ldi	r25, 0x00	; 0
+     a2a:	8c db       	rcall	.-2280   	; 0x144 <wait>
+     a2c:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(570 ,100);
+     a2e:	30 e0       	ldi	r19, 0x00	; 0
+     a30:	40 e0       	ldi	r20, 0x00	; 0
+     a32:	50 e0       	ldi	r21, 0x00	; 0
+     a34:	6a e3       	ldi	r22, 0x3A	; 58
+     a36:	72 e0       	ldi	r23, 0x02	; 2
+     a38:	80 e0       	ldi	r24, 0x00	; 0
+     a3a:	90 e0       	ldi	r25, 0x00	; 0
+     a3c:	31 db       	rcall	.-2462   	; 0xa0 <playTune>
+		wait(220);
+     a3e:	8c ed       	ldi	r24, 0xDC	; 220
+     a40:	90 e0       	ldi	r25, 0x00	; 0
+     a42:	80 db       	rcall	.-2304   	; 0x144 <wait>
+     a44:	24 e6       	ldi	r18, 0x64	; 100
 
-000003c6 <__divmodhi4_exit>:
- 3c6:	08 95       	ret
+		playTune(500 ,100);
+     a46:	30 e0       	ldi	r19, 0x00	; 0
+     a48:	40 e0       	ldi	r20, 0x00	; 0
+     a4a:	50 e0       	ldi	r21, 0x00	; 0
+     a4c:	64 ef       	ldi	r22, 0xF4	; 244
+     a4e:	71 e0       	ldi	r23, 0x01	; 1
+     a50:	80 e0       	ldi	r24, 0x00	; 0
+     a52:	90 e0       	ldi	r25, 0x00	; 0
+     a54:	25 db       	rcall	.-2486   	; 0xa0 <playTune>
+		wait(300);
+     a56:	8c e2       	ldi	r24, 0x2C	; 44
+     a58:	91 e0       	ldi	r25, 0x01	; 1
+     a5a:	74 db       	rcall	.-2328   	; 0x144 <wait>
 
-000003c8 <__udivmodhi4>:
- 3c8:	aa 1b       	sub	r26, r26
- 3ca:	bb 1b       	sub	r27, r27
- 3cc:	51 e1       	ldi	r21, 0x11	; 17
- 3ce:	07 c0       	rjmp	.+14     	; 0x3de <__udivmodhi4_ep>
+		playTune(760 ,100);
+     a5c:	24 e6       	ldi	r18, 0x64	; 100
+     a5e:	30 e0       	ldi	r19, 0x00	; 0
+     a60:	40 e0       	ldi	r20, 0x00	; 0
+     a62:	50 e0       	ldi	r21, 0x00	; 0
+     a64:	68 ef       	ldi	r22, 0xF8	; 248
+     a66:	72 e0       	ldi	r23, 0x02	; 2
+     a68:	80 e0       	ldi	r24, 0x00	; 0
+     a6a:	90 e0       	ldi	r25, 0x00	; 0
+     a6c:	19 db       	rcall	.-2510   	; 0xa0 <playTune>
+		wait(100);
+     a6e:	84 e6       	ldi	r24, 0x64	; 100
+     a70:	90 e0       	ldi	r25, 0x00	; 0
+     a72:	68 db       	rcall	.-2352   	; 0x144 <wait>
+		playTune(720 ,100);
+     a74:	24 e6       	ldi	r18, 0x64	; 100
+     a76:	30 e0       	ldi	r19, 0x00	; 0
+     a78:	40 e0       	ldi	r20, 0x00	; 0
+     a7a:	50 e0       	ldi	r21, 0x00	; 0
+     a7c:	60 ed       	ldi	r22, 0xD0	; 208
+     a7e:	72 e0       	ldi	r23, 0x02	; 2
+     a80:	80 e0       	ldi	r24, 0x00	; 0
+     a82:	90 e0       	ldi	r25, 0x00	; 0
+     a84:	0d db       	rcall	.-2534   	; 0xa0 <playTune>
+		wait(150);
+     a86:	86 e9       	ldi	r24, 0x96	; 150
+     a88:	90 e0       	ldi	r25, 0x00	; 0
+     a8a:	5c db       	rcall	.-2376   	; 0x144 <wait>
+		playTune(680 ,100);
+     a8c:	24 e6       	ldi	r18, 0x64	; 100
+     a8e:	30 e0       	ldi	r19, 0x00	; 0
+     a90:	40 e0       	ldi	r20, 0x00	; 0
+     a92:	50 e0       	ldi	r21, 0x00	; 0
+     a94:	68 ea       	ldi	r22, 0xA8	; 168
+     a96:	72 e0       	ldi	r23, 0x02	; 2
+     a98:	80 e0       	ldi	r24, 0x00	; 0
+     a9a:	90 e0       	ldi	r25, 0x00	; 0
+     a9c:	01 db       	rcall	.-2558   	; 0xa0 <playTune>
+		wait(150);
+     a9e:	86 e9       	ldi	r24, 0x96	; 150
+     aa0:	90 e0       	ldi	r25, 0x00	; 0
+     aa2:	50 db       	rcall	.-2400   	; 0x144 <wait>
+     aa4:	26 e9       	ldi	r18, 0x96	; 150
+		playTune(620 ,150);
+     aa6:	30 e0       	ldi	r19, 0x00	; 0
+     aa8:	40 e0       	ldi	r20, 0x00	; 0
+     aaa:	50 e0       	ldi	r21, 0x00	; 0
+     aac:	6c e6       	ldi	r22, 0x6C	; 108
+     aae:	72 e0       	ldi	r23, 0x02	; 2
+     ab0:	80 e0       	ldi	r24, 0x00	; 0
+     ab2:	90 e0       	ldi	r25, 0x00	; 0
+     ab4:	f5 da       	rcall	.-2582   	; 0xa0 <playTune>
+		wait(300);
+     ab6:	8c e2       	ldi	r24, 0x2C	; 44
+     ab8:	91 e0       	ldi	r25, 0x01	; 1
+     aba:	44 db       	rcall	.-2424   	; 0x144 <wait>
+     abc:	28 ec       	ldi	r18, 0xC8	; 200
 
-000003d0 <__udivmodhi4_loop>:
- 3d0:	aa 1f       	adc	r26, r26
- 3d2:	bb 1f       	adc	r27, r27
- 3d4:	a6 17       	cp	r26, r22
- 3d6:	b7 07       	cpc	r27, r23
- 3d8:	10 f0       	brcs	.+4      	; 0x3de <__udivmodhi4_ep>
- 3da:	a6 1b       	sub	r26, r22
- 3dc:	b7 0b       	sbc	r27, r23
+		playTune(650 ,200);
+     abe:	30 e0       	ldi	r19, 0x00	; 0
+     ac0:	40 e0       	ldi	r20, 0x00	; 0
+     ac2:	50 e0       	ldi	r21, 0x00	; 0
+     ac4:	6a e8       	ldi	r22, 0x8A	; 138
+     ac6:	72 e0       	ldi	r23, 0x02	; 2
+     ac8:	80 e0       	ldi	r24, 0x00	; 0
+     aca:	90 e0       	ldi	r25, 0x00	; 0
+     acc:	e9 da       	rcall	.-2606   	; 0xa0 <playTune>
+		wait(300);
+     ace:	8c e2       	ldi	r24, 0x2C	; 44
+     ad0:	91 e0       	ldi	r25, 0x01	; 1
+     ad2:	38 db       	rcall	.-2448   	; 0x144 <wait>
+     ad4:	20 e5       	ldi	r18, 0x50	; 80
 
-000003de <__udivmodhi4_ep>:
- 3de:	88 1f       	adc	r24, r24
- 3e0:	99 1f       	adc	r25, r25
- 3e2:	5a 95       	dec	r21
- 3e4:	a9 f7       	brne	.-22     	; 0x3d0 <__udivmodhi4_loop>
- 3e6:	80 95       	com	r24
- 3e8:	90 95       	com	r25
- 3ea:	bc 01       	movw	r22, r24
- 3ec:	cd 01       	movw	r24, r26
- 3ee:	08 95       	ret
+		playTune(1020,80);
+     ad6:	30 e0       	ldi	r19, 0x00	; 0
+     ad8:	40 e0       	ldi	r20, 0x00	; 0
+     ada:	50 e0       	ldi	r21, 0x00	; 0
+     adc:	6c ef       	ldi	r22, 0xFC	; 252
+     ade:	73 e0       	ldi	r23, 0x03	; 3
+     ae0:	80 e0       	ldi	r24, 0x00	; 0
+     ae2:	90 e0       	ldi	r25, 0x00	; 0
+     ae4:	dd da       	rcall	.-2630   	; 0xa0 <playTune>
+		wait(300);
+     ae6:	8c e2       	ldi	r24, 0x2C	; 44
+     ae8:	91 e0       	ldi	r25, 0x01	; 1
+     aea:	2c db       	rcall	.-2472   	; 0x144 <wait>
+		playTune(1020,80);
+     aec:	20 e5       	ldi	r18, 0x50	; 80
+     aee:	30 e0       	ldi	r19, 0x00	; 0
+     af0:	40 e0       	ldi	r20, 0x00	; 0
+     af2:	50 e0       	ldi	r21, 0x00	; 0
+     af4:	6c ef       	ldi	r22, 0xFC	; 252
+     af6:	73 e0       	ldi	r23, 0x03	; 3
+     af8:	80 e0       	ldi	r24, 0x00	; 0
+     afa:	90 e0       	ldi	r25, 0x00	; 0
+     afc:	d1 da       	rcall	.-2654   	; 0xa0 <playTune>
+		wait(150);
+     afe:	86 e9       	ldi	r24, 0x96	; 150
+     b00:	90 e0       	ldi	r25, 0x00	; 0
+     b02:	20 db       	rcall	.-2496   	; 0x144 <wait>
+		playTune(1020,80);
+     b04:	20 e5       	ldi	r18, 0x50	; 80
+     b06:	30 e0       	ldi	r19, 0x00	; 0
+     b08:	40 e0       	ldi	r20, 0x00	; 0
+     b0a:	50 e0       	ldi	r21, 0x00	; 0
+     b0c:	6c ef       	ldi	r22, 0xFC	; 252
+     b0e:	73 e0       	ldi	r23, 0x03	; 3
+     b10:	80 e0       	ldi	r24, 0x00	; 0
+     b12:	90 e0       	ldi	r25, 0x00	; 0
+     b14:	c5 da       	rcall	.-2678   	; 0xa0 <playTune>
+		wait(300);
+     b16:	8c e2       	ldi	r24, 0x2C	; 44
+     b18:	91 e0       	ldi	r25, 0x01	; 1
+     b1a:	14 db       	rcall	.-2520   	; 0x144 <wait>
 
-000003f0 <_exit>:
- 3f0:	f8 94       	cli
+		playTune(380 ,100);
+     b1c:	24 e6       	ldi	r18, 0x64	; 100
+     b1e:	30 e0       	ldi	r19, 0x00	; 0
+     b20:	40 e0       	ldi	r20, 0x00	; 0
+     b22:	50 e0       	ldi	r21, 0x00	; 0
+     b24:	6c e7       	ldi	r22, 0x7C	; 124
+     b26:	71 e0       	ldi	r23, 0x01	; 1
+     b28:	80 e0       	ldi	r24, 0x00	; 0
+     b2a:	90 e0       	ldi	r25, 0x00	; 0
+     b2c:	b9 da       	rcall	.-2702   	; 0xa0 <playTune>
+		wait(300);
+     b2e:	8c e2       	ldi	r24, 0x2C	; 44
+     b30:	91 e0       	ldi	r25, 0x01	; 1
+     b32:	08 db       	rcall	.-2544   	; 0x144 <wait>
+     b34:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(500 ,100);
+     b36:	30 e0       	ldi	r19, 0x00	; 0
+     b38:	40 e0       	ldi	r20, 0x00	; 0
+     b3a:	50 e0       	ldi	r21, 0x00	; 0
+     b3c:	64 ef       	ldi	r22, 0xF4	; 244
+     b3e:	71 e0       	ldi	r23, 0x01	; 1
+     b40:	80 e0       	ldi	r24, 0x00	; 0
+     b42:	90 e0       	ldi	r25, 0x00	; 0
+     b44:	ad da       	rcall	.-2726   	; 0xa0 <playTune>
+		wait(300);
+     b46:	8c e2       	ldi	r24, 0x2C	; 44
+     b48:	91 e0       	ldi	r25, 0x01	; 1
+     b4a:	fc da       	rcall	.-2568   	; 0x144 <wait>
+     b4c:	24 e6       	ldi	r18, 0x64	; 100
 
-000003f2 <__stop_program>:
- 3f2:	ff cf       	rjmp	.-2      	; 0x3f2 <__stop_program>
+		playTune(760 ,100);
+     b4e:	30 e0       	ldi	r19, 0x00	; 0
+     b50:	40 e0       	ldi	r20, 0x00	; 0
+     b52:	50 e0       	ldi	r21, 0x00	; 0
+     b54:	68 ef       	ldi	r22, 0xF8	; 248
+     b56:	72 e0       	ldi	r23, 0x02	; 2
+     b58:	80 e0       	ldi	r24, 0x00	; 0
+     b5a:	90 e0       	ldi	r25, 0x00	; 0
+     b5c:	a1 da       	rcall	.-2750   	; 0xa0 <playTune>
+		wait(100);
+     b5e:	84 e6       	ldi	r24, 0x64	; 100
+     b60:	90 e0       	ldi	r25, 0x00	; 0
+     b62:	f0 da       	rcall	.-2592   	; 0x144 <wait>
+     b64:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(720 ,100);
+     b66:	30 e0       	ldi	r19, 0x00	; 0
+     b68:	40 e0       	ldi	r20, 0x00	; 0
+     b6a:	50 e0       	ldi	r21, 0x00	; 0
+     b6c:	60 ed       	ldi	r22, 0xD0	; 208
+     b6e:	72 e0       	ldi	r23, 0x02	; 2
+     b70:	80 e0       	ldi	r24, 0x00	; 0
+     b72:	90 e0       	ldi	r25, 0x00	; 0
+     b74:	95 da       	rcall	.-2774   	; 0xa0 <playTune>
+		wait(150);
+     b76:	86 e9       	ldi	r24, 0x96	; 150
+     b78:	90 e0       	ldi	r25, 0x00	; 0
+     b7a:	e4 da       	rcall	.-2616   	; 0x144 <wait>
+		playTune(680 ,100);
+     b7c:	24 e6       	ldi	r18, 0x64	; 100
+     b7e:	30 e0       	ldi	r19, 0x00	; 0
+     b80:	40 e0       	ldi	r20, 0x00	; 0
+     b82:	50 e0       	ldi	r21, 0x00	; 0
+     b84:	68 ea       	ldi	r22, 0xA8	; 168
+     b86:	72 e0       	ldi	r23, 0x02	; 2
+     b88:	80 e0       	ldi	r24, 0x00	; 0
+     b8a:	90 e0       	ldi	r25, 0x00	; 0
+     b8c:	89 da       	rcall	.-2798   	; 0xa0 <playTune>
+		wait(150);
+     b8e:	86 e9       	ldi	r24, 0x96	; 150
+     b90:	90 e0       	ldi	r25, 0x00	; 0
+     b92:	d8 da       	rcall	.-2640   	; 0x144 <wait>
+		playTune(620 ,150);
+     b94:	26 e9       	ldi	r18, 0x96	; 150
+     b96:	30 e0       	ldi	r19, 0x00	; 0
+     b98:	40 e0       	ldi	r20, 0x00	; 0
+     b9a:	50 e0       	ldi	r21, 0x00	; 0
+     b9c:	6c e6       	ldi	r22, 0x6C	; 108
+     b9e:	72 e0       	ldi	r23, 0x02	; 2
+     ba0:	80 e0       	ldi	r24, 0x00	; 0
+     ba2:	90 e0       	ldi	r25, 0x00	; 0
+     ba4:	7d da       	rcall	.-2822   	; 0xa0 <playTune>
+		wait(300);
+     ba6:	8c e2       	ldi	r24, 0x2C	; 44
+     ba8:	91 e0       	ldi	r25, 0x01	; 1
+     baa:	cc da       	rcall	.-2664   	; 0x144 <wait>
+
+		playTune(650 ,150);
+     bac:	26 e9       	ldi	r18, 0x96	; 150
+     bae:	30 e0       	ldi	r19, 0x00	; 0
+     bb0:	40 e0       	ldi	r20, 0x00	; 0
+     bb2:	50 e0       	ldi	r21, 0x00	; 0
+     bb4:	6a e8       	ldi	r22, 0x8A	; 138
+     bb6:	72 e0       	ldi	r23, 0x02	; 2
+     bb8:	80 e0       	ldi	r24, 0x00	; 0
+     bba:	90 e0       	ldi	r25, 0x00	; 0
+     bbc:	71 da       	rcall	.-2846   	; 0xa0 <playTune>
+		wait(300);
+     bbe:	8c e2       	ldi	r24, 0x2C	; 44
+     bc0:	91 e0       	ldi	r25, 0x01	; 1
+     bc2:	c0 da       	rcall	.-2688   	; 0x144 <wait>
+     bc4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(380 ,100);
+     bc6:	30 e0       	ldi	r19, 0x00	; 0
+     bc8:	40 e0       	ldi	r20, 0x00	; 0
+     bca:	50 e0       	ldi	r21, 0x00	; 0
+     bcc:	6c e7       	ldi	r22, 0x7C	; 124
+     bce:	71 e0       	ldi	r23, 0x01	; 1
+     bd0:	80 e0       	ldi	r24, 0x00	; 0
+     bd2:	90 e0       	ldi	r25, 0x00	; 0
+     bd4:	65 da       	rcall	.-2870   	; 0xa0 <playTune>
+		wait(150);
+     bd6:	86 e9       	ldi	r24, 0x96	; 150
+     bd8:	90 e0       	ldi	r25, 0x00	; 0
+     bda:	b4 da       	rcall	.-2712   	; 0x144 <wait>
+     bdc:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(430 ,100);
+     bde:	30 e0       	ldi	r19, 0x00	; 0
+     be0:	40 e0       	ldi	r20, 0x00	; 0
+     be2:	50 e0       	ldi	r21, 0x00	; 0
+     be4:	6e ea       	ldi	r22, 0xAE	; 174
+     be6:	71 e0       	ldi	r23, 0x01	; 1
+     be8:	80 e0       	ldi	r24, 0x00	; 0
+     bea:	90 e0       	ldi	r25, 0x00	; 0
+     bec:	59 da       	rcall	.-2894   	; 0xa0 <playTune>
+		wait(150);
+     bee:	86 e9       	ldi	r24, 0x96	; 150
+     bf0:	90 e0       	ldi	r25, 0x00	; 0
+     bf2:	a8 da       	rcall	.-2736   	; 0x144 <wait>
+     bf4:	24 e6       	ldi	r18, 0x64	; 100
+
+		playTune(500 ,100);
+     bf6:	30 e0       	ldi	r19, 0x00	; 0
+     bf8:	40 e0       	ldi	r20, 0x00	; 0
+     bfa:	50 e0       	ldi	r21, 0x00	; 0
+     bfc:	64 ef       	ldi	r22, 0xF4	; 244
+     bfe:	71 e0       	ldi	r23, 0x01	; 1
+     c00:	80 e0       	ldi	r24, 0x00	; 0
+     c02:	90 e0       	ldi	r25, 0x00	; 0
+     c04:	4d da       	rcall	.-2918   	; 0xa0 <playTune>
+		wait(300);
+     c06:	8c e2       	ldi	r24, 0x2C	; 44
+     c08:	91 e0       	ldi	r25, 0x01	; 1
+     c0a:	9c da       	rcall	.-2760   	; 0x144 <wait>
+		playTune(430 ,100);
+     c0c:	24 e6       	ldi	r18, 0x64	; 100
+     c0e:	30 e0       	ldi	r19, 0x00	; 0
+     c10:	40 e0       	ldi	r20, 0x00	; 0
+     c12:	50 e0       	ldi	r21, 0x00	; 0
+     c14:	6e ea       	ldi	r22, 0xAE	; 174
+     c16:	71 e0       	ldi	r23, 0x01	; 1
+     c18:	80 e0       	ldi	r24, 0x00	; 0
+     c1a:	90 e0       	ldi	r25, 0x00	; 0
+     c1c:	41 da       	rcall	.-2942   	; 0xa0 <playTune>
+		wait(150);
+     c1e:	86 e9       	ldi	r24, 0x96	; 150
+     c20:	90 e0       	ldi	r25, 0x00	; 0
+     c22:	90 da       	rcall	.-2784   	; 0x144 <wait>
+		playTune(500 ,100);
+     c24:	24 e6       	ldi	r18, 0x64	; 100
+     c26:	30 e0       	ldi	r19, 0x00	; 0
+     c28:	40 e0       	ldi	r20, 0x00	; 0
+     c2a:	50 e0       	ldi	r21, 0x00	; 0
+     c2c:	64 ef       	ldi	r22, 0xF4	; 244
+     c2e:	71 e0       	ldi	r23, 0x01	; 1
+     c30:	80 e0       	ldi	r24, 0x00	; 0
+     c32:	90 e0       	ldi	r25, 0x00	; 0
+     c34:	35 da       	rcall	.-2966   	; 0xa0 <playTune>
+		wait(100);
+     c36:	84 e6       	ldi	r24, 0x64	; 100
+     c38:	90 e0       	ldi	r25, 0x00	; 0
+     c3a:	84 da       	rcall	.-2808   	; 0x144 <wait>
+		playTune(570 ,100);
+     c3c:	24 e6       	ldi	r18, 0x64	; 100
+     c3e:	30 e0       	ldi	r19, 0x00	; 0
+     c40:	40 e0       	ldi	r20, 0x00	; 0
+     c42:	50 e0       	ldi	r21, 0x00	; 0
+     c44:	6a e3       	ldi	r22, 0x3A	; 58
+     c46:	72 e0       	ldi	r23, 0x02	; 2
+     c48:	80 e0       	ldi	r24, 0x00	; 0
+     c4a:	90 e0       	ldi	r25, 0x00	; 0
+     c4c:	29 da       	rcall	.-2990   	; 0xa0 <playTune>
+		wait(420);
+     c4e:	84 ea       	ldi	r24, 0xA4	; 164
+     c50:	91 e0       	ldi	r25, 0x01	; 1
+     c52:	78 da       	rcall	.-2832   	; 0x144 <wait>
+     c54:	24 e6       	ldi	r18, 0x64	; 100
+
+		playTune(585 ,100);
+     c56:	30 e0       	ldi	r19, 0x00	; 0
+     c58:	40 e0       	ldi	r20, 0x00	; 0
+     c5a:	50 e0       	ldi	r21, 0x00	; 0
+     c5c:	69 e4       	ldi	r22, 0x49	; 73
+     c5e:	72 e0       	ldi	r23, 0x02	; 2
+     c60:	80 e0       	ldi	r24, 0x00	; 0
+     c62:	90 e0       	ldi	r25, 0x00	; 0
+     c64:	1d da       	rcall	.-3014   	; 0xa0 <playTune>
+		wait(450);
+     c66:	82 ec       	ldi	r24, 0xC2	; 194
+     c68:	91 e0       	ldi	r25, 0x01	; 1
+     c6a:	6c da       	rcall	.-2856   	; 0x144 <wait>
+     c6c:	24 e6       	ldi	r18, 0x64	; 100
+
+		playTune(550 ,100);
+     c6e:	30 e0       	ldi	r19, 0x00	; 0
+     c70:	40 e0       	ldi	r20, 0x00	; 0
+     c72:	50 e0       	ldi	r21, 0x00	; 0
+     c74:	66 e2       	ldi	r22, 0x26	; 38
+     c76:	72 e0       	ldi	r23, 0x02	; 2
+     c78:	80 e0       	ldi	r24, 0x00	; 0
+     c7a:	90 e0       	ldi	r25, 0x00	; 0
+     c7c:	11 da       	rcall	.-3038   	; 0xa0 <playTune>
+		wait(420);
+     c7e:	84 ea       	ldi	r24, 0xA4	; 164
+     c80:	91 e0       	ldi	r25, 0x01	; 1
+     c82:	60 da       	rcall	.-2880   	; 0x144 <wait>
+     c84:	24 e6       	ldi	r18, 0x64	; 100
+
+		playTune(500 ,100);
+     c86:	30 e0       	ldi	r19, 0x00	; 0
+     c88:	40 e0       	ldi	r20, 0x00	; 0
+     c8a:	50 e0       	ldi	r21, 0x00	; 0
+     c8c:	64 ef       	ldi	r22, 0xF4	; 244
+     c8e:	71 e0       	ldi	r23, 0x01	; 1
+     c90:	80 e0       	ldi	r24, 0x00	; 0
+     c92:	90 e0       	ldi	r25, 0x00	; 0
+     c94:	05 da       	rcall	.-3062   	; 0xa0 <playTune>
+		wait(360);
+     c96:	88 e6       	ldi	r24, 0x68	; 104
+     c98:	91 e0       	ldi	r25, 0x01	; 1
+     c9a:	54 da       	rcall	.-2904   	; 0x144 <wait>
+
+		playTune(380 ,100);
+     c9c:	24 e6       	ldi	r18, 0x64	; 100
+     c9e:	30 e0       	ldi	r19, 0x00	; 0
+     ca0:	40 e0       	ldi	r20, 0x00	; 0
+     ca2:	50 e0       	ldi	r21, 0x00	; 0
+     ca4:	6c e7       	ldi	r22, 0x7C	; 124
+     ca6:	71 e0       	ldi	r23, 0x01	; 1
+     ca8:	80 e0       	ldi	r24, 0x00	; 0
+     caa:	90 e0       	ldi	r25, 0x00	; 0
+     cac:	f9 d9       	rcall	.-3086   	; 0xa0 <playTune>
+		wait(300);
+     cae:	8c e2       	ldi	r24, 0x2C	; 44
+     cb0:	91 e0       	ldi	r25, 0x01	; 1
+     cb2:	48 da       	rcall	.-2928   	; 0x144 <wait>
+		playTune(500 ,100);
+     cb4:	24 e6       	ldi	r18, 0x64	; 100
+     cb6:	30 e0       	ldi	r19, 0x00	; 0
+     cb8:	40 e0       	ldi	r20, 0x00	; 0
+     cba:	50 e0       	ldi	r21, 0x00	; 0
+     cbc:	64 ef       	ldi	r22, 0xF4	; 244
+     cbe:	71 e0       	ldi	r23, 0x01	; 1
+     cc0:	80 e0       	ldi	r24, 0x00	; 0
+     cc2:	90 e0       	ldi	r25, 0x00	; 0
+     cc4:	ed d9       	rcall	.-3110   	; 0xa0 <playTune>
+		wait(300);
+     cc6:	8c e2       	ldi	r24, 0x2C	; 44
+     cc8:	91 e0       	ldi	r25, 0x01	; 1
+     cca:	3c da       	rcall	.-2952   	; 0x144 <wait>
+		playTune(500 ,100);
+     ccc:	24 e6       	ldi	r18, 0x64	; 100
+     cce:	30 e0       	ldi	r19, 0x00	; 0
+     cd0:	40 e0       	ldi	r20, 0x00	; 0
+     cd2:	50 e0       	ldi	r21, 0x00	; 0
+     cd4:	64 ef       	ldi	r22, 0xF4	; 244
+     cd6:	71 e0       	ldi	r23, 0x01	; 1
+     cd8:	80 e0       	ldi	r24, 0x00	; 0
+     cda:	90 e0       	ldi	r25, 0x00	; 0
+     cdc:	e1 d9       	rcall	.-3134   	; 0xa0 <playTune>
+		wait(150);
+     cde:	86 e9       	ldi	r24, 0x96	; 150
+     ce0:	90 e0       	ldi	r25, 0x00	; 0
+     ce2:	30 da       	rcall	.-2976   	; 0x144 <wait>
+     ce4:	24 e6       	ldi	r18, 0x64	; 100
+		playTune(500 ,100);
+     ce6:	30 e0       	ldi	r19, 0x00	; 0
+     ce8:	40 e0       	ldi	r20, 0x00	; 0
+     cea:	50 e0       	ldi	r21, 0x00	; 0
+     cec:	64 ef       	ldi	r22, 0xF4	; 244
+     cee:	71 e0       	ldi	r23, 0x01	; 1
+     cf0:	80 e0       	ldi	r24, 0x00	; 0
+     cf2:	90 e0       	ldi	r25, 0x00	; 0
+     cf4:	d5 d9       	rcall	.-3158   	; 0xa0 <playTune>
+		wait(300);
+     cf6:	8c e2       	ldi	r24, 0x2C	; 44
+     cf8:	91 e0       	ldi	r25, 0x01	; 1
+     cfa:	24 da       	rcall	.-3000   	; 0x144 <wait>
+     cfc:	2c e3       	ldi	r18, 0x3C	; 60
+
+		playTune(500 ,60);
+     cfe:	30 e0       	ldi	r19, 0x00	; 0
+     d00:	40 e0       	ldi	r20, 0x00	; 0
+     d02:	50 e0       	ldi	r21, 0x00	; 0
+     d04:	64 ef       	ldi	r22, 0xF4	; 244
+     d06:	71 e0       	ldi	r23, 0x01	; 1
+     d08:	80 e0       	ldi	r24, 0x00	; 0
+     d0a:	90 e0       	ldi	r25, 0x00	; 0
+     d0c:	c9 d9       	rcall	.-3182   	; 0xa0 <playTune>
+		wait(150);
+     d0e:	86 e9       	ldi	r24, 0x96	; 150
+     d10:	90 e0       	ldi	r25, 0x00	; 0
+     d12:	18 da       	rcall	.-3024   	; 0x144 <wait>
+     d14:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(500 ,80);
+     d16:	30 e0       	ldi	r19, 0x00	; 0
+     d18:	40 e0       	ldi	r20, 0x00	; 0
+     d1a:	50 e0       	ldi	r21, 0x00	; 0
+     d1c:	64 ef       	ldi	r22, 0xF4	; 244
+     d1e:	71 e0       	ldi	r23, 0x01	; 1
+     d20:	80 e0       	ldi	r24, 0x00	; 0
+     d22:	90 e0       	ldi	r25, 0x00	; 0
+     d24:	bd d9       	rcall	.-3206   	; 0xa0 <playTune>
+		wait(300);
+     d26:	8c e2       	ldi	r24, 0x2C	; 44
+     d28:	91 e0       	ldi	r25, 0x01	; 1
+     d2a:	0c da       	rcall	.-3048   	; 0x144 <wait>
+		playTune(500 ,60);
+     d2c:	2c e3       	ldi	r18, 0x3C	; 60
+     d2e:	30 e0       	ldi	r19, 0x00	; 0
+     d30:	40 e0       	ldi	r20, 0x00	; 0
+     d32:	50 e0       	ldi	r21, 0x00	; 0
+     d34:	64 ef       	ldi	r22, 0xF4	; 244
+     d36:	71 e0       	ldi	r23, 0x01	; 1
+     d38:	80 e0       	ldi	r24, 0x00	; 0
+     d3a:	90 e0       	ldi	r25, 0x00	; 0
+     d3c:	b1 d9       	rcall	.-3230   	; 0xa0 <playTune>
+		wait(350);
+     d3e:	8e e5       	ldi	r24, 0x5E	; 94
+     d40:	91 e0       	ldi	r25, 0x01	; 1
+     d42:	00 da       	rcall	.-3072   	; 0x144 <wait>
+		playTune(500 ,80);
+     d44:	20 e5       	ldi	r18, 0x50	; 80
+     d46:	30 e0       	ldi	r19, 0x00	; 0
+     d48:	40 e0       	ldi	r20, 0x00	; 0
+     d4a:	50 e0       	ldi	r21, 0x00	; 0
+     d4c:	64 ef       	ldi	r22, 0xF4	; 244
+     d4e:	71 e0       	ldi	r23, 0x01	; 1
+     d50:	80 e0       	ldi	r24, 0x00	; 0
+     d52:	90 e0       	ldi	r25, 0x00	; 0
+     d54:	a5 d9       	rcall	.-3254   	; 0xa0 <playTune>
+		wait(150);
+     d56:	86 e9       	ldi	r24, 0x96	; 150
+     d58:	90 e0       	ldi	r25, 0x00	; 0
+     d5a:	f4 d9       	rcall	.-3096   	; 0x144 <wait>
+		playTune(580 ,80);
+     d5c:	20 e5       	ldi	r18, 0x50	; 80
+     d5e:	30 e0       	ldi	r19, 0x00	; 0
+     d60:	40 e0       	ldi	r20, 0x00	; 0
+     d62:	50 e0       	ldi	r21, 0x00	; 0
+     d64:	64 e4       	ldi	r22, 0x44	; 68
+     d66:	72 e0       	ldi	r23, 0x02	; 2
+     d68:	80 e0       	ldi	r24, 0x00	; 0
+     d6a:	90 e0       	ldi	r25, 0x00	; 0
+     d6c:	99 d9       	rcall	.-3278   	; 0xa0 <playTune>
+		wait(350);
+     d6e:	8e e5       	ldi	r24, 0x5E	; 94
+     d70:	91 e0       	ldi	r25, 0x01	; 1
+     d72:	e8 d9       	rcall	.-3120   	; 0x144 <wait>
+     d74:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(660 ,80);
+     d76:	30 e0       	ldi	r19, 0x00	; 0
+     d78:	40 e0       	ldi	r20, 0x00	; 0
+     d7a:	50 e0       	ldi	r21, 0x00	; 0
+     d7c:	64 e9       	ldi	r22, 0x94	; 148
+     d7e:	72 e0       	ldi	r23, 0x02	; 2
+     d80:	80 e0       	ldi	r24, 0x00	; 0
+     d82:	90 e0       	ldi	r25, 0x00	; 0
+     d84:	8d d9       	rcall	.-3302   	; 0xa0 <playTune>
+		wait(150);
+     d86:	86 e9       	ldi	r24, 0x96	; 150
+     d88:	90 e0       	ldi	r25, 0x00	; 0
+     d8a:	dc d9       	rcall	.-3144   	; 0x144 <wait>
+     d8c:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(500 ,80);
+     d8e:	30 e0       	ldi	r19, 0x00	; 0
+     d90:	40 e0       	ldi	r20, 0x00	; 0
+     d92:	50 e0       	ldi	r21, 0x00	; 0
+     d94:	64 ef       	ldi	r22, 0xF4	; 244
+     d96:	71 e0       	ldi	r23, 0x01	; 1
+     d98:	80 e0       	ldi	r24, 0x00	; 0
+     d9a:	90 e0       	ldi	r25, 0x00	; 0
+     d9c:	81 d9       	rcall	.-3326   	; 0xa0 <playTune>
+		wait(300);
+     d9e:	8c e2       	ldi	r24, 0x2C	; 44
+     da0:	91 e0       	ldi	r25, 0x01	; 1
+     da2:	d0 d9       	rcall	.-3168   	; 0x144 <wait>
+     da4:	20 e5       	ldi	r18, 0x50	; 80
+		playTune(430 ,80);
+     da6:	30 e0       	ldi	r19, 0x00	; 0
+     da8:	40 e0       	ldi	r20, 0x00	; 0
+     daa:	50 e0       	ldi	r21, 0x00	; 0
+     dac:	6e ea       	ldi	r22, 0xAE	; 174
+     dae:	71 e0       	ldi	r23, 0x01	; 1
+     db0:	80 e0       	ldi	r24, 0x00	; 0
+     db2:	90 e0       	ldi	r25, 0x00	; 0
+     db4:	75 d9       	rcall	.-3350   	; 0xa0 <playTune>
+		wait(150);
+     db6:	86 e9       	ldi	r24, 0x96	; 150
+     db8:	90 e0       	ldi	r25, 0x00	; 0
+     dba:	c4 d9       	rcall	.-3192   	; 0x144 <wait>
+		playTune(380 ,80);
+     dbc:	20 e5       	ldi	r18, 0x50	; 80
+     dbe:	30 e0       	ldi	r19, 0x00	; 0
+     dc0:	40 e0       	ldi	r20, 0x00	; 0
+     dc2:	50 e0       	ldi	r21, 0x00	; 0
+     dc4:	6c e7       	ldi	r22, 0x7C	; 124
+     dc6:	71 e0       	ldi	r23, 0x01	; 1
+     dc8:	80 e0       	ldi	r24, 0x00	; 0
+     dca:	90 e0       	ldi	r25, 0x00	; 0
+     dcc:	69 d9       	rcall	.-3374   	; 0xa0 <playTune>
+		wait(600);
+     dce:	88 e5       	ldi	r24, 0x58	; 88
+     dd0:	92 e0       	ldi	r25, 0x02	; 2
+     dd2:	b8 d9       	rcall	.-3216   	; 0x144 <wait>
+
+		playTune(500 ,60);
+     dd4:	2c e3       	ldi	r18, 0x3C	; 60
+     dd6:	30 e0       	ldi	r19, 0x00	; 0
+     dd8:	40 e0       	ldi	r20, 0x00	; 0
+     dda:	50 e0       	ldi	r21, 0x00	; 0
+     ddc:	64 ef       	ldi	r22, 0xF4	; 244
+     dde:	71 e0       	ldi	r23, 0x01	; 1
+     de0:	80 e0       	ldi	r24, 0x00	; 0
+     de2:	90 e0       	ldi	r25, 0x00	; 0
+     de4:	5d d9       	rcall	.-3398   	; 0xa0 <playTune>
+		wait(150);
+     de6:	86 e9       	ldi	r24, 0x96	; 150
+     de8:	90 e0       	ldi	r25, 0x00	; 0
+     dea:	ac d9       	rcall	.-3240   	; 0x144 <wait>
+		playTune(500 ,80);
+     dec:	20 e5       	ldi	r18, 0x50	; 80
+     dee:	30 e0       	ldi	r19, 0x00	; 0
+     df0:	40 e0       	ldi	r20, 0x00	; 0
+     df2:	50 e0       	ldi	r21, 0x00	; 0
+     df4:	64 ef       	ldi	r22, 0xF4	; 244
+     df6:	71 e0       	ldi	r23, 0x01	; 1
+     df8:	80 e0       	ldi	r24, 0x00	; 0
+     dfa:	90 e0       	ldi	r25, 0x00	; 0
+     dfc:	51 d9       	rcall	.-3422   	; 0xa0 <playTune>
+		wait(300);
+     dfe:	8c e2       	ldi	r24, 0x2C	; 44
+     e00:	91 e0       	ldi	r25, 0x01	; 1
+     e02:	a0 d9       	rcall	.-3264   	; 0x144 <wait>
+		playTune(500 ,60);
+     e04:	2c e3       	ldi	r18, 0x3C	; 60
+     e06:	30 e0       	ldi	r19, 0x00	; 0
+     e08:	40 e0       	ldi	r20, 0x00	; 0
+     e0a:	50 e0       	ldi	r21, 0x00	; 0
+     e0c:	64 ef       	ldi	r22, 0xF4	; 244
+     e0e:	71 e0       	ldi	r23, 0x01	; 1
+     e10:	80 e0       	ldi	r24, 0x00	; 0
+     e12:	90 e0       	ldi	r25, 0x00	; 0
+     e14:	45 d9       	rcall	.-3446   	; 0xa0 <playTune>
+     e16:	8e e5       	ldi	r24, 0x5E	; 94
+		wait(350);
+     e18:	91 e0       	ldi	r25, 0x01	; 1
+     e1a:	94 d9       	rcall	.-3288   	; 0x144 <wait>
+     e1c:	20 e5       	ldi	r18, 0x50	; 80
+     e1e:	30 e0       	ldi	r19, 0x00	; 0
+		playTune(500 ,80);
+     e20:	40 e0       	ldi	r20, 0x00	; 0
+     e22:	50 e0       	ldi	r21, 0x00	; 0
+     e24:	64 ef       	ldi	r22, 0xF4	; 244
+     e26:	71 e0       	ldi	r23, 0x01	; 1
+     e28:	80 e0       	ldi	r24, 0x00	; 0
+     e2a:	90 e0       	ldi	r25, 0x00	; 0
+     e2c:	39 d9       	rcall	.-3470   	; 0xa0 <playTune>
+     e2e:	86 e9       	ldi	r24, 0x96	; 150
+     e30:	90 e0       	ldi	r25, 0x00	; 0
+     e32:	88 d9       	rcall	.-3312   	; 0x144 <wait>
+		wait(150);
+     e34:	20 e5       	ldi	r18, 0x50	; 80
+     e36:	30 e0       	ldi	r19, 0x00	; 0
+     e38:	40 e0       	ldi	r20, 0x00	; 0
+     e3a:	50 e0       	ldi	r21, 0x00	; 0
+		playTune(580 ,80);
+     e3c:	64 e4       	ldi	r22, 0x44	; 68
+     e3e:	72 e0       	ldi	r23, 0x02	; 2
+     e40:	80 e0       	ldi	r24, 0x00	; 0
+     e42:	90 e0       	ldi	r25, 0x00	; 0
+     e44:	2d d9       	rcall	.-3494   	; 0xa0 <playTune>
+     e46:	86 e9       	ldi	r24, 0x96	; 150
+     e48:	90 e0       	ldi	r25, 0x00	; 0
+     e4a:	7c d9       	rcall	.-3336   	; 0x144 <wait>
+     e4c:	20 e5       	ldi	r18, 0x50	; 80
+     e4e:	30 e0       	ldi	r19, 0x00	; 0
+		wait(150);
+     e50:	40 e0       	ldi	r20, 0x00	; 0
+     e52:	50 e0       	ldi	r21, 0x00	; 0
+     e54:	64 e9       	ldi	r22, 0x94	; 148
+     e56:	72 e0       	ldi	r23, 0x02	; 2
+		playTune(660 ,80);
+     e58:	80 e0       	ldi	r24, 0x00	; 0
+     e5a:	90 e0       	ldi	r25, 0x00	; 0
+     e5c:	21 d9       	rcall	.-3518   	; 0xa0 <playTune>
+     e5e:	86 e2       	ldi	r24, 0x26	; 38
+     e60:	92 e0       	ldi	r25, 0x02	; 2
+     e62:	70 d9       	rcall	.-3360   	; 0x144 <wait>
+     e64:	20 e5       	ldi	r18, 0x50	; 80
+     e66:	30 e0       	ldi	r19, 0x00	; 0
+     e68:	40 e0       	ldi	r20, 0x00	; 0
+     e6a:	50 e0       	ldi	r21, 0x00	; 0
+		wait(550);
+     e6c:	66 e6       	ldi	r22, 0x66	; 102
+     e6e:	73 e0       	ldi	r23, 0x03	; 3
+     e70:	80 e0       	ldi	r24, 0x00	; 0
+     e72:	90 e0       	ldi	r25, 0x00	; 0
+
+		playTune(870 , 80);
+     e74:	15 d9       	rcall	.-3542   	; 0xa0 <playTune>
+     e76:	85 e4       	ldi	r24, 0x45	; 69
+     e78:	91 e0       	ldi	r25, 0x01	; 1
+     e7a:	64 d9       	rcall	.-3384   	; 0x144 <wait>
+     e7c:	20 e5       	ldi	r18, 0x50	; 80
+     e7e:	30 e0       	ldi	r19, 0x00	; 0
+     e80:	40 e0       	ldi	r20, 0x00	; 0
+     e82:	50 e0       	ldi	r21, 0x00	; 0
+     e84:	68 ef       	ldi	r22, 0xF8	; 248
+     e86:	72 e0       	ldi	r23, 0x02	; 2
+		wait(325);
+     e88:	80 e0       	ldi	r24, 0x00	; 0
+     e8a:	90 e0       	ldi	r25, 0x00	; 0
+     e8c:	09 d9       	rcall	.-3566   	; 0xa0 <playTune>
+     e8e:	88 e5       	ldi	r24, 0x58	; 88
+		playTune(760 , 80);
+     e90:	92 e0       	ldi	r25, 0x02	; 2
+     e92:	58 d9       	rcall	.-3408   	; 0x144 <wait>
+     e94:	2c e3       	ldi	r18, 0x3C	; 60
+     e96:	30 e0       	ldi	r19, 0x00	; 0
+     e98:	40 e0       	ldi	r20, 0x00	; 0
+     e9a:	50 e0       	ldi	r21, 0x00	; 0
+     e9c:	64 ef       	ldi	r22, 0xF4	; 244
+     e9e:	71 e0       	ldi	r23, 0x01	; 1
+     ea0:	80 e0       	ldi	r24, 0x00	; 0
+     ea2:	90 e0       	ldi	r25, 0x00	; 0
+		wait(600);
+     ea4:	fd d8       	rcall	.-3590   	; 0xa0 <playTune>
+     ea6:	86 e9       	ldi	r24, 0x96	; 150
+     ea8:	90 e0       	ldi	r25, 0x00	; 0
+     eaa:	4c d9       	rcall	.-3432   	; 0x144 <wait>
+
+		playTune(500 ,60);
+     eac:	20 e5       	ldi	r18, 0x50	; 80
+     eae:	30 e0       	ldi	r19, 0x00	; 0
+     eb0:	40 e0       	ldi	r20, 0x00	; 0
+     eb2:	50 e0       	ldi	r21, 0x00	; 0
+     eb4:	64 ef       	ldi	r22, 0xF4	; 244
+     eb6:	71 e0       	ldi	r23, 0x01	; 1
+     eb8:	80 e0       	ldi	r24, 0x00	; 0
+     eba:	90 e0       	ldi	r25, 0x00	; 0
+     ebc:	f1 d8       	rcall	.-3614   	; 0xa0 <playTune>
+     ebe:	8c e2       	ldi	r24, 0x2C	; 44
+		wait(150);
+     ec0:	91 e0       	ldi	r25, 0x01	; 1
+     ec2:	40 d9       	rcall	.-3456   	; 0x144 <wait>
+     ec4:	2c e3       	ldi	r18, 0x3C	; 60
+     ec6:	30 e0       	ldi	r19, 0x00	; 0
+		playTune(500 ,80);
+     ec8:	40 e0       	ldi	r20, 0x00	; 0
+     eca:	50 e0       	ldi	r21, 0x00	; 0
+     ecc:	64 ef       	ldi	r22, 0xF4	; 244
+     ece:	71 e0       	ldi	r23, 0x01	; 1
+     ed0:	80 e0       	ldi	r24, 0x00	; 0
+     ed2:	90 e0       	ldi	r25, 0x00	; 0
+     ed4:	e5 d8       	rcall	.-3638   	; 0xa0 <playTune>
+     ed6:	8e e5       	ldi	r24, 0x5E	; 94
+     ed8:	91 e0       	ldi	r25, 0x01	; 1
+     eda:	34 d9       	rcall	.-3480   	; 0x144 <wait>
+		wait(300);
+     edc:	20 e5       	ldi	r18, 0x50	; 80
+     ede:	30 e0       	ldi	r19, 0x00	; 0
+     ee0:	40 e0       	ldi	r20, 0x00	; 0
+     ee2:	50 e0       	ldi	r21, 0x00	; 0
+		playTune(500 ,60);
+     ee4:	64 ef       	ldi	r22, 0xF4	; 244
+     ee6:	71 e0       	ldi	r23, 0x01	; 1
+     ee8:	80 e0       	ldi	r24, 0x00	; 0
+     eea:	90 e0       	ldi	r25, 0x00	; 0
+     eec:	d9 d8       	rcall	.-3662   	; 0xa0 <playTune>
+     eee:	86 e9       	ldi	r24, 0x96	; 150
+     ef0:	90 e0       	ldi	r25, 0x00	; 0
+     ef2:	28 d9       	rcall	.-3504   	; 0x144 <wait>
+     ef4:	20 e5       	ldi	r18, 0x50	; 80
+     ef6:	30 e0       	ldi	r19, 0x00	; 0
+		wait(350);
+     ef8:	40 e0       	ldi	r20, 0x00	; 0
+     efa:	50 e0       	ldi	r21, 0x00	; 0
+     efc:	64 e4       	ldi	r22, 0x44	; 68
+     efe:	72 e0       	ldi	r23, 0x02	; 2
+		playTune(500 ,80);
+     f00:	80 e0       	ldi	r24, 0x00	; 0
+     f02:	90 e0       	ldi	r25, 0x00	; 0
+     f04:	cd d8       	rcall	.-3686   	; 0xa0 <playTune>
+     f06:	8e e5       	ldi	r24, 0x5E	; 94
+     f08:	91 e0       	ldi	r25, 0x01	; 1
+     f0a:	1c d9       	rcall	.-3528   	; 0x144 <wait>
+     f0c:	20 e5       	ldi	r18, 0x50	; 80
+     f0e:	30 e0       	ldi	r19, 0x00	; 0
+     f10:	40 e0       	ldi	r20, 0x00	; 0
+     f12:	50 e0       	ldi	r21, 0x00	; 0
+		wait(150);
+     f14:	64 e9       	ldi	r22, 0x94	; 148
+     f16:	72 e0       	ldi	r23, 0x02	; 2
+     f18:	80 e0       	ldi	r24, 0x00	; 0
+     f1a:	90 e0       	ldi	r25, 0x00	; 0
+		playTune(580 ,80);
+     f1c:	c1 d8       	rcall	.-3710   	; 0xa0 <playTune>
+     f1e:	86 e9       	ldi	r24, 0x96	; 150
+     f20:	90 e0       	ldi	r25, 0x00	; 0
+     f22:	10 d9       	rcall	.-3552   	; 0x144 <wait>
+     f24:	20 e5       	ldi	r18, 0x50	; 80
+     f26:	30 e0       	ldi	r19, 0x00	; 0
+     f28:	40 e0       	ldi	r20, 0x00	; 0
+     f2a:	50 e0       	ldi	r21, 0x00	; 0
+     f2c:	64 ef       	ldi	r22, 0xF4	; 244
+     f2e:	71 e0       	ldi	r23, 0x01	; 1
+		wait(350);
+     f30:	80 e0       	ldi	r24, 0x00	; 0
+     f32:	90 e0       	ldi	r25, 0x00	; 0
+     f34:	b5 d8       	rcall	.-3734   	; 0xa0 <playTune>
+     f36:	8c e2       	ldi	r24, 0x2C	; 44
+		playTune(660 ,80);
+     f38:	91 e0       	ldi	r25, 0x01	; 1
+     f3a:	04 d9       	rcall	.-3576   	; 0x144 <wait>
+     f3c:	20 e5       	ldi	r18, 0x50	; 80
+     f3e:	30 e0       	ldi	r19, 0x00	; 0
+     f40:	40 e0       	ldi	r20, 0x00	; 0
+     f42:	50 e0       	ldi	r21, 0x00	; 0
+     f44:	6e ea       	ldi	r22, 0xAE	; 174
+     f46:	71 e0       	ldi	r23, 0x01	; 1
+     f48:	80 e0       	ldi	r24, 0x00	; 0
+     f4a:	90 e0       	ldi	r25, 0x00	; 0
+		wait(150);
+     f4c:	a9 d8       	rcall	.-3758   	; 0xa0 <playTune>
+     f4e:	86 e9       	ldi	r24, 0x96	; 150
+     f50:	90 e0       	ldi	r25, 0x00	; 0
+     f52:	f8 d8       	rcall	.-3600   	; 0x144 <wait>
+		playTune(500 ,80);
+     f54:	20 e5       	ldi	r18, 0x50	; 80
+     f56:	30 e0       	ldi	r19, 0x00	; 0
+     f58:	40 e0       	ldi	r20, 0x00	; 0
+     f5a:	50 e0       	ldi	r21, 0x00	; 0
+     f5c:	6c e7       	ldi	r22, 0x7C	; 124
+     f5e:	71 e0       	ldi	r23, 0x01	; 1
+     f60:	80 e0       	ldi	r24, 0x00	; 0
+     f62:	90 e0       	ldi	r25, 0x00	; 0
+     f64:	9d d8       	rcall	.-3782   	; 0xa0 <playTune>
+     f66:	88 e5       	ldi	r24, 0x58	; 88
+		wait(300);
+     f68:	92 e0       	ldi	r25, 0x02	; 2
+     f6a:	ec d8       	rcall	.-3624   	; 0x144 <wait>
+     f6c:	24 e6       	ldi	r18, 0x64	; 100
+     f6e:	30 e0       	ldi	r19, 0x00	; 0
+		playTune(430 ,80);
+     f70:	40 e0       	ldi	r20, 0x00	; 0
+     f72:	50 e0       	ldi	r21, 0x00	; 0
+     f74:	64 e9       	ldi	r22, 0x94	; 148
+     f76:	72 e0       	ldi	r23, 0x02	; 2
+     f78:	80 e0       	ldi	r24, 0x00	; 0
+     f7a:	90 e0       	ldi	r25, 0x00	; 0
+     f7c:	91 d8       	rcall	.-3806   	; 0xa0 <playTune>
+     f7e:	86 e9       	ldi	r24, 0x96	; 150
+     f80:	90 e0       	ldi	r25, 0x00	; 0
+     f82:	e0 d8       	rcall	.-3648   	; 0x144 <wait>
+		wait(150);
+     f84:	24 e6       	ldi	r18, 0x64	; 100
+     f86:	30 e0       	ldi	r19, 0x00	; 0
+     f88:	40 e0       	ldi	r20, 0x00	; 0
+     f8a:	50 e0       	ldi	r21, 0x00	; 0
+		playTune(380 ,80);
+     f8c:	64 e9       	ldi	r22, 0x94	; 148
+     f8e:	72 e0       	ldi	r23, 0x02	; 2
+     f90:	80 e0       	ldi	r24, 0x00	; 0
+     f92:	90 e0       	ldi	r25, 0x00	; 0
+     f94:	85 d8       	rcall	.-3830   	; 0xa0 <playTune>
+     f96:	8c e2       	ldi	r24, 0x2C	; 44
+     f98:	91 e0       	ldi	r25, 0x01	; 1
+     f9a:	d4 d8       	rcall	.-3672   	; 0x144 <wait>
+     f9c:	24 e6       	ldi	r18, 0x64	; 100
+     f9e:	30 e0       	ldi	r19, 0x00	; 0
+		wait(600);
+     fa0:	40 e0       	ldi	r20, 0x00	; 0
+     fa2:	50 e0       	ldi	r21, 0x00	; 0
+     fa4:	64 e9       	ldi	r22, 0x94	; 148
+     fa6:	72 e0       	ldi	r23, 0x02	; 2
+
+		playTune(660 ,100);
+     fa8:	80 e0       	ldi	r24, 0x00	; 0
+     faa:	90 e0       	ldi	r25, 0x00	; 0
+     fac:	79 d8       	rcall	.-3854   	; 0xa0 <playTune>
+     fae:	8c e2       	ldi	r24, 0x2C	; 44
+     fb0:	91 e0       	ldi	r25, 0x01	; 1
+     fb2:	c8 d8       	rcall	.-3696   	; 0x144 <wait>
+     fb4:	24 e6       	ldi	r18, 0x64	; 100
+     fb6:	30 e0       	ldi	r19, 0x00	; 0
+     fb8:	40 e0       	ldi	r20, 0x00	; 0
+     fba:	50 e0       	ldi	r21, 0x00	; 0
+		wait(150);
+     fbc:	6e ef       	ldi	r22, 0xFE	; 254
+     fbe:	71 e0       	ldi	r23, 0x01	; 1
+     fc0:	80 e0       	ldi	r24, 0x00	; 0
+     fc2:	90 e0       	ldi	r25, 0x00	; 0
+		playTune(660 ,100);
+     fc4:	6d d8       	rcall	.-3878   	; 0xa0 <playTune>
+     fc6:	84 e6       	ldi	r24, 0x64	; 100
+     fc8:	90 e0       	ldi	r25, 0x00	; 0
+     fca:	bc d8       	rcall	.-3720   	; 0x144 <wait>
+     fcc:	24 e6       	ldi	r18, 0x64	; 100
+     fce:	30 e0       	ldi	r19, 0x00	; 0
+     fd0:	40 e0       	ldi	r20, 0x00	; 0
+     fd2:	50 e0       	ldi	r21, 0x00	; 0
+     fd4:	64 e9       	ldi	r22, 0x94	; 148
+     fd6:	72 e0       	ldi	r23, 0x02	; 2
+		wait(300);
+     fd8:	80 e0       	ldi	r24, 0x00	; 0
+     fda:	90 e0       	ldi	r25, 0x00	; 0
+     fdc:	61 d8       	rcall	.-3902   	; 0xa0 <playTune>
+     fde:	8c e2       	ldi	r24, 0x2C	; 44
+		playTune(660 ,100);
+     fe0:	91 e0       	ldi	r25, 0x01	; 1
+     fe2:	b0 d8       	rcall	.-3744   	; 0x144 <wait>
+     fe4:	24 e6       	ldi	r18, 0x64	; 100
+     fe6:	30 e0       	ldi	r19, 0x00	; 0
+     fe8:	40 e0       	ldi	r20, 0x00	; 0
+     fea:	50 e0       	ldi	r21, 0x00	; 0
+     fec:	62 e0       	ldi	r22, 0x02	; 2
+     fee:	73 e0       	ldi	r23, 0x03	; 3
+     ff0:	80 e0       	ldi	r24, 0x00	; 0
+     ff2:	90 e0       	ldi	r25, 0x00	; 0
+		wait(300);
+     ff4:	55 d8       	rcall	.-3926   	; 0xa0 <playTune>
+     ff6:	86 e2       	ldi	r24, 0x26	; 38
+     ff8:	92 e0       	ldi	r25, 0x02	; 2
+     ffa:	a4 d8       	rcall	.-3768   	; 0x144 <wait>
+		playTune(510 ,100);
+     ffc:	24 e6       	ldi	r18, 0x64	; 100
+     ffe:	30 e0       	ldi	r19, 0x00	; 0
+    1000:	40 e0       	ldi	r20, 0x00	; 0
+    1002:	50 e0       	ldi	r21, 0x00	; 0
+    1004:	6c e7       	ldi	r22, 0x7C	; 124
+    1006:	71 e0       	ldi	r23, 0x01	; 1
+    1008:	80 e0       	ldi	r24, 0x00	; 0
+    100a:	90 e0       	ldi	r25, 0x00	; 0
+    100c:	49 d8       	rcall	.-3950   	; 0xa0 <playTune>
+    100e:	8f e3       	ldi	r24, 0x3F	; 63
+		wait(100);
+    1010:	92 e0       	ldi	r25, 0x02	; 2
+    1012:	98 d8       	rcall	.-3792   	; 0x144 <wait>
+    1014:	af c8       	rjmp	.-3746   	; 0x174 <main+0xe>
+
+00001016 <__divmodsi4>:
+    1016:	05 2e       	mov	r0, r21
+		playTune(660 ,100);
+    1018:	97 fb       	bst	r25, 7
+    101a:	16 f4       	brtc	.+4      	; 0x1020 <__divmodsi4+0xa>
+    101c:	00 94       	com	r0
+    101e:	0f d0       	rcall	.+30     	; 0x103e <__negsi2>
+    1020:	57 fd       	sbrc	r21, 7
+    1022:	05 d0       	rcall	.+10     	; 0x102e <__divmodsi4_neg2>
+    1024:	1e d0       	rcall	.+60     	; 0x1062 <__udivmodsi4>
+    1026:	07 fc       	sbrc	r0, 7
+    1028:	02 d0       	rcall	.+4      	; 0x102e <__divmodsi4_neg2>
+    102a:	46 f4       	brtc	.+16     	; 0x103c <__divmodsi4_exit>
+		wait(300);
+    102c:	08 c0       	rjmp	.+16     	; 0x103e <__negsi2>
+
+0000102e <__divmodsi4_neg2>:
+    102e:	50 95       	com	r21
+    1030:	40 95       	com	r20
+    1032:	30 95       	com	r19
+		playTune(770 ,100);
+    1034:	21 95       	neg	r18
+    1036:	3f 4f       	sbci	r19, 0xFF	; 255
+    1038:	4f 4f       	sbci	r20, 0xFF	; 255
+    103a:	5f 4f       	sbci	r21, 0xFF	; 255
+
+0000103c <__divmodsi4_exit>:
+    103c:	08 95       	ret
+
+0000103e <__negsi2>:
+    103e:	90 95       	com	r25
+    1040:	80 95       	com	r24
+    1042:	70 95       	com	r23
+    1044:	61 95       	neg	r22
+    1046:	7f 4f       	sbci	r23, 0xFF	; 255
+		wait(550);
+    1048:	8f 4f       	sbci	r24, 0xFF	; 255
+    104a:	9f 4f       	sbci	r25, 0xFF	; 255
+    104c:	08 95       	ret
+
+0000104e <__muluhisi3>:
+    104e:	2b d0       	rcall	.+86     	; 0x10a6 <__umulhisi3>
+		playTune(380 ,100);
+    1050:	a5 9f       	mul	r26, r21
+    1052:	90 0d       	add	r25, r0
+    1054:	b4 9f       	mul	r27, r20
+    1056:	90 0d       	add	r25, r0
+    1058:	a4 9f       	mul	r26, r20
+    105a:	80 0d       	add	r24, r0
+    105c:	91 1d       	adc	r25, r1
+    105e:	11 24       	eor	r1, r1
+    1060:	08 95       	ret
+
+00001062 <__udivmodsi4>:
+    1062:	a1 e2       	ldi	r26, 0x21	; 33
+		wait(575);
+    1064:	1a 2e       	mov	r1, r26
+    1066:	aa 1b       	sub	r26, r26
+    1068:	bb 1b       	sub	r27, r27
+    106a:	fd 01       	movw	r30, r26
+    106c:	0d c0       	rjmp	.+26     	; 0x1088 <__udivmodsi4_ep>
+
+0000106e <__udivmodsi4_loop>:
+    106e:	aa 1f       	adc	r26, r26
+    1070:	bb 1f       	adc	r27, r27
+    1072:	ee 1f       	adc	r30, r30
+    1074:	ff 1f       	adc	r31, r31
+    1076:	a2 17       	cp	r26, r18
+    1078:	b3 07       	cpc	r27, r19
+    107a:	e4 07       	cpc	r30, r20
+    107c:	f5 07       	cpc	r31, r21
+    107e:	20 f0       	brcs	.+8      	; 0x1088 <__udivmodsi4_ep>
+    1080:	a2 1b       	sub	r26, r18
+    1082:	b3 0b       	sbc	r27, r19
+    1084:	e4 0b       	sbc	r30, r20
+    1086:	f5 0b       	sbc	r31, r21
+
+00001088 <__udivmodsi4_ep>:
+    1088:	66 1f       	adc	r22, r22
+    108a:	77 1f       	adc	r23, r23
+    108c:	88 1f       	adc	r24, r24
+    108e:	99 1f       	adc	r25, r25
+    1090:	1a 94       	dec	r1
+    1092:	69 f7       	brne	.-38     	; 0x106e <__udivmodsi4_loop>
+    1094:	60 95       	com	r22
+    1096:	70 95       	com	r23
+    1098:	80 95       	com	r24
+    109a:	90 95       	com	r25
+    109c:	9b 01       	movw	r18, r22
+    109e:	ac 01       	movw	r20, r24
+    10a0:	bd 01       	movw	r22, r26
+    10a2:	cf 01       	movw	r24, r30
+    10a4:	08 95       	ret
+
+000010a6 <__umulhisi3>:
+    10a6:	a2 9f       	mul	r26, r18
+    10a8:	b0 01       	movw	r22, r0
+    10aa:	b3 9f       	mul	r27, r19
+    10ac:	c0 01       	movw	r24, r0
+    10ae:	a3 9f       	mul	r26, r19
+    10b0:	70 0d       	add	r23, r0
+    10b2:	81 1d       	adc	r24, r1
+    10b4:	11 24       	eor	r1, r1
+    10b6:	91 1d       	adc	r25, r1
+    10b8:	b2 9f       	mul	r27, r18
+    10ba:	70 0d       	add	r23, r0
+    10bc:	81 1d       	adc	r24, r1
+    10be:	11 24       	eor	r1, r1
+    10c0:	91 1d       	adc	r25, r1
+    10c2:	08 95       	ret
+
+000010c4 <_exit>:
+    10c4:	f8 94       	cli
+
+000010c6 <__stop_program>:
+    10c6:	ff cf       	rjmp	.-2      	; 0x10c6 <__stop_program>
