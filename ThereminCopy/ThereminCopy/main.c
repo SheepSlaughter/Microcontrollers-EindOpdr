@@ -83,6 +83,7 @@ int main(void)
 	while(1)
 	{
 		echo();
+		wait(100);
 		if(PORTA < 0b11111111){
 			tune = 1050 - (PORTA * 4);
 		}
