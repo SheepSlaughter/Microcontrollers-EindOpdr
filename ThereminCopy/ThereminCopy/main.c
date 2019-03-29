@@ -46,13 +46,13 @@ void echo(void){
 
 /************************************************************************/
 /* 
-Interrupts when Port E4 is changes State
+Interrupts when PE4 is changes State
 
 This interrupt happens twice after the trigger pin is send a pulse.
-The first time E4 triggers a rising edge:
+The first time PE4 triggers a rising edge:
 	In this case timer 1 is started
 	
-The second time E4 triggers a falling edge:
+The second time PE4 triggers a falling edge:
 	In this case timer 1 is stopped and the value is read and translated to a distance the ultra sonic sensor has detected
                                                                      */
 /************************************************************************/
