@@ -69,20 +69,26 @@ ISR(INT4_vect)
 	}
 }
 
+ISR( INT0_vect )
+{
+	setIneterupt(1);
+	PORTD &= ~(1<<5);
+}
+
 int main(void)
 {
 	int tune = 0;
 	int oct = 0;
 	int tonelen = 200;
 	int lastOct = 0;
-	DDRD = 0b00000100;
+	DDRD = 0xF0;
 	DDRA = 0b11111111;
 	DDRB = 0b11111111;
 	DDRC = 0;
 	
-	
-	EICRB = 0b00000001;
-	EIMSK = 0b00010000;
+	EICRA = 0b00000001;
+	EICRB = 0b00000101;
+	EIMSK = 0b00010001;
 	sei();
 	
 	DDRF = 0b00001000;			//set DDRD3 as output

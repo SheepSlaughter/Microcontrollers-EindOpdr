@@ -7,6 +7,9 @@
 
 #ifndef H_SONG
 #define H_SONG
+
+
 void marioTheme();
+void setIneterupt(int i);
 
 #endif
