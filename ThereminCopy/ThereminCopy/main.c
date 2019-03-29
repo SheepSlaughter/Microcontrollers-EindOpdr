@@ -77,39 +77,54 @@ int main(void)
 	DDRA = 0b11111111;
 	DDRB = 0b11111111;
 	
-	EICRB = 0b00000001;
-	EIMSK = 0b00010000;
-	sei();
+// 	EICRB = 0b00000001;
+// 	EIMSK = 0b00010000;
+	//sei();
 	
 	DDRF = 0b00001000;			//set DDRD3 as output
 	TCCR3B |= 0b00000001;	//set up timer
 	
 	long time = 0;
+	int temp;
 	int echos = 0;
 	while(1)
 	{
 		//echo();
-		
-		if(PORTA < 60){
-			frequency = 1050 - (PORTA * 4);
+		temp = PIND & 0b00000001;
+		if(distance < 60){
+			frequency = 1050 - (distance * 4);
 		}
-		if(frequency > 100 && PORTA < 60)
+		if(frequency > 100 && distance < 60)
 		{
-			time += 1000000/frequency/2;
+			//time += 1000000/frequency/2;
 			delay_us(1000000/frequency/2);
 			PORTF ^= (0b00001000);
-			//t += TCNT3;
+			time += TCNT3;
 			TCNT3 = 0;
+		} else{
+			_delay_us(1);
+			time += 1;
 		}
-		if(time >= 100000){
+		if(!echos && time >= 100000){
 			PORTE = 0b00000100;
-		}else if (time >= 101000){
+			echos  = 1;
+		}else if (echos && time >= 101000){
 			PORTE = 0b00000000;
-			TCNT1 = 0;
+			//TCNT1 = 0;
 			time = 0;
+			echos = 2;
+		} else if(echos == 2 && temp)
+		{
+			echos = 2;
+		} else if(echos == 3 && !temp)
+		{
+			distance = (time/2) / 29.1;
+			time = 0;
+			echos = 0;
+		} else {
+			PORTA = time/1000;
 		}
-		
-		
+		//_delay_us(1);
 		//marioTheme();
 	}
 	
