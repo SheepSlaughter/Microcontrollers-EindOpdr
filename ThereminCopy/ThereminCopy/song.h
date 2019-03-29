@@ -2,7 +2,7 @@
  * song.h
  *
  * Created: 29-Mar-19 9:53:45
- *  Author: svber
+ *  Author: Gerdtinus
  */ 
 
 #ifndef H_SONG

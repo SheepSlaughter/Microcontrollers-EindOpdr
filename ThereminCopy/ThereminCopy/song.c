@@ -2,10 +2,13 @@
  * song.c
  *
  * Created: 29-Mar-19 9:43:15
- *  Author: svber
+ *  Author: Gerdtinus
  */ 
 #include "audio.h"
 
+/*
+Plays a song on button press
+*/
 void marioTheme()
 {
 	playTune(660 ,100);
