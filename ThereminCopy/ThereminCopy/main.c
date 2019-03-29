@@ -27,7 +27,7 @@
 int duration;
 int distance;
 
-void echoNoTimer(void){
+void echo(void){
 	/* Replace with your application code */
 
 	DDRD = 0b00000100;
@@ -79,7 +79,7 @@ ISR(INT4_vect)
 
 int main(void)
 {
-    echoNoTimer();
+    echo();
 	DDRE = 0b00001000;			//set DDRD3 as output
 	TCCR3B |= 0b00000001;	//set up timer
 	while(1)
