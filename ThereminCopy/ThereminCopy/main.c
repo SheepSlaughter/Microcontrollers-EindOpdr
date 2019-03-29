@@ -28,15 +28,6 @@ int duration;
 int distance;
 
 void echo(void){
-	/* Replace with your application code */
-
-	DDRD = 0b00000100;
-	DDRA = 0b11111111;
-	DDRB = 0b11111111;
-	
-	EICRB = 0b00000001;
-	EIMSK = 0b00010000;
-	sei();
 		
 		//digitalWrite(trigPin, HIGH);
 		PORTE = 0b00000100;
@@ -79,12 +70,20 @@ ISR(INT4_vect)
 
 int main(void)
 {
-    echo();
+	DDRD = 0b00000100;
+	DDRA = 0b11111111;
+	DDRB = 0b11111111;
+	
+	EICRB = 0b00000001;
+	EIMSK = 0b00010000;
+	sei();
+	
 	DDRE = 0b00001000;			//set DDRD3 as output
 	TCCR3B |= 0b00000001;	//set up timer
 	while(1)
 	{
-		marioTheme();	
+		echo();
+		wait(100);
 	}
 	
 	return 0;	                  // Standard Return Code
