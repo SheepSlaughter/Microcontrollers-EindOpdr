@@ -2,13 +2,16 @@
  * song.c
  *
  * Created: 29-Mar-19 9:43:15
- *  Author: svber
+ *  Author: Gerdtinus
  */ 
 #include "audio.h"
 #include "song.h"
 
 int interupt = 0;
 
+/*
+Plays a song on button press
+*/
 void marioTheme()
 {
 	interupt = 0;
