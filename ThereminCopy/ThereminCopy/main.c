@@ -24,6 +24,8 @@
 #include "audio.h"
 #include "song.h"
 
+#define BIT(x) (1<<x)
+
 int duration;
 int distance;
 
@@ -76,6 +78,8 @@ int main(void)
 	DDRD = 0b00000100;
 	DDRA = 0b11111111;
 	DDRB = 0b11111111;
+	DDRC = 0;
+	
 	
 	EICRB = 0b00000001;
 	EIMSK = 0b00010000;
@@ -134,7 +138,8 @@ int main(void)
 		}else{
 			wait(100);
 		}
-		//marioTheme();
+		if (PINC & BIT(0))
+			marioTheme();
 	}
 	
 	return 0;	                  // Standard Return Code
