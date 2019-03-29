@@ -72,6 +72,7 @@ int main(void)
 	int tune = 0;
 	int oct = 0;
 	int tonelen = 200;
+	int lastOct = 0;
 	DDRD = 0b00000100;
 	DDRA = 0b11111111;
 	DDRB = 0b11111111;
@@ -92,37 +93,43 @@ int main(void)
 		{
 			//playTune(tune, 100);
 			oct = PORTA / 8;
-			switch(oct)
-			{
-				case (0):
-					playTune(261, tonelen);
-				case (1):
-					playTune(293,tonelen);
-					break;
-				case (2):
-					playTune(329,tonelen);
-					break;
-				case (3):
-					playTune(349,tonelen);
-					break;
-				case (4):
-					playTune(391,tonelen);
-					break;
-				case (5):
-					playTune(440,tonelen);
-					break;
-				case (6):
-					playTune(493,tonelen);
-					break;
-				case (7):
-					playTune(523,tonelen);
-					break;
-				case (8):
-					playTune(587,tonelen);
-					break;
-				default:
-					wait(tonelen);
-					break;
+			if(lastOct != oct){
+				lastOct = oct;
+				switch(oct)
+				{
+					case (0):
+						playTune(261, tonelen);
+						break;
+					case (1):
+						playTune(293,tonelen);
+						break;
+					case (2):
+						playTune(329,tonelen);
+						break;
+					case (3):
+						playTune(349,tonelen);
+						break;
+					case (4):
+						playTune(391,tonelen);
+						break;
+					case (5):
+						playTune(440,tonelen);
+						break;
+					case (6):
+						playTune(493,tonelen);
+						break;
+					case (7):
+						playTune(523,tonelen);
+						break;
+					case (8):
+						playTune(587,tonelen);
+						break;
+					default:
+						wait(tonelen);
+						break;
+				}
+			}else{
+				wait(100);
 			}
 		}else{
 			wait(100);
